@@ -73,6 +73,16 @@ namespace KHELA_GHOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_black_and_white_gaming_aesthetic_black_gaming {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-black-and-white-gaming-aesthetic-black-gaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KHELA_GHOR {
             get {
                 object obj = ResourceManager.GetObject("KHELA GHOR", resourceCulture);
@@ -86,6 +96,16 @@ namespace KHELA_GHOR.Properties {
         internal static System.Drawing.Bitmap KHELA_GHOR__1_ {
             get {
                 object obj = ResourceManager.GetObject("KHELA GHOR (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KHELA_GHOR_NOOUTLINE {
+            get {
+                object obj = ResourceManager.GetObject("KHELA_GHOR_NOOUTLINE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -121,10 +121,22 @@
   <data name="KHELA GHOR (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KHELA GHOR (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="desktop-wallpaper-black-and-white-gaming-aesthetic-black-gaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desktop-wallpaper-black-and-white-gaming-aesthetic-black-gaming.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="KHELA GHOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KHELA GHOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo_new [Recovered]" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_new [Recovered].png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_new-[Recovered]" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_new-[Recovered].gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="5073414" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5073414.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KHELA_GHOR_NOOUTLINE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KHELA_GHOR_NOOUTLINE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
