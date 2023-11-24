@@ -116,5 +116,11 @@
   <ItemGroup>
     <None Include="Resources\KHELA_GHOR_NOOUTLINE.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KHELA_GHOR_REGISTRATIONPIC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KHELA_GHOR_WELCOM.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
