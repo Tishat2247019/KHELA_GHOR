@@ -40,7 +40,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::KHELA_GHOR.Properties.Resources.KHELA_GHOR_NOOUTLINE;
-            this.pictureBox1.Location = new System.Drawing.Point(-17, -7);
+            this.pictureBox1.Location = new System.Drawing.Point(-16, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1127, 688);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
