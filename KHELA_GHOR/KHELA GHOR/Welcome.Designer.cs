@@ -42,7 +42,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto Mono", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(814, 75);
+            this.label1.Location = new System.Drawing.Point(703, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 49);
             this.label1.TabIndex = 1;
@@ -55,7 +55,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Roboto Mono", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(634, 135);
+            this.label2.Location = new System.Drawing.Point(556, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(528, 49);
             this.label2.TabIndex = 2;
@@ -68,7 +68,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(696, 184);
+            this.label3.Location = new System.Drawing.Point(617, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(410, 21);
             this.label3.TabIndex = 3;
@@ -83,9 +83,9 @@
             this.button_signup.FlatAppearance.BorderSize = 0;
             this.button_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_signup.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_signup.Location = new System.Drawing.Point(708, 323);
+            this.button_signup.Location = new System.Drawing.Point(660, 309);
             this.button_signup.Name = "button_signup";
-            this.button_signup.Size = new System.Drawing.Size(398, 59);
+            this.button_signup.Size = new System.Drawing.Size(307, 59);
             this.button_signup.TabIndex = 4;
             this.button_signup.Text = "SIGN UP";
             this.button_signup.UseVisualStyleBackColor = false;
@@ -99,9 +99,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(708, 418);
+            this.button1.Location = new System.Drawing.Point(660, 390);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(398, 59);
+            this.button1.Size = new System.Drawing.Size(307, 59);
             this.button1.TabIndex = 5;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
@@ -115,7 +115,7 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = global::KHELA_GHOR.Properties.Resources.KHELA_GHOR_WELCOM;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1211, 716);
+            this.ClientSize = new System.Drawing.Size(1111, 658);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);

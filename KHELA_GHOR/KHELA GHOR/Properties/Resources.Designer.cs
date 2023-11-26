@@ -133,6 +133,16 @@ namespace KHELA_GHOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap password_new {
+            get {
+                object obj = ResourceManager.GetObject("password_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap REGISTER_SCREEN {
             get {
                 object obj = ResourceManager.GetObject("REGISTER_SCREEN", resourceCulture);
@@ -146,6 +156,26 @@ namespace KHELA_GHOR.Properties {
         internal static System.Drawing.Bitmap REGISTER_SCREEN_KHELA_GHOR {
             get {
                 object obj = ResourceManager.GetObject("REGISTER_SCREEN_KHELA_GHOR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap REGISTER_SCREEN_KHELA_GHOR1 {
+            get {
+                object obj = ResourceManager.GetObject("REGISTER_SCREEN_KHELA_GHOR1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_new {
+            get {
+                object obj = ResourceManager.GetObject("user_new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

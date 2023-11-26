@@ -134,5 +134,14 @@
   <ItemGroup>
     <None Include="Resources\REGISTER_SCREEN.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTER_SCREEN_KHELA_GHOR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_new.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
