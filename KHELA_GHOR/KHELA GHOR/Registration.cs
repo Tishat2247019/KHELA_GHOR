@@ -13,6 +13,9 @@ namespace LOGIN_REGISTRATION
 {
     public partial class Registration : Form
     {
+        private static bool isclicked2 = false;
+        private static bool isclicked3 = false;
+
         public Registration()
         {
             InitializeComponent();
@@ -22,16 +25,21 @@ namespace LOGIN_REGISTRATION
         {
 
         }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+            this.textBox1.SelectionStart = this.textBox2.Text.Length;
+            this.textBox1.DeselectAll();
+
+        }
+
+            private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void textBox1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -53,6 +61,7 @@ namespace LOGIN_REGISTRATION
             {
                 textBox2.Clear();
             }
+            isclicked2 = true;
 
             textBox2.UseSystemPasswordChar = true;
             pictureBox3.Visible = false;
@@ -67,11 +76,13 @@ namespace LOGIN_REGISTRATION
             {
                 textBox3.Clear();
             }
-            textBox3.UseSystemPasswordChar = true;
 
+            isclicked3 = true;
+            textBox3.UseSystemPasswordChar = true;
             pictureBox6.Visible = false;
             pictureBox9.Visible = true;
         }
+
 
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
@@ -80,8 +91,13 @@ namespace LOGIN_REGISTRATION
 
         private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
         {
-            textBox2.UseSystemPasswordChar = true;
+            if (isclicked2)
+            {
+                textBox2.UseSystemPasswordChar = true;
+
+            }
         }
+
 
         private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
@@ -90,7 +106,11 @@ namespace LOGIN_REGISTRATION
 
         private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
         {
-            textBox3.UseSystemPasswordChar = true;
+            if (isclicked3)
+            {
+                textBox3.UseSystemPasswordChar = true;
+
+            }
         }
     }
 }
