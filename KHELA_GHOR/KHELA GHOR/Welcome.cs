@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LOGIN_REGISTRATION
 {
     public partial class Welcome : Form
@@ -51,6 +52,12 @@ namespace LOGIN_REGISTRATION
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button_signup_Click(object sender, EventArgs e)
+        {
+            new Registration().Show();
+            this.Hide();
         }
     }
 }
