@@ -73,6 +73,46 @@ namespace KHELA_GHOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _55x50 {
+            get {
+                object obj = ResourceManager.GetObject("55x50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Asset_1 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Asset_11 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Asset_3 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap desktop_wallpaper_black_and_white_gaming_aesthetic_black_gaming {
             get {
                 object obj = ResourceManager.GetObject("desktop-wallpaper-black-and-white-gaming-aesthetic-black-gaming", resourceCulture);
@@ -133,6 +173,36 @@ namespace KHELA_GHOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PASSWORD_AFTER {
+            get {
+                object obj = ResourceManager.GetObject("PASSWORD_AFTER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PASSWORD_FIRST {
+            get {
+                object obj = ResourceManager.GetObject("PASSWORD_FIRST", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PASSWORD_FIRSTT {
+            get {
+                object obj = ResourceManager.GetObject("PASSWORD_FIRSTT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password_new {
             get {
                 object obj = ResourceManager.GetObject("password_new", resourceCulture);
@@ -166,6 +236,36 @@ namespace KHELA_GHOR.Properties {
         internal static System.Drawing.Bitmap REGISTER_SCREEN_KHELA_GHOR1 {
             get {
                 object obj = ResourceManager.GetObject("REGISTER_SCREEN_KHELA_GHOR1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap REGISTER_SCREEN_KHELAGHOR_LOGORIGHT {
+            get {
+                object obj = ResourceManager.GetObject("REGISTER_SCREEN_KHELAGHOR_LOGORIGHT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap USER_AFTER {
+            get {
+                object obj = ResourceManager.GetObject("USER_AFTER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap USER_FIRST {
+            get {
+                object obj = ResourceManager.GetObject("USER_FIRST", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

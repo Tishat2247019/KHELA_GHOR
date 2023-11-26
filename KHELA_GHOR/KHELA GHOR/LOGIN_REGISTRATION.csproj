@@ -57,6 +57,11 @@
     <Compile Include="Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,14 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -142,6 +142,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\password_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REGISTER_SCREEN_KHELAGHOR_LOGORIGHT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EYE_PASSWORD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55x50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSWOPD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSWORD_FIRST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSWORD_FIRSTT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER_FIRST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER_AFTER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PASSWORD_AFTER.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
