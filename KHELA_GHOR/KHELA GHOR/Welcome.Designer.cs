@@ -73,19 +73,20 @@
             this.label3.Size = new System.Drawing.Size(410, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Entertain Yourself By Playing Mini Games";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+           
             // 
             // button_signup
             // 
             this.button_signup.AutoSize = true;
-            this.button_signup.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button_signup.BackColor = System.Drawing.Color.Coral;
             this.button_signup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_signup.FlatAppearance.BorderSize = 0;
+            this.button_signup.FlatAppearance.BorderSize = 2;
             this.button_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_signup.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_signup.Location = new System.Drawing.Point(660, 309);
+            this.button_signup.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_signup.Location = new System.Drawing.Point(677, 309);
             this.button_signup.Name = "button_signup";
-            this.button_signup.Size = new System.Drawing.Size(307, 59);
+            this.button_signup.Size = new System.Drawing.Size(290, 59);
             this.button_signup.TabIndex = 4;
             this.button_signup.Text = "SIGN UP";
             this.button_signup.UseVisualStyleBackColor = false;
@@ -96,12 +97,13 @@
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(660, 390);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(677, 390);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(307, 59);
+            this.button1.Size = new System.Drawing.Size(290, 59);
             this.button1.TabIndex = 5;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
