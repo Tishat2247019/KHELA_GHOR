@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Label_SignUp = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button_signup = new System.Windows.Forms.Button();
+            this.email_before = new System.Windows.Forms.PictureBox();
+            this.email_after = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.TxtBox_Email = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button_signup = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Label_SignUp = new System.Windows.Forms.Label();
-            this.email_before = new System.Windows.Forms.PictureBox();
-            this.email_after = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -97,6 +97,70 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // Label_SignUp
+            // 
+            this.Label_SignUp.AutoSize = true;
+            this.Label_SignUp.Font = new System.Drawing.Font("Red Hat Display Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_SignUp.Location = new System.Drawing.Point(7, 0);
+            this.Label_SignUp.Name = "Label_SignUp";
+            this.Label_SignUp.Size = new System.Drawing.Size(342, 25);
+            this.Label_SignUp.TabIndex = 21;
+            this.Label_SignUp.Text = "Let\'s Create a Khela Ghor Account";
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 380);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(307, 59);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "LOGIN";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button_signup
+            // 
+            this.button_signup.AutoSize = true;
+            this.button_signup.BackColor = System.Drawing.Color.Coral;
+            this.button_signup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_signup.FlatAppearance.BorderSize = 2;
+            this.button_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_signup.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_signup.Location = new System.Drawing.Point(11, 296);
+            this.button_signup.Name = "button_signup";
+            this.button_signup.Size = new System.Drawing.Size(307, 59);
+            this.button_signup.TabIndex = 19;
+            this.button_signup.Text = "SIGN UP";
+            this.button_signup.UseVisualStyleBackColor = false;
+            this.button_signup.Click += new System.EventHandler(this.button_signup_Click);
+            // 
+            // email_before
+            // 
+            this.email_before.Image = global::KHELA_GHOR.Properties.Resources.Asset_9;
+            this.email_before.Location = new System.Drawing.Point(11, 107);
+            this.email_before.Name = "email_before";
+            this.email_before.Size = new System.Drawing.Size(26, 33);
+            this.email_before.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.email_before.TabIndex = 18;
+            this.email_before.TabStop = false;
+            this.email_before.Click += new System.EventHandler(this.email_before_Click);
+            // 
+            // email_after
+            // 
+            this.email_after.Image = global::KHELA_GHOR.Properties.Resources.EMAIL_AFTER_1;
+            this.email_after.Location = new System.Drawing.Point(11, 112);
+            this.email_after.Name = "email_after";
+            this.email_after.Size = new System.Drawing.Size(23, 29);
+            this.email_after.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.email_after.TabIndex = 17;
+            this.email_after.TabStop = false;
+            this.email_after.Click += new System.EventHandler(this.email_after_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(55)))));
@@ -119,6 +183,19 @@
             this.TxtBox_Email.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TxtBox_Email_MouseClick_1);
             this.TxtBox_Email.TextChanged += new System.EventHandler(this.TxtBox_Email_TextChanged);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
+            this.pictureBox5.Location = new System.Drawing.Point(287, 233);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(23, 28);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseDown);
+            this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseUp);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(55)))));
@@ -140,6 +217,19 @@
             this.textBox3.Text = "Confirm Password";
             this.textBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox3_MouseClick);
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
+            this.pictureBox4.Location = new System.Drawing.Point(287, 177);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 28);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
+            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
             // 
             // panel3
             // 
@@ -185,96 +275,6 @@
             this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button_signup
-            // 
-            this.button_signup.AutoSize = true;
-            this.button_signup.BackColor = System.Drawing.Color.Coral;
-            this.button_signup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_signup.FlatAppearance.BorderSize = 2;
-            this.button_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_signup.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_signup.Location = new System.Drawing.Point(11, 296);
-            this.button_signup.Name = "button_signup";
-            this.button_signup.Size = new System.Drawing.Size(307, 59);
-            this.button_signup.TabIndex = 19;
-            this.button_signup.Text = "SIGN UP";
-            this.button_signup.UseVisualStyleBackColor = false;
-            this.button_signup.Click += new System.EventHandler(this.button_signup_Click);
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(307, 59);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Label_SignUp
-            // 
-            this.Label_SignUp.AutoSize = true;
-            this.Label_SignUp.Font = new System.Drawing.Font("Red Hat Display Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_SignUp.Location = new System.Drawing.Point(7, 0);
-            this.Label_SignUp.Name = "Label_SignUp";
-            this.Label_SignUp.Size = new System.Drawing.Size(342, 25);
-            this.Label_SignUp.TabIndex = 21;
-            this.Label_SignUp.Text = "Let\'s Create a Khela Ghor Account";
-            // 
-            // email_before
-            // 
-            this.email_before.Image = global::KHELA_GHOR.Properties.Resources.Asset_9;
-            this.email_before.Location = new System.Drawing.Point(11, 107);
-            this.email_before.Name = "email_before";
-            this.email_before.Size = new System.Drawing.Size(26, 33);
-            this.email_before.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.email_before.TabIndex = 18;
-            this.email_before.TabStop = false;
-            this.email_before.Click += new System.EventHandler(this.email_before_Click);
-            // 
-            // email_after
-            // 
-            this.email_after.Image = global::KHELA_GHOR.Properties.Resources.EMAIL_AFTER_1;
-            this.email_after.Location = new System.Drawing.Point(11, 112);
-            this.email_after.Name = "email_after";
-            this.email_after.Size = new System.Drawing.Size(23, 29);
-            this.email_after.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.email_after.TabIndex = 17;
-            this.email_after.TabStop = false;
-            this.email_after.Click += new System.EventHandler(this.email_after_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
-            this.pictureBox5.Location = new System.Drawing.Point(287, 233);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(23, 28);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseDown);
-            this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseUp);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
-            this.pictureBox4.Location = new System.Drawing.Point(287, 177);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
-            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::KHELA_GHOR.Properties.Resources.USER_FIRST;
@@ -301,7 +301,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::KHELA_GHOR.Properties.Resources.PASSWORD_FIRSTT;
-            this.pictureBox6.Location = new System.Drawing.Point(11, 236);
+            this.pictureBox6.Location = new System.Drawing.Point(14, 236);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(26, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -312,7 +312,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::KHELA_GHOR.Properties.Resources.PASSWORD_AFTER;
-            this.pictureBox9.Location = new System.Drawing.Point(11, 236);
+            this.pictureBox9.Location = new System.Drawing.Point(14, 236);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(23, 26);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -323,7 +323,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::KHELA_GHOR.Properties.Resources.PASSWORD_FIRSTT;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 237);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 178);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -334,7 +334,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::KHELA_GHOR.Properties.Resources.PASSWORD_AFTER;
-            this.pictureBox8.Location = new System.Drawing.Point(11, 179);
+            this.pictureBox8.Location = new System.Drawing.Point(12, 177);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(23, 26);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
