@@ -13,28 +13,33 @@ namespace LOGIN_REGISTRATION
 {
     public partial class Registration : Form
     {
+        private static bool isclicked1 = false;
         private static bool isclicked2 = false;
         private static bool isclicked3 = false;
+        private static bool isclicked_emailtxtbox = false;
+        private Form previousForm;
 
         public Registration()
         {
             InitializeComponent();
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.MouseOverBackColor = Color.Coral;
         }
-
-        private void Registration_Load(object sender, EventArgs e)
+        public Registration(Form form) : this()
         {
-
-        }
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-
-            this.textBox1.SelectionStart = this.textBox2.Text.Length;
-            this.textBox1.DeselectAll();
-
+            previousForm = form;
         }
 
-            private void pictureBox1_Click(object sender, EventArgs e)
+        //protected override void OnLoad(EventArgs e)
+        //{
+        //    base.OnLoad(e);
+
+        //    this.textBox1.SelectionStart = this.textBox2.Text.Length;
+        //    this.textBox1.DeselectAll();
+
+        //}
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -47,6 +52,7 @@ namespace LOGIN_REGISTRATION
             {
                 textBox1.Clear();
             }
+            isclicked1 = true;
 
             pictureBox2.Visible = false;
             pictureBox7.Visible = true;
@@ -57,13 +63,13 @@ namespace LOGIN_REGISTRATION
 
         private void textBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            if (textBox2.Text == "Password")
+            if (txtBoxPassword_Signup.Text == "Password")
             {
-                textBox2.Clear();
+                txtBoxPassword_Signup.Clear();
             }
             isclicked2 = true;
 
-            textBox2.UseSystemPasswordChar = true;
+            txtBoxPassword_Signup.UseSystemPasswordChar = true;
             pictureBox3.Visible = false;
             pictureBox8.Visible = true;
 
@@ -71,14 +77,14 @@ namespace LOGIN_REGISTRATION
 
         private void textBox3_MouseClick(object sender, MouseEventArgs e)
         {
-            if (textBox3.Text == "Confirm Password")
+            if (txtBoxConPassword_Signup.Text == "Confirm Password")
 
             {
-                textBox3.Clear();
+                txtBoxConPassword_Signup.Clear();
             }
 
             isclicked3 = true;
-            textBox3.UseSystemPasswordChar = true;
+            txtBoxConPassword_Signup.UseSystemPasswordChar = true;
             pictureBox6.Visible = false;
             pictureBox9.Visible = true;
         }
@@ -86,14 +92,14 @@ namespace LOGIN_REGISTRATION
 
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
-            textBox2.UseSystemPasswordChar = false;
+            txtBoxPassword_Signup.UseSystemPasswordChar = false;
         }
 
         private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
         {
             if (isclicked2)
             {
-                textBox2.UseSystemPasswordChar = true;
+                txtBoxPassword_Signup.UseSystemPasswordChar = true;
 
             }
         }
@@ -101,14 +107,14 @@ namespace LOGIN_REGISTRATION
 
         private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
-            textBox3.UseSystemPasswordChar = false;
+            txtBoxConPassword_Signup.UseSystemPasswordChar = false;
         }
 
         private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
         {
             if (isclicked3)
             {
-                textBox3.UseSystemPasswordChar = true;
+                txtBoxConPassword_Signup.UseSystemPasswordChar = true;
 
             }
         }
@@ -123,7 +129,7 @@ namespace LOGIN_REGISTRATION
                 TxtBox_Email.Clear();
             }
 
-            isclicked3 = true;
+            isclicked_emailtxtbox = true;
             email_after.Visible = true;
             email_before.Visible = false;
         }
@@ -230,7 +236,88 @@ namespace LOGIN_REGISTRATION
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Login().Show();
+            button1.BackColor = Color.Coral;
+            Login L = new Login(this);
+            L.Show();
+            this.Hide();
+        }
+
+        private void Label_SignUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (isclicked1)
+            {
+                if (string.IsNullOrEmpty(textBox1.Text))
+                {
+                    errorProvider1.SetError(this.textBox1, "Please Enter Your Username!!");
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                }
+
+            }
+        }
+
+        private void TxtBox_Email_Leave(object sender, EventArgs e)
+        {
+            if (isclicked_emailtxtbox)
+            {
+                if (string.IsNullOrEmpty(TxtBox_Email.Text)){
+                    errorProvider2.SetError(this.TxtBox_Email, "Please Enter Your Email");
+
+                }
+                else
+                {
+                    errorProvider2.Clear();
+                }
+            }
+        }
+
+
+        private void txtBoxPassword_Signup_Leave(object sender, EventArgs e)
+        {
+            if (isclicked2)
+            {
+                if (string.IsNullOrEmpty(txtBoxPassword_Signup.Text))
+                {
+                    errorProvider3.SetError(this.txtBoxPassword_Signup, "Please Enter Your Password");
+                }
+                else
+                {
+                    errorProvider3.Clear();
+                }
+            }
+
+        }
+
+        private void txtBoxConPassword_Signup_Leave(object sender, EventArgs e)
+        {
+            if (isclicked3 && isclicked2)
+
+            {
+                if (string.IsNullOrEmpty(txtBoxConPassword_Signup.Text))
+                {
+                    errorProvider4.SetError(this.txtBoxConPassword_Signup, "Please Confirm Your Password");
+                }
+                else if (txtBoxPassword_Signup.Text != txtBoxConPassword_Signup.Text)
+                {
+                    errorProvider4.SetError(this.txtBoxConPassword_Signup, "Password Mismatched");
+                }
+                else
+                {
+                    errorProvider4.Clear();
+                }
+            }
+        }
+
+        private void btnBack_Signup_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
             this.Hide();
         }
     }

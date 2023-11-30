@@ -26,7 +26,7 @@ namespace LOGIN_REGISTRATION
         private void timer1_Tick(object sender, EventArgs e)
         {
             panel2.Width += 3;
-            if (panel2.Width > 1111) {
+            if (panel2.Width > 450) {
                 timer1.Stop();
                 Welcome w = new Welcome();
                 w.Show();

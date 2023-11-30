@@ -191,5 +191,11 @@
   <ItemGroup>
     <None Include="Resources\EMAIL_AFTER_1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DASHBOARD\DASHBOARD.csproj">
+      <Project>{574dd541-7dc8-4f8b-9318-1013a2a5a1f0}</Project>
+      <Name>DASHBOARD</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
