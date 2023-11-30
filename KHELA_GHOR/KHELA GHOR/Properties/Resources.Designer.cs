@@ -113,9 +113,29 @@ namespace KHELA_GHOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Asset_9 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap desktop_wallpaper_black_and_white_gaming_aesthetic_black_gaming {
             get {
                 object obj = ResourceManager.GetObject("desktop-wallpaper-black-and-white-gaming-aesthetic-black-gaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EMAIL_AFTER_1 {
+            get {
+                object obj = ResourceManager.GetObject("EMAIL_AFTER_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

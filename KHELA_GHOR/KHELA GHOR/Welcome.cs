@@ -39,19 +39,13 @@ namespace LOGIN_REGISTRATION
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            Login L = new Login();
+            L.Show();
+            this.Hide();
         }
 
         private void button_signup_Click(object sender, EventArgs e)
