@@ -160,7 +160,7 @@
             // 
             this.Login_label1.AutoSize = true;
             this.Login_label1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_label1.Location = new System.Drawing.Point(12, 23);
+            this.Login_label1.Location = new System.Drawing.Point(9, 17);
             this.Login_label1.Name = "Login_label1";
             this.Login_label1.Size = new System.Drawing.Size(320, 25);
             this.Login_label1.TabIndex = 21;
@@ -230,7 +230,7 @@
             this.panel_Login.Controls.Add(this.picBox_PassAfter);
             this.panel_Login.Location = new System.Drawing.Point(605, 107);
             this.panel_Login.Name = "panel_Login";
-            this.panel_Login.Size = new System.Drawing.Size(365, 434);
+            this.panel_Login.Size = new System.Drawing.Size(335, 434);
             this.panel_Login.TabIndex = 2;
             this.panel_Login.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

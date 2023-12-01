@@ -143,6 +143,16 @@ namespace KHELA_GHOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_full_screen__1_ {
+            get {
+                object obj = ResourceManager.GetObject("exit-full-screen (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KHELA_GHOR {
             get {
                 object obj = ResourceManager.GetObject("KHELA GHOR", resourceCulture);

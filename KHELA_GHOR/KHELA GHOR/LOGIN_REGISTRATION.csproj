@@ -74,6 +74,12 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="SignUpExistError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpExistError.Designer.cs">
+      <DependentUpon>SignUpExistError.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpExistError.resx">
+      <DependentUpon>SignUpExistError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -196,6 +205,9 @@
       <Project>{574dd541-7dc8-4f8b-9318-1013a2a5a1f0}</Project>
       <Name>DASHBOARD</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-full-screen %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

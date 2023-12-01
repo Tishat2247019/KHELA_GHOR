@@ -124,6 +124,12 @@
   <data name="KHELA_GHOR_NOOUTLINE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KHELA_GHOR_NOOUTLINE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Asset 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Asset 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMAIL_AFTER_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EMAIL_AFTER_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PASSWORD_FIRSTT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PASSWORD_FIRSTT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,9 +138,6 @@
   </data>
   <data name="USER_AFTER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\USER_AFTER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Asset 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Asset 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="REGISTER_SCREEN_KHELA_GHOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\REGISTER_SCREEN_KHELA_GHOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +148,11 @@
   <data name="KHELA GHOR (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KHELA GHOR (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="REGISTER_SCREEN_KHELA_GHOR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REGISTER_SCREEN_KHELA_GHOR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Asset 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Asset 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5073414" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5073414.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KHELA_GHOR_REGISTRATIONPIC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KHELA_GHOR_REGISTRATIONPIC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="USER_FIRST" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\USER_FIRST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,28 +175,28 @@
   <data name="logo_new-[Recovered]" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_new-[Recovered].gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="5073414" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5073414.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="password_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KHELA_GHOR_WELCOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KHELA_GHOR_WELCOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PASSWORD_AFTER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PASSWORD_AFTER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="REGISTER_SCREEN_KHELA_GHOR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REGISTER_SCREEN_KHELA_GHOR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo_new [Recovered]" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_new [Recovered].png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KHELA_GHOR_REGISTRATIONPIC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KHELA_GHOR_REGISTRATIONPIC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KHELA_GHOR_WELCOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KHELA_GHOR_WELCOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Asset 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Asset 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Asset 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Asset 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Asset 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Asset 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PASSWORD_AFTER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PASSWORD_AFTER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EMAIL_AFTER_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EMAIL_AFTER_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit-full-screen (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit-full-screen (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

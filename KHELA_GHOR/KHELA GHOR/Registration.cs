@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.PropertyGridInternal;
+using System.Data.SqlClient;
 
 namespace LOGIN_REGISTRATION
 {
@@ -48,9 +49,9 @@ namespace LOGIN_REGISTRATION
 
         private void textBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (textBox1.Text == "Username")
+            if (txtBoxUser_SignUp.Text == "Username")
             {
-                textBox1.Clear();
+                txtBoxUser_SignUp.Clear();
             }
             isclicked1 = true;
 
@@ -120,13 +121,14 @@ namespace LOGIN_REGISTRATION
         }
 
        
+       
 
         private void TxtBox_Email_MouseClick_1(object sender, MouseEventArgs e)
         {
-            if (TxtBox_Email.Text == "Email")
+            if (TxtBoxEmail_SignUp.Text == "Email")
 
             {
-                TxtBox_Email.Clear();
+                TxtBoxEmail_SignUp.Clear();
             }
 
             isclicked_emailtxtbox = true;
@@ -136,7 +138,77 @@ namespace LOGIN_REGISTRATION
 
         private void button_signup_Click(object sender, EventArgs e)
         {
+            //address of the SQL server and database
 
+            string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+
+
+            //esblish connection;
+            SqlConnection con = new SqlConnection(connectinString);
+
+            //open connection
+            con.Open();
+            if (isclicked1 == false || isclicked2 == false || isclicked3 == false || isclicked_emailtxtbox == false || txtBoxUser_SignUp.Text == "" || TxtBoxEmail_SignUp.Text == "" || txtBoxPassword_Signup.Text == "" || txtBoxConPassword_Signup.Text == "")
+            {
+                MessageBox.Show("Please fill all the data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+           
+
+
+            else
+            {
+                try
+                {
+                   
+
+            
+                    string Username = txtBoxUser_SignUp.Text;
+                    string Email = TxtBoxEmail_SignUp.Text;
+                    string Password = txtBoxPassword_Signup.Text;
+                    //prepare Query
+                    string Query = "INSERT INTO SIGNUP_INFO(UserName, Email, Password) VALUES('" + Username + "', '" + Email + "', '" + Password + "')";
+
+                    //exucute Query
+                    SqlCommand cmd = new SqlCommand(Query, con);
+                    cmd.ExecuteNonQuery();
+
+                    txtBoxUser_SignUp.Clear();
+                    txtBoxPassword_Signup.Clear();
+                    TxtBoxEmail_SignUp.Clear();
+                    txtBoxConPassword_Signup.Clear();
+                    MessageBox.Show("Account Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TxtBoxEmail_SignUp.Text = "Email";
+                    txtBoxUser_SignUp.Text = "Username";
+                    txtBoxPassword_Signup.Text = "Password";
+                    txtBoxConPassword_Signup.Text = "Confirm Password";
+                    txtBoxPassword_Signup.UseSystemPasswordChar = false;
+                    txtBoxConPassword_Signup.UseSystemPasswordChar = false;
+
+                    isclicked1 = false;
+                    isclicked2 = false;
+                    isclicked3 = false;
+                    isclicked_emailtxtbox = false;
+
+                }
+                catch(Exception ex) 
+                {
+                    //MessageBox.Show($"Username {txtBoxUser_SignUp.Text} Already Exist", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string user = txtBoxUser_SignUp.Text;
+                    SignUpExistError.showmsg(user);
+                }
+
+                //close connection;
+                finally
+                {
+                con.Close();
+                    
+                }
+                
+
+
+            }
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -251,9 +323,9 @@ namespace LOGIN_REGISTRATION
         {
             if (isclicked1)
             {
-                if (string.IsNullOrEmpty(textBox1.Text))
+                if (string.IsNullOrEmpty(txtBoxUser_SignUp.Text))
                 {
-                    errorProvider1.SetError(this.textBox1, "Please Enter Your Username!!");
+                    errorProvider1.SetError(this.txtBoxUser_SignUp, "Please Enter Your Username!!");
                 }
                 else
                 {
@@ -267,8 +339,8 @@ namespace LOGIN_REGISTRATION
         {
             if (isclicked_emailtxtbox)
             {
-                if (string.IsNullOrEmpty(TxtBox_Email.Text)){
-                    errorProvider2.SetError(this.TxtBox_Email, "Please Enter Your Email");
+                if (string.IsNullOrEmpty(TxtBoxEmail_SignUp.Text)){
+                    errorProvider2.SetError(this.TxtBoxEmail_SignUp, "Please Enter Your Email");
 
                 }
                 else

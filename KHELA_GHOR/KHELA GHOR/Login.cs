@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using System.Data.SqlClient;
 using DASHBOARD;
 
 namespace LOGIN_REGISTRATION
@@ -272,8 +273,32 @@ namespace LOGIN_REGISTRATION
 
         private void btnSignin_Login_Click(object sender, EventArgs e)
         {
-            new Dashboard().Show();
-            this.Hide();
+            //address of the SQL server and database
+            string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+
+
+            //esblish connection;
+            SqlConnection con = new SqlConnection(connectinString);
+            string Query = "SELECT * FROM SIGNUP_INFO WHERE UserName = '"+txt_UserLogin.Text+"' AND Password = '"+txt_PassLogin.Text+"'";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                new Dashboard().Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_UserLogin.Clear();
+                txt_PassLogin.Clear();
+
+                txt_UserLogin.Focus();
+            }
+
+            
         }
 
         private void btnBack_Login_Click(object sender, EventArgs e)
