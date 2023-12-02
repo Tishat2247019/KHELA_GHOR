@@ -80,7 +80,7 @@
             // btnSignUp_Welcom
             // 
             this.btnSignUp_Welcom.AutoSize = true;
-            this.btnSignUp_Welcom.BackColor = System.Drawing.Color.Coral;
+            this.btnSignUp_Welcom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.btnSignUp_Welcom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp_Welcom.FlatAppearance.BorderSize = 2;
             this.btnSignUp_Welcom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -84,9 +84,9 @@
             // picBox_UserAfter
             // 
             this.picBox_UserAfter.Image = global::KHELA_GHOR.Properties.Resources.USER_AFTER;
-            this.picBox_UserAfter.Location = new System.Drawing.Point(15, 77);
+            this.picBox_UserAfter.Location = new System.Drawing.Point(11, 80);
             this.picBox_UserAfter.Name = "picBox_UserAfter";
-            this.picBox_UserAfter.Size = new System.Drawing.Size(22, 22);
+            this.picBox_UserAfter.Size = new System.Drawing.Size(23, 26);
             this.picBox_UserAfter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox_UserAfter.TabIndex = 12;
             this.picBox_UserAfter.TabStop = false;
@@ -95,7 +95,7 @@
             // picBox_userBefore
             // 
             this.picBox_userBefore.Image = global::KHELA_GHOR.Properties.Resources.USER_FIRST;
-            this.picBox_userBefore.Location = new System.Drawing.Point(14, 77);
+            this.picBox_userBefore.Location = new System.Drawing.Point(11, 81);
             this.picBox_userBefore.Name = "picBox_userBefore";
             this.picBox_userBefore.Size = new System.Drawing.Size(26, 25);
             this.picBox_userBefore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -160,7 +160,7 @@
             // 
             this.Login_label1.AutoSize = true;
             this.Login_label1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_label1.Location = new System.Drawing.Point(12, 23);
+            this.Login_label1.Location = new System.Drawing.Point(9, 17);
             this.Login_label1.Name = "Login_label1";
             this.Login_label1.Size = new System.Drawing.Size(320, 25);
             this.Login_label1.TabIndex = 21;
@@ -228,9 +228,9 @@
             this.panel_Login.Controls.Add(this.picBox_userBefore);
             this.panel_Login.Controls.Add(this.picBox_UserAfter);
             this.panel_Login.Controls.Add(this.picBox_PassAfter);
-            this.panel_Login.Location = new System.Drawing.Point(605, 107);
+            this.panel_Login.Location = new System.Drawing.Point(540, 112);
             this.panel_Login.Name = "panel_Login";
-            this.panel_Login.Size = new System.Drawing.Size(365, 434);
+            this.panel_Login.Size = new System.Drawing.Size(335, 434);
             this.panel_Login.TabIndex = 2;
             this.panel_Login.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -242,7 +242,7 @@
             this.Login_Label2.Name = "Login_Label2";
             this.Login_Label2.Size = new System.Drawing.Size(230, 21);
             this.Login_Label2.TabIndex = 26;
-            this.Login_Label2.Text = "Not A Khela Khor User?";
+            this.Login_Label2.Text = "Not A Khela Ghor User?";
             // 
             // errorProvider1
             // 

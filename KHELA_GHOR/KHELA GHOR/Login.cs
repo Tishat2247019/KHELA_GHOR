@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using System.Data.SqlClient;
 using DASHBOARD;
 
 namespace LOGIN_REGISTRATION
@@ -48,8 +49,6 @@ namespace LOGIN_REGISTRATION
         private float originalLabel2FontSize;
 
 
-
-
         public Login()
         {
             InitializeComponent();
@@ -69,7 +68,7 @@ namespace LOGIN_REGISTRATION
             PanelOriginalRectangle1 = new Rectangle(panel_Login.Location.X, panel_Login.Location.Y, panel_Login.Width, panel_Login.Height);
 
             txtboxUserOriginalRectangle1 = new Rectangle(txt_UserLogin.Location.X, txt_UserLogin.Location.Y, txt_UserLogin.Width, txt_UserLogin.Height);
-            PicUserBeforeOriginalRectangl2 = new Rectangle(picBox_userBefore.Location.X, picBox_userBefore .Location.Y, picBox_userBefore.Width, picBox_userBefore.Height);
+            PicUserBeforeOriginalRectangl2 = new Rectangle(picBox_userBefore.Location.X, picBox_userBefore.Location.Y, picBox_userBefore.Width, picBox_userBefore.Height);
             PicUserAfterOriginalRectangl3 = new Rectangle(picBox_UserAfter.Location.X, picBox_UserAfter.Location.Y, picBox_UserAfter.Width, picBox_UserAfter.Height);
             PanelUserOriginalRectangl4 = new Rectangle(panel2.Location.X, panel2.Location.Y, panel2.Width, panel2.Height);
 
@@ -135,7 +134,7 @@ namespace LOGIN_REGISTRATION
             {
                 ratio = yRatio;
             }
-            
+
         }
         private void Login_Resize(object sender, EventArgs e)
         {
@@ -203,7 +202,7 @@ namespace LOGIN_REGISTRATION
                 txt_UserLogin.Clear();
             }
             isClick_username = true;
-             
+
             picBox_userBefore.Visible = false;
             picBox_UserAfter.Visible = true;
         }
@@ -228,7 +227,7 @@ namespace LOGIN_REGISTRATION
 
         private void picBox_Eye_MouseDown(object sender, MouseEventArgs e)
         {
-            txt_PassLogin.UseSystemPasswordChar = false ;
+            txt_PassLogin.UseSystemPasswordChar = false;
         }
 
         private void picBox_Eye_MouseUp(object sender, MouseEventArgs e)
@@ -241,7 +240,7 @@ namespace LOGIN_REGISTRATION
 
         private void txt_UserLogin_Leave(object sender, EventArgs e)
         {
-            if (isClick_username) 
+            if (isClick_username)
             {
                 if (string.IsNullOrEmpty(txt_UserLogin.Text))
                 {
@@ -272,8 +271,41 @@ namespace LOGIN_REGISTRATION
 
         private void btnSignin_Login_Click(object sender, EventArgs e)
         {
-            new Dashboard().Show();
-            this.Hide();
+            //address of the SQL server and database
+            if ((!isClick_password || !isClick_username || txt_UserLogin.Text == "" || txt_PassLogin.Text == ""))
+            {
+                SignUpExistError.showLogin("Please Fill Up All Data");
+            }
+            else
+            {
+                string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+
+
+                //esblish connection;
+                SqlConnection con = new SqlConnection(connectinString);
+                string Query = "SELECT * FROM SIGNUP_INFO WHERE UserName = '" + txt_UserLogin.Text + "' AND Password = '" + txt_PassLogin.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    new Dashboard().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    //MessageBox.Show("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SignUpExistError.showLogin("Invalid Login Details");
+                    txt_UserLogin.Clear();
+                    txt_PassLogin.Clear();
+
+                    txt_UserLogin.Focus();
+                }
+
+            }
+
+
         }
 
         private void btnBack_Login_Click(object sender, EventArgs e)
@@ -282,7 +314,5 @@ namespace LOGIN_REGISTRATION
             previousForm.Show();
             this.Hide();
         }
-
-        
     }
 }

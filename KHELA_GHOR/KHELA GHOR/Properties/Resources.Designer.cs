@@ -93,9 +93,29 @@ namespace KHELA_GHOR.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Asset_10_1_5x {
+            get {
+                object obj = ResourceManager.GetObject("Asset 10@1.5x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Asset_11 {
             get {
                 object obj = ResourceManager.GetObject("Asset 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Asset_13_4x {
+            get {
+                object obj = ResourceManager.GetObject("Asset 13@4x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,26 @@ namespace KHELA_GHOR.Properties {
         internal static System.Drawing.Bitmap EMAIL_AFTER_1 {
             get {
                 object obj = ResourceManager.GetObject("EMAIL_AFTER_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EMAIL_AFTER_1_2x {
+            get {
+                object obj = ResourceManager.GetObject("EMAIL_AFTER_1@2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_full_screen__1_ {
+            get {
+                object obj = ResourceManager.GetObject("exit-full-screen (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
