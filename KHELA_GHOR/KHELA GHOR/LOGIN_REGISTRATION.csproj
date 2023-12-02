@@ -209,5 +209,14 @@
   <ItemGroup>
     <None Include="Resources\exit-full-screen %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 10%401.5x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMAIL_AFTER_1%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 13%404x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
