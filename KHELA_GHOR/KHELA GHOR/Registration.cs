@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -240,7 +240,23 @@ namespace LOGIN_REGISTRATION
                     //TxtBoxEmail_SignUp.Clear();
                     //txtBoxConPassword_Signup.Clear();
                     this.clear();
-                    MessageBox.Show("Account Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Account Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string idsuccess = SignUpExistError.showSuccess("Your Registration Is Successfull!!");
+                    if (idsuccess == "1")
+                    {
+                        Login L = new Login(this);
+                        L.Show();
+                        this.Hide();
+                    }
+                    if (idsuccess == "2")
+                    {
+                        this.clear();
+                        this.default_txt();
+                        txtBoxPassword_Signup.UseSystemPasswordChar = false;
+                        txtBoxConPassword_Signup.UseSystemPasswordChar = false;
+                    }
+
+
                     this.default_txt();
                     txtBoxPassword_Signup.UseSystemPasswordChar = false;
                     txtBoxConPassword_Signup.UseSystemPasswordChar = false;

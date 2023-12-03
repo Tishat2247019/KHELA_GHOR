@@ -218,5 +218,17 @@
   <ItemGroup>
     <None Include="Resources\Asset 13%404x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SIGNUP_ANIMATOIN_FAILED.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SIGNUP_ANIMATION_SUCCESS.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\failed_sound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
