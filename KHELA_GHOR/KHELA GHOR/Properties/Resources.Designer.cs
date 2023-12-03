@@ -181,6 +181,15 @@ namespace KHELA_GHOR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream failed_sound {
+            get {
+                return ResourceManager.GetStream("failed_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap KHELA_GHOR {
@@ -307,6 +316,35 @@ namespace KHELA_GHOR.Properties {
             get {
                 object obj = ResourceManager.GetObject("REGISTER_SCREEN_KHELAGHOR_LOGORIGHT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SIGNUP_ANIMATION_SUCCESS {
+            get {
+                object obj = ResourceManager.GetObject("SIGNUP_ANIMATION_SUCCESS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SIGNUP_ANIMATOIN_FAILED {
+            get {
+                object obj = ResourceManager.GetObject("SIGNUP_ANIMATOIN_FAILED", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream success_sound {
+            get {
+                return ResourceManager.GetStream("success_sound", resourceCulture);
             }
         }
         

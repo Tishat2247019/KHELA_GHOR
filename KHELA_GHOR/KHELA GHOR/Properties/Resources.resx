@@ -157,6 +157,9 @@
   <data name="Asset 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Asset 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EMAIL_AFTER_1@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EMAIL_AFTER_1@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Asset 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Asset 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,11 +184,11 @@
   <data name="REGISTER_SCREEN_KHELA_GHOR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\REGISTER_SCREEN_KHELA_GHOR1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EMAIL_AFTER_1@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EMAIL_AFTER_1@2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="KHELA_GHOR_REGISTRATIONPIC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KHELA_GHOR_REGISTRATIONPIC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SIGNUP_ANIMATOIN_FAILED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SIGNUP_ANIMATOIN_FAILED.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Asset 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Asset 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,13 +202,22 @@
   <data name="KHELA GHOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KHELA GHOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Asset 13@4x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Asset 13@4x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="REGISTER_SCREEN_KHELAGHOR_LOGORIGHT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\REGISTER_SCREEN_KHELAGHOR_LOGORIGHT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KHELA_GHOR_NOOUTLINE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KHELA_GHOR_NOOUTLINE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Asset 13@4x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Asset 13@4x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SIGNUP_ANIMATION_SUCCESS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SIGNUP_ANIMATION_SUCCESS.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="success_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\success_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="failed_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\failed_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
