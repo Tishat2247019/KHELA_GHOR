@@ -39,7 +39,9 @@ namespace RUNNING_GAME
 
         private Size OriginalFormSize2;
         private bool orignalsize = true;
-       // private bool maxsize = false;
+        // private bool maxsize = false;
+
+        private Rectangle playerafterresize;
 
         public RunningGame()
         {
@@ -100,7 +102,7 @@ namespace RUNNING_GAME
                     x.Left -= obstaclespeed;
                     if (x.Left < -100)
                     {
-                        x.Left = random.Next(1000, 2000);
+                        x.Left = random.Next(1500, 2000);
                         score += 1;
                     }
 
@@ -127,7 +129,7 @@ namespace RUNNING_GAME
             if (score > 10)
             {
                 obstaclespeed = 15;
-                gravityvalue = 10;
+                gravityvalue = 13;
             }
         
     }
@@ -215,6 +217,28 @@ namespace RUNNING_GAME
             Player.Location = new Point(453, 265);
             Player.Image = Properties.Resources.images_runniong_game__1_;
             score = 0;
+            gravityvalue = 13;
+            gravity = gravityvalue;
+            obstaclespeed = 10;
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "obstacle")
+                {
+                    x.Left = random.Next(1000, 2000);
+                }
+            }
+            gameTimer.Start();
+        }
+        private void continueGame()
+        {
+
+            lblScore.Parent = pictureBox1;
+            lblHighScore.Parent = pictureBox2;
+            lblHighScore.Top = 10;
+            Player.Location = playerafterresize.Location;
+            Player.Image = Properties.Resources.images_runniong_game__1_;
+            score = 0;
             gravityvalue = 12;
             gravity = gravityvalue;
             obstaclespeed = 8;
@@ -299,8 +323,10 @@ namespace RUNNING_GAME
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
+                
                 RestartGame2();
                 orignalsize = false;
+                playerafterresize = new Rectangle(Player.Location.X, Player.Location.Y, Player.Width, Player.Height);
                 resizeControl2(OriginalPicBox1Size, pictureBox1);
                 resizeControl2(OriginalPicBox2Size, pictureBox2);
                 resizeControl2(OriginalPlayerSize, Player);
@@ -312,7 +338,11 @@ namespace RUNNING_GAME
             }
             if (this.WindowState == FormWindowState.Normal)
             {
-                RestartGame();
+
+                if (gameover)
+                    RestartGame();
+                else
+                    continueGame();
                 orignalsize = true;
                 pictureBox1.Location = OriginalPicBox1Size.Location;
                 pictureBox1.Size = OriginalPicBox1Size.Size;
