@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Car Racing\Car Racing.csproj">
+      <Project>{e5facaf8-00bf-44b3-af91-a50ef9e0a863}</Project>
+      <Name>Car Racing</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RUNNING_GAME\RUNNING_GAME.csproj">
       <Project>{0900d191-7787-4da8-9a7b-4383a21236cc}</Project>
       <Name>RUNNING_GAME</Name>
