@@ -37,8 +37,14 @@ namespace RUNNING_GAME
         private float OrigijalLblScoreFontSize;
         private float OrigijalLblHighScoreFontSize;
 
+        private Size OriginalFormSize2;
+        private bool orignalsize = true;
+       // private bool maxsize = false;
+
         public RunningGame()
         {
+            OriginalFormSize2 = this.Size;
+            orignalsize = true;
             InitializeComponent();
             RestartGame();
         }
@@ -51,18 +57,40 @@ namespace RUNNING_GAME
 
             // when the player land on the platforms
 
-            if (Player.Top > 455)
+
+            if (orignalsize)
             {
-                gravity = 0;
-                Player.Top = 455;
-                Player.Image = Properties.Resources.images_runniong_game__1_;
+                if (Player.Top > 455)
+                {
+                    gravity = 0;
+                    Player.Top = 455;
+                    Player.Image = Properties.Resources.images_runniong_game__1_;
+                }
+
+                else if (Player.Top < 84)
+                {
+                    gravity = 0;
+                    Player.Top = 84;
+                    Player.Image = Properties.Resources.images_runniong_game__2_;
+                }
             }
 
-            else if (Player.Top < 84)
+            if (!orignalsize)
             {
-                gravity = 0;
-                Player.Top = 84;
-                Player.Image = Properties.Resources.images_runniong_game__2_;
+
+                if (Player.Top > 715)
+                {
+                    gravity = 0;
+                    Player.Top = 715;
+                    Player.Image = Properties.Resources.images_runniong_game__1_;
+                }
+
+                else if (Player.Top < 124)
+                {
+                    gravity = 0;
+                    Player.Top = 124;
+                    Player.Image = Properties.Resources.images_runniong_game__2_;
+                }
             }
 
             foreach (Control x in this.Controls)
@@ -106,24 +134,53 @@ namespace RUNNING_GAME
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space ) {
-                if (Player.Top == 455)
-                {
-                    Player.Top -= 10;
-                    gravity = -gravityvalue;
-                }
-                else if (Player.Top == 84)
-                {
-                    Player.Top += 10;
-                    gravity = gravityvalue;
-                }
-            }
-
-            if (e.KeyCode == Keys.Enter && gameover) 
+            if (orignalsize)
             {
-                RestartGame();
-                gameover = false;
+                if (e.KeyCode == Keys.Space)
+                {
+                    if (Player.Top == 455)
+                    {
+                        Player.Top -= 10;
+                        gravity = -gravityvalue;
+                    }
+                    else if (Player.Top == 84)
+                    {
+                        Player.Top += 10;
+                        gravity = gravityvalue;
+                    }
+                }
+                if (e.KeyCode == Keys.Enter && gameover)
+                {
+                    RestartGame();
+                    gameover = false;
+                }
+
             }
+            if (!orignalsize)
+            {
+                if (e.KeyCode == Keys.Space)
+                {
+                    if (Player.Top == 715)
+                    {
+                        Player.Top -= 20;
+                        gravity = -gravityvalue;
+                    }
+                    else if (Player.Top == 124)
+                    {
+                        Player.Top += 20;
+                        gravity = gravityvalue;
+                    }
+                }
+                if (e.KeyCode == Keys.Enter && gameover)
+                {
+                    RestartGame2();
+                    gameover = false;
+                }
+            }
+            
+           
+
+            
 
         }
 
@@ -149,6 +206,28 @@ namespace RUNNING_GAME
                 }
                 gameTimer.Start();
             }
+        private void RestartGame2()
+        {
+
+            lblScore.Parent = pictureBox1;
+            lblHighScore.Parent = pictureBox2;
+            lblHighScore.Top = 10;
+            Player.Location = new Point(453, 265);
+            Player.Image = Properties.Resources.images_runniong_game__1_;
+            score = 0;
+            gravityvalue = 12;
+            gravity = gravityvalue;
+            obstaclespeed = 8;
+
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "obstacle")
+                {
+                    x.Left = random.Next(1000, 2000);
+                }
+            }
+            gameTimer.Start();
+        }
 
         private void RunningGame_Load(object sender, EventArgs e)
         {
@@ -218,14 +297,42 @@ namespace RUNNING_GAME
 
         private void RunningGame_Resize_1(object sender, EventArgs e)
         {
-            resizeControl2(OriginalPicBox1Size, pictureBox1);
-            resizeControl2(OriginalPicBox2Size, pictureBox2);
-            resizeControl2(OriginalPlayerSize, Player);
-            resizeControl2(OriginalPicBox3Size, pictureBox3);
-            resizeControl2(OriginalPicBox5Size, pictureBox5);
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                RestartGame2();
+                orignalsize = false;
+                resizeControl2(OriginalPicBox1Size, pictureBox1);
+                resizeControl2(OriginalPicBox2Size, pictureBox2);
+                resizeControl2(OriginalPlayerSize, Player);
+                resizeControl2(OriginalPicBox3Size, pictureBox3);
+                resizeControl2(OriginalPicBox5Size, pictureBox5);
 
-            resizeControl(OriginalLblScorsize, lblScore, OrigijalLblScoreFontSize);
-            resizeControl(OriginalLblHighScorsize, lblHighScore, OrigijalLblHighScoreFontSize);
+                resizeControl(OriginalLblScorsize, lblScore, OrigijalLblScoreFontSize);
+                resizeControl(OriginalLblHighScorsize, lblHighScore, OrigijalLblHighScoreFontSize);
+            }
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                RestartGame();
+                orignalsize = true;
+                pictureBox1.Location = OriginalPicBox1Size.Location;
+                pictureBox1.Size = OriginalPicBox1Size.Size;
+                pictureBox2.Location = OriginalPicBox2Size.Location;
+                pictureBox2.Size = OriginalPicBox2Size.Size;
+
+                Player.Location = OriginalPlayerSize.Location;
+                Player.Size = OriginalPlayerSize.Size;
+
+                pictureBox3.Location = OriginalPicBox3Size.Location;
+                pictureBox3.Size = OriginalPicBox3Size.Size;
+                pictureBox5.Location = OriginalPicBox5Size.Location;
+                pictureBox5.Size = OriginalPicBox5Size.Size;
+
+                lblScore.Location = OriginalLblScorsize.Location;
+                lblScore.Size = OriginalLblScorsize.Size;
+                lblHighScore.Location = OriginalLblHighScorsize.Location;
+                lblHighScore.Size = OriginalLblHighScorsize.Size;
+
+            }
         }
     }
 }

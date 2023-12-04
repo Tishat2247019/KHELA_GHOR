@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DASHBOARD", "DASHBOARD\DASH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RUNNING_GAME", "RUNNING_GAME\RUNNING_GAME.csproj", "{0900D191-7787-4DA8-9A7B-4383A21236CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Racing", "C:\Users\User\Desktop\Car Racing\Car Racing\Car Racing.csproj", "{E5FACAF8-00BF-44B3-AF91-A50EF9E0A863}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Racing", "Car Racing\Car Racing.csproj", "{E5FACAF8-00BF-44B3-AF91-A50EF9E0A863}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
