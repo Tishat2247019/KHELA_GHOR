@@ -5,8 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using System.Windows.Forms;
 
 namespace RUNNING_GAME
@@ -20,6 +24,19 @@ namespace RUNNING_GAME
         int highscore = 0;
         bool gameover = false;
         Random random = new Random();
+
+        private Rectangle OriginalFormSize;
+        private Rectangle OriginalPicBox1Size;
+        private Rectangle OriginalPicBox2Size;
+        private Rectangle OriginalPlayerSize;
+        private Rectangle OriginalPicBox3Size;
+        private Rectangle OriginalPicBox5Size;
+        private Rectangle OriginalLblScorsize;
+        private Rectangle OriginalLblHighScorsize;
+
+        private float OrigijalLblScoreFontSize;
+        private float OrigijalLblHighScoreFontSize;
+
         public RunningGame()
         {
             InitializeComponent();
@@ -132,6 +149,83 @@ namespace RUNNING_GAME
                 }
                 gameTimer.Start();
             }
+
+        private void RunningGame_Load(object sender, EventArgs e)
+        {
+            OriginalFormSize = new Rectangle(this.Location.X, this.Location.Y, this.Size.Width, this.Size.Height);
+
+            OriginalPicBox1Size = new Rectangle(pictureBox1.Location.X, pictureBox1.Location.Y, pictureBox1.Width, pictureBox1.Height);
+            OriginalPicBox2Size = new Rectangle(pictureBox2.Location.X, pictureBox2.Location.Y, pictureBox2.Width, pictureBox2.Height);
+            OriginalPlayerSize= new Rectangle(Player.Location.X, Player.Location.Y, Player.Width, Player.Height);
+            OriginalPicBox3Size = new Rectangle(pictureBox3.Location.X, pictureBox3.Location.Y, pictureBox3.Width, pictureBox3.Height); 
+            OriginalPicBox5Size = new Rectangle(pictureBox5.Location.X, pictureBox5.Location.Y, pictureBox5.Width, pictureBox5.Height); 
+            OriginalLblScorsize = new Rectangle(lblScore.Location.X, lblScore.Location.Y, lblScore.Width, lblScore.Height); 
+            OriginalLblHighScorsize = new Rectangle(lblHighScore.Location.X, lblHighScore.Location.Y, lblHighScore.Width, lblHighScore.Height);
+            //OriginalLblScorsize = new Rectangle(lbLocation.X, pictureBox5.Location.Y, pictureBox5.Width, pictureBox5.Height); 
+            //  OriginalPicBox5Size = new Rectangle(pictureBox5.Location.X, pictureBox5.Location.Y, pictureBox5.Width, pictureBox5.Height);
+            //  
+            OrigijalLblScoreFontSize = lblScore.Font.Size;
+            OrigijalLblHighScoreFontSize = lblHighScore.Font.Size;
+
+        }
+        private void resizeControl(Rectangle r, Control c, float originalfontsize)
+        {
+            float xRatio = (float)(this.Width) / (float)(OriginalFormSize.Width);
+            float yRatio = (float)(this.Height) / (float)(OriginalFormSize.Height);
+
+            int newX = (int)(r.Location.X * xRatio);
+            int newY = (int)(r.Location.Y * yRatio);
+
+            int newWidth = (int)(r.Width * xRatio);
+            int newHeight = (int)(r.Height * yRatio);
+
+            c.Location = new Point(newX, newY);
+            c.Size = new Size(newWidth, newHeight);
+
+            float ratio = xRatio;
+            if (xRatio >= yRatio)
+            {
+                ratio = yRatio;
+            }
+            float newfontsize = originalfontsize * ratio;
+            Font newfont = new Font(c.Font.FontFamily, newfontsize);
+            c.Font = newfont;
+        }
+        private void resizeControl2(Rectangle r, Control c)
+        {
+            float xRatio = (float)(this.Width) / (float)(OriginalFormSize.Width);
+            float yRatio = (float)(this.Height) / (float)(OriginalFormSize.Height);
+
+            int newX = (int)(r.Location.X * xRatio);
+            int newY = (int)(r.Location.Y * yRatio);
+
+            int newWidth = (int)(r.Width * xRatio);
+            int newHeight = (int)(r.Height * yRatio);
+
+            c.Location = new Point(newX, newY);
+            c.Size = new Size(newWidth, newHeight);
+
+            float ratio = xRatio;
+            if (xRatio >= yRatio)
+            {
+                ratio = yRatio;
+            }
+
+        }
+
+          //resizeControl(OriginalPicBox5Size, lblHighScore, OrigijalLblHighScoreFontSize);
         
+
+        private void RunningGame_Resize_1(object sender, EventArgs e)
+        {
+            resizeControl2(OriginalPicBox1Size, pictureBox1);
+            resizeControl2(OriginalPicBox2Size, pictureBox2);
+            resizeControl2(OriginalPlayerSize, Player);
+            resizeControl2(OriginalPicBox3Size, pictureBox3);
+            resizeControl2(OriginalPicBox5Size, pictureBox5);
+
+            resizeControl(OriginalLblScorsize, lblScore, OrigijalLblScoreFontSize);
+            resizeControl(OriginalLblHighScorsize, lblHighScore, OrigijalLblHighScoreFontSize);
+        }
     }
 }
