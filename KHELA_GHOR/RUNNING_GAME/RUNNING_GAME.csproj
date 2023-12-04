@@ -62,6 +62,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RunningGame.resx">
       <DependentUpon>RunningGame.cs</DependentUpon>
@@ -78,6 +79,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images runniong game %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images runniong game %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images runniong game %283%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images runniong game %284%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_still.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smash_sound.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
