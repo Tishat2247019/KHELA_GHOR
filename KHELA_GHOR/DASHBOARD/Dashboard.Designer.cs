@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_RunningGame = new System.Windows.Forms.Button();
+            this.btnCarracing = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_RunningGame
@@ -44,11 +45,25 @@
             this.btn_RunningGame.UseVisualStyleBackColor = false;
             this.btn_RunningGame.Click += new System.EventHandler(this.btn_RunningGame_Click);
             // 
+            // btnCarracing
+            // 
+            this.btnCarracing.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnCarracing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarracing.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarracing.Location = new System.Drawing.Point(483, 100);
+            this.btnCarracing.Name = "btnCarracing";
+            this.btnCarracing.Size = new System.Drawing.Size(191, 111);
+            this.btnCarracing.TabIndex = 0;
+            this.btnCarracing.Text = "Car Racing\r\n";
+            this.btnCarracing.UseVisualStyleBackColor = false;
+            this.btnCarracing.Click += new System.EventHandler(this.btnCarracing_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 632);
+            this.Controls.Add(this.btnCarracing);
             this.Controls.Add(this.btn_RunningGame);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -60,6 +75,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_RunningGame;
+        private System.Windows.Forms.Button btnCarracing;
     }
 }
 
