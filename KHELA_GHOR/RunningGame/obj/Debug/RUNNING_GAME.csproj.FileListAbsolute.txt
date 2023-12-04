@@ -1,9 +1,0 @@
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\bin\Debug\RunningGame.exe.config
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\bin\Debug\RunningGame.exe
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\bin\Debug\RunningGame.pdb
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\obj\Debug\RUNNING_GAME.csproj.AssemblyReference.cache
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\obj\Debug\RunningGame.Properties.Resources.resources
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\obj\Debug\RUNNING_GAME.csproj.GenerateResource.cache
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\obj\Debug\RUNNING_GAME.csproj.CoreCompileInputs.cache
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\obj\Debug\RunningGame.exe
-F:\KHELA GHOR\KHELA_GHOR\RunningGame\obj\Debug\RunningGame.pdb
