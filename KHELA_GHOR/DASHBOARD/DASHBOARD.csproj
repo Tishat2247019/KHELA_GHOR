@@ -84,7 +84,7 @@
       <Project>{0900d191-7787-4da8-9a7b-4383a21236cc}</Project>
       <Name>RUNNING_GAME</Name>
     </ProjectReference>
-    <ProjectReference Include="E:\FALL 23-24\OBJECT ORIENTED PROGRAMMING 2%28C#%29\Car Racing\Car Racing\Car Racing.csproj">
+    <ProjectReference Include="C:\Users\User\Desktop\Car Racing\Car Racing\Car Racing.csproj">
       <Project>{e5facaf8-00bf-44b3-af91-a50ef9e0a863}</Project>
       <Name>Car Racing</Name>
     </ProjectReference>
