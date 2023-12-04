@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RUNNING_GAME;
+using Car_Racing;
 
 
 namespace DASHBOARD
@@ -25,6 +26,13 @@ namespace DASHBOARD
             r.Show();
             this.Close();
 
+        }
+
+        private void btnCarracing_Click(object sender, EventArgs e)
+        {
+            Form1 car_racing  = new Form1();
+            car_racing.Show();
+            this.Close();
         }
     }
 }
