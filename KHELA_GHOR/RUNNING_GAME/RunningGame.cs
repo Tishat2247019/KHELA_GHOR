@@ -80,17 +80,17 @@ namespace RUNNING_GAME
             if (!orignalsize)
             {
 
-                if (Player.Top > 715)
+                if (Player.Top > 565)
                 {
                     gravity = 0;
-                    Player.Top = 715;
+                    Player.Top = 565;
                     Player.Image = Properties.Resources.images_runniong_game__1_;
                 }
 
-                else if (Player.Top < 124)
+                else if (Player.Top < 104)
                 {
                     gravity = 0;
-                    Player.Top = 124;
+                    Player.Top = 104;
                     Player.Image = Properties.Resources.images_runniong_game__2_;
                 }
             }
@@ -162,12 +162,12 @@ namespace RUNNING_GAME
             {
                 if (e.KeyCode == Keys.Space)
                 {
-                    if (Player.Top == 715)
+                    if (Player.Top == 565)
                     {
                         Player.Top -= 20;
                         gravity = -gravityvalue;
                     }
-                    else if (Player.Top == 124)
+                    else if (Player.Top == 104)
                     {
                         Player.Top += 20;
                         gravity = gravityvalue;

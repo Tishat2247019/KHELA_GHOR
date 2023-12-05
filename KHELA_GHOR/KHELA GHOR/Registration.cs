@@ -198,7 +198,7 @@ namespace LOGIN_REGISTRATION
         {
             //address of the SQL server and database
 
-            string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+            string connectinString = "Data Source=LAPTOP-1LRTBSIR\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True";
 
 
             //esblish connection;

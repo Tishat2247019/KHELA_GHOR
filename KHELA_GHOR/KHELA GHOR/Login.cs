@@ -278,7 +278,7 @@ namespace LOGIN_REGISTRATION
             }
             else
             {
-                string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+                string connectinString = "Data Source=LAPTOP-1LRTBSIR\\SQLEXPRESS;Initial Catalog=MyDB;Integrated Security=True";
 
 
                 //esblish connection;
