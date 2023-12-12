@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace RUNNING_GAME
 {
@@ -24,7 +25,7 @@ namespace RUNNING_GAME
         int highscore = 0;
         bool gameover = false;
         Random random = new Random();
-
+        
         private Rectangle OriginalFormSize;
         private Rectangle OriginalPicBox1Size;
         private Rectangle OriginalPicBox2Size;
@@ -42,6 +43,9 @@ namespace RUNNING_GAME
         // private bool maxsize = false;
 
         private Rectangle playerafterresize;
+        private Rectangle playerBeforerresize;
+
+        
 
         public RunningGame()
         {
@@ -75,6 +79,8 @@ namespace RUNNING_GAME
                     Player.Top = 84;
                     Player.Image = Properties.Resources.images_runniong_game__2_;
                 }
+                playerBeforerresize = new Rectangle(Player.Location.X, Player.Location.Y, Player.Width, Player.Height);
+
             }
 
             if (!orignalsize)
@@ -93,6 +99,8 @@ namespace RUNNING_GAME
                     Player.Top = 124;
                     Player.Image = Properties.Resources.images_runniong_game__2_;
                 }
+                playerafterresize = new Rectangle(Player.Location.X, Player.Location.Y, Player.Width, Player.Height);
+
             }
 
             foreach (Control x in this.Controls)
@@ -110,13 +118,13 @@ namespace RUNNING_GAME
 
                     if (x.Bounds.IntersectsWith(Player.Bounds))
                     {
+                        gameover = true;
                         gameTimer.Stop();
                         System.Media.SoundPlayer s = new System.Media.SoundPlayer();
                         s.Stream = Resources.smash_sound;
                         s.Load();
                         s.Play();
                         lblScore.Text += " Game Over !! Press Enter to Restert";
-                        gameover = true;
 
                         if (score > highscore)
                         {
@@ -124,15 +132,22 @@ namespace RUNNING_GAME
                         }
 
                     }
-                }
+                } 
             }
             if (score > 10)
             {
                 obstaclespeed = 15;
                 gravityvalue = 13;
+
+               
+                if (score % 10 == 0)
+                {
+                    obstaclespeed += 2;     
+                    gravityvalue += 1;      
+                }
             }
-        
-    }
+
+        }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
@@ -148,8 +163,10 @@ namespace RUNNING_GAME
                     else if (Player.Top == 84)
                     {
                         Player.Top += 10;
-                        gravity = gravityvalue;
+                        gravity =   gravityvalue;
                     }
+                  //  playerBeforerresize = new Rectangle(Player.Location.X, Player.Location.Y, Player.Width, Player.Height);
+
                 }
                 if (e.KeyCode == Keys.Enter && gameover)
                 {
@@ -172,6 +189,8 @@ namespace RUNNING_GAME
                         Player.Top += 20;
                         gravity = gravityvalue;
                     }
+                   // playerafterresize = new Rectangle(Player.Location.X, Player.Location.Y, Player.Width, Player.Height);
+
                 }
                 if (e.KeyCode == Keys.Enter && gameover)
                 {
@@ -230,18 +249,47 @@ namespace RUNNING_GAME
             }
             gameTimer.Start();
         }
+        //private void continueGame()
+        //{
+
+        //    lblScore.Parent = pictureBox1;
+        //    lblHighScore.Parent = pictureBox2;
+        //    lblHighScore.Top = 10;
+        //    Player.Location = playerafterresize.Location;
+        //    Player.Image = Properties.Resources.images_runniong_game__1_;
+        //    score = 0;
+        //    gravityvalue = 12;
+        //    gravity = gravityvalue;
+        //    obstaclespeed = 8;
+
+        //    foreach (Control x in this.Controls)
+        //    {
+        //        if (x is PictureBox && (string)x.Tag == "obstacle")
+        //        {
+        //            x.Left = random.Next(1000, 2000);
+        //        }
+        //    }
+        //    gameTimer.Start();
+        //}
         private void continueGame()
         {
-
             lblScore.Parent = pictureBox1;
             lblHighScore.Parent = pictureBox2;
             lblHighScore.Top = 10;
-            Player.Location = playerafterresize.Location;
+
+            // Adjust player location based on the resized window
+            //Player.Location = orignalsize ? new Point(253, 265) : new Point(453, 265);
+            Player.Location = orignalsize ? playerBeforerresize.Location : playerafterresize.Location;
+            
+
             Player.Image = Properties.Resources.images_runniong_game__1_;
-            score = 0;
-            gravityvalue = 12;
+
+            // Avoid resetting the score to zero
+            // score = 0;
+
+            gravityvalue = orignalsize ? 12 : 13;
             gravity = gravityvalue;
-            obstaclespeed = 8;
+            obstaclespeed = orignalsize ? 8 : 10;
 
             foreach (Control x in this.Controls)
             {
@@ -250,8 +298,10 @@ namespace RUNNING_GAME
                     x.Left = random.Next(1000, 2000);
                 }
             }
-            gameTimer.Start();
+
+            //gameTimer.Start();
         }
+
 
         private void RunningGame_Load(object sender, EventArgs e)
         {
@@ -323,10 +373,19 @@ namespace RUNNING_GAME
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
-                
-                RestartGame2();
+                if (gameover)
+                {
+                    RestartGame2();
+
+                }
+                else
+                {
+                    continueGame();
+                }
+
                 orignalsize = false;
-                playerafterresize = new Rectangle(Player.Location.X, Player.Location.Y, Player.Width, Player.Height);
+
+
                 resizeControl2(OriginalPicBox1Size, pictureBox1);
                 resizeControl2(OriginalPicBox2Size, pictureBox2);
                 resizeControl2(OriginalPlayerSize, Player);
@@ -335,21 +394,29 @@ namespace RUNNING_GAME
 
                 resizeControl(OriginalLblScorsize, lblScore, OrigijalLblScoreFontSize);
                 resizeControl(OriginalLblHighScorsize, lblHighScore, OrigijalLblHighScoreFontSize);
+              //  Player.Location = playerafterresize.Location;
             }
             if (this.WindowState == FormWindowState.Normal)
             {
 
                 if (gameover)
+                {
+
                     RestartGame();
+                }
                 else
-                    continueGame();
+                { 
+                  // continueGame();
+                }
                 orignalsize = true;
                 pictureBox1.Location = OriginalPicBox1Size.Location;
                 pictureBox1.Size = OriginalPicBox1Size.Size;
                 pictureBox2.Location = OriginalPicBox2Size.Location;
                 pictureBox2.Size = OriginalPicBox2Size.Size;
 
-                Player.Location = OriginalPlayerSize.Location;
+                // Player.Location = OriginalPlayerSize.Location;
+                Player.Location = playerBeforerresize.Location;
+
                 Player.Size = OriginalPlayerSize.Size;
 
                 pictureBox3.Location = OriginalPicBox3Size.Location;
