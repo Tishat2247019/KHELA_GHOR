@@ -53,7 +53,7 @@ namespace LOGIN_REGISTRATION
         {
             InitializeComponent();
             btnSignup_Login.FlatStyle = FlatStyle.Flat;
-            btnSignup_Login.FlatAppearance.MouseOverBackColor = Color.Coral;
+            btnSignup_Login.FlatAppearance.MouseOverBackColor = Color.FromArgb(241, 90, 41);
             //btnBack_Login.FlatAppearance.MouseOverBackColor = Color.Coral;
         }
 
@@ -290,7 +290,7 @@ namespace LOGIN_REGISTRATION
 
                 if (dt.Rows.Count > 0)
                 {
-                    new Dashboard().Show();
+                    new Dashboard(txt_UserLogin.Text).Show();
                     this.Hide();
                 }
                 else

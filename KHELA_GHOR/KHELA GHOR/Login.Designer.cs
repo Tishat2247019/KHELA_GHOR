@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picBox_PassAfter = new System.Windows.Forms.PictureBox();
@@ -45,8 +44,8 @@
             this.picBox_Eye = new System.Windows.Forms.PictureBox();
             this.panel_Login = new System.Windows.Forms.Panel();
             this.Login_Label2 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider();
             this.btnBack_Login = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_PassAfter)).BeginInit();
@@ -127,7 +126,7 @@
             // btnSignin_Login
             // 
             this.btnSignin_Login.AutoSize = true;
-            this.btnSignin_Login.BackColor = System.Drawing.Color.Coral;
+            this.btnSignin_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.btnSignin_Login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignin_Login.FlatAppearance.BorderSize = 2;
             this.btnSignin_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

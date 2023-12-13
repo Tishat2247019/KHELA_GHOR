@@ -13,6 +13,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Collections;
+
 
 namespace RUNNING_GAME
 {
@@ -45,20 +50,30 @@ namespace RUNNING_GAME
         private Rectangle playerafterresize;
         private Rectangle playerBeforerresize;
 
-        
+        string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+        public static string username;
 
         public RunningGame()
         {
+            InitializeComponent();
             OriginalFormSize2 = this.Size;
             orignalsize = true;
-            InitializeComponent();
             RestartGame();
+        }
+
+        public RunningGame(string username1)
+        {
+            InitializeComponent();
+            username = username1;
+            RestartGame();
+            orignalsize = true;
+
         }
 
         private void GameTimerEvent(object sender, EventArgs e)
         {
             lblScore.Text = "Score : " + score;
-            lblHighScore.Text = "High Score : " + highscore;
+            lblHighScore.Text = "High Score : " + GetHighScore() ;
             Player.Top += gravity;
 
             // when the player land on the platforms
@@ -129,6 +144,7 @@ namespace RUNNING_GAME
                         if (score > highscore)
                         {
                             highscore = score;
+                            SaveHighScore(username, highscore);
                         }
 
                     }
@@ -148,6 +164,7 @@ namespace RUNNING_GAME
             }
 
         }
+
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
@@ -204,6 +221,52 @@ namespace RUNNING_GAME
             
 
         }
+
+        private  void SaveHighScore(string playerName, int score)
+        {
+
+             //esblish connection;
+            SqlConnection con = new SqlConnection(connectinString);
+
+            //open connection
+            con.Open();
+            string game_name = "RunningGame";
+            string user_name =  playerName ;
+            string score1 = score.ToString();
+            string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name+ "', '" + score1 + "')";
+            //exucute Query
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+
+            //close the connection
+            con.Close();
+          
+            
+        }
+
+        private int GetHighScore()
+        {
+            using (SqlConnection connection = new SqlConnection(connectinString))
+            {
+                connection.Open();
+
+                string query = "select max(Convert(int, score_value)) from Leader_Board;";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return 0; // Default value if no high score is found
+                    }
+                }
+            }
+        }
+
+
 
         private void RestartGame()
         {
