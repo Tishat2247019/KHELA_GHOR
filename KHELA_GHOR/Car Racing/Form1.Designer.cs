@@ -70,7 +70,7 @@
             // award
             // 
             this.award.Image = global::Car_Racing.Properties.Resources.bronze;
-            this.award.Location = new System.Drawing.Point(92, 163);
+            this.award.Location = new System.Drawing.Point(53, 177);
             this.award.Margin = new System.Windows.Forms.Padding(2);
             this.award.Name = "award";
             this.award.Size = new System.Drawing.Size(250, 100);
@@ -202,8 +202,10 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Racing";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
+            this.Resize += new System.EventHandler(this.form1_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.award)).EndInit();

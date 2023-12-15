@@ -19,6 +19,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Collections;
 
 
+
 namespace RUNNING_GAME
 {
     public partial class RunningGame : Form
@@ -26,8 +27,8 @@ namespace RUNNING_GAME
         int gravity;
         int gravityvalue = 8;
         int obstaclespeed = 10;
+       // int highcore = 0;
         int score = 0;
-        int highscore = 0;
         bool gameover = false;
         Random random = new Random();
         
@@ -75,6 +76,8 @@ namespace RUNNING_GAME
             lblScore.Text = "Score : " + score;
             lblHighScore.Text = "High Score : " + GetHighScore() ;
             Player.Top += gravity;
+            int highscore = GetHighScore() ;
+
 
             // when the player land on the platforms
 
@@ -133,19 +136,31 @@ namespace RUNNING_GAME
 
                     if (x.Bounds.IntersectsWith(Player.Bounds))
                     {
+                        string id = "";
                         gameover = true;
                         gameTimer.Stop();
                         System.Media.SoundPlayer s = new System.Media.SoundPlayer();
                         s.Stream = Resources.smash_sound;
                         s.Load();
                         s.Play();
-                        lblScore.Text += " Game Over !! Press Enter to Restert";
-
+                        // lblScore.Text += " Game Over !! Press Enter to Restert";
                         if (score > highscore)
                         {
                             highscore = score;
                             SaveHighScore(username, highscore);
+                            id = RunnigGamePopUp.showHighScore($"Your score is {score}");
                         }
+                        else
+                        {
+                         id =   RunnigGamePopUp.showScore($"Your score is {score}");
+                        }
+
+                        if (id == "1")
+                        {
+                            RestartGame();
+                        }
+
+                       
 
                     }
                 } 
@@ -274,7 +289,11 @@ namespace RUNNING_GAME
                 lblScore.Parent = pictureBox1;
                 lblHighScore.Parent = pictureBox2;
                 lblHighScore.Top = 10;
-                Player.Location = new Point(253, 265);
+            
+            lblHighScore.Text = "High Score : " + GetHighScore();
+
+
+            Player.Location = new Point(253, 265);
                 Player.Image = Properties.Resources.images_runniong_game__1_;
                 score = 0;
                 gravityvalue = 12;

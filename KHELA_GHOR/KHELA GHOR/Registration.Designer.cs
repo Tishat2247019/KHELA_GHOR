@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
             this.SignUp_label2 = new System.Windows.Forms.Label();
-            this.SignUp_lable1 = new System.Windows.Forms.Label();
             this.button_Signin = new System.Windows.Forms.Button();
             this.button_signup = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,6 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBoxPassword_Signup = new System.Windows.Forms.TextBox();
             this.txtBoxUser_SignUp = new System.Windows.Forms.TextBox();
+            this.SignUp_lable1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -118,18 +118,6 @@
             this.SignUp_label2.Size = new System.Drawing.Size(243, 20);
             this.SignUp_label2.TabIndex = 91;
             this.SignUp_label2.Text = "Already A khela Ghor User?\r\n";
-            // 
-            // SignUp_lable1
-            // 
-            this.SignUp_lable1.AutoSize = true;
-            this.SignUp_lable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
-            this.SignUp_lable1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUp_lable1.Location = new System.Drawing.Point(562, 14);
-            this.SignUp_lable1.Name = "SignUp_lable1";
-            this.SignUp_lable1.Size = new System.Drawing.Size(375, 25);
-            this.SignUp_lable1.TabIndex = 21;
-            this.SignUp_lable1.Text = "Let\'s Create a Khela Ghor Account";
-            this.SignUp_lable1.Click += new System.EventHandler(this.Label_SignUp_Click);
             // 
             // button_Signin
             // 
@@ -254,6 +242,18 @@
             this.txtBoxUser_SignUp.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             this.txtBoxUser_SignUp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtBoxUser_SignUp.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // SignUp_lable1
+            // 
+            this.SignUp_lable1.AutoSize = true;
+            this.SignUp_lable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.SignUp_lable1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUp_lable1.Location = new System.Drawing.Point(577, 14);
+            this.SignUp_lable1.Name = "SignUp_lable1";
+            this.SignUp_lable1.Size = new System.Drawing.Size(375, 25);
+            this.SignUp_lable1.TabIndex = 21;
+            this.SignUp_lable1.Text = "Let\'s Create a Khela Ghor Account";
+            this.SignUp_lable1.Click += new System.EventHandler(this.Label_SignUp_Click);
             // 
             // errorProvider1
             // 

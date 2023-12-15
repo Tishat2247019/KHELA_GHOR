@@ -23,8 +23,12 @@ namespace DASHBOARD
         FormHelp help;
 
         public static string usernmaepass;
+        private Image originalImage;
 
         bool siderBarExpand;
+
+        private Size originalSize;
+        private bool isHovered = false;
         public Dashboard()
         {
             InitializeComponent();
@@ -102,7 +106,12 @@ namespace DASHBOARD
 
         private void btn_Home_Click(object sender, EventArgs e)
         {
-           // Dashboard d = new Dashboard();
+            // Dashboard d = new Dashboard();
+            panel3.Visible = true;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
             if (home == null)
             {
                 home = new FormHome();
@@ -124,6 +133,7 @@ namespace DASHBOARD
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            panel3.Visible = true;
             home = new FormHome();
             home.FormClosed += FormHome_FormClosed;
             home.MdiParent = this;
@@ -140,6 +150,10 @@ namespace DASHBOARD
 
         private void btn_ScoreBoard_Click(object sender, EventArgs e)
         {
+            panel3.Visible = false;
+            panel4.Visible = true;
+            panel5.Visible = false;
+            panel6.Visible = false;
             FormScoreBoard scoreboard = new FormScoreBoard();
             scoreboard.FormClosed += FormScoreboard_FormClosed;
             scoreboard.MdiParent = this;
@@ -152,6 +166,65 @@ namespace DASHBOARD
             home = null;
         }
 
-        
+        private void panel_sideBarContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnsidepanel_MouseHover(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            //button.Location = new Point(button.Location.X -7, button.Location.Y);
+            //button.Size = new Size(120, 115);
+            //button.BringToFront();
+
+            if (!isHovered)
+            {
+                originalSize = button.Size;
+                button.Location = new Point(button.Location.X - 5, button.Location.Y - 5);
+
+                button.Size = new Size(originalSize.Width + 26, originalSize.Height + 24);
+                isHovered = true;
+            }
+        }
+
+        private void btn_sidepanel_MouseLeave(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            // button.Location = new Point(button.Location.X +7, button.Location.Y);
+            // button.Size = new Size(94, 91);
+            //button.BringToFront();
+
+            if (isHovered)
+            {
+                button.Location = new Point(button.Location.X + 5, button.Location.Y + 5);
+
+                button.Size = originalSize;
+                isHovered = false;
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Settings_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = true;
+            panel6.Visible = false;
+        }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = true;
+        }
+
+       
     }
 }

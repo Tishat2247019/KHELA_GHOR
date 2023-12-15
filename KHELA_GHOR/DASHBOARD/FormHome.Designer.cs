@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCarracing = new System.Windows.Forms.Button();
             this.btn_RunningGame = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_Helicopter = new System.Windows.Forms.Button();
+            this.btn_Arcade = new System.Windows.Forms.Button();
+            this.btn_Snake = new System.Windows.Forms.Button();
+            this.btn_OtherGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +52,7 @@
             // btnCarracing
             // 
             this.btnCarracing.BackColor = System.Drawing.Color.Transparent;
-            this.btnCarracing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCarracing.BackgroundImage")));
+            this.btnCarracing.BackgroundImage = global::DASHBOARD.Properties.Resources._103x103;
             this.btnCarracing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCarracing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCarracing.FlatAppearance.BorderSize = 0;
@@ -60,7 +60,7 @@
             this.btnCarracing.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCarracing.Location = new System.Drawing.Point(191, 211);
             this.btnCarracing.Name = "btnCarracing";
-            this.btnCarracing.Size = new System.Drawing.Size(94, 91);
+            this.btnCarracing.Size = new System.Drawing.Size(103, 102);
             this.btnCarracing.TabIndex = 1;
             this.btnCarracing.UseVisualStyleBackColor = false;
             this.btnCarracing.Click += new System.EventHandler(this.btnCarracing_Click);
@@ -70,11 +70,12 @@
             // btn_RunningGame
             // 
             this.btn_RunningGame.BackColor = System.Drawing.Color.Transparent;
+            this.btn_RunningGame.BackgroundImage = global::DASHBOARD.Properties.Resources.runningicon124491103x103;
+            this.btn_RunningGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_RunningGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_RunningGame.FlatAppearance.BorderSize = 0;
             this.btn_RunningGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RunningGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RunningGame.Image = ((System.Drawing.Image)(resources.GetObject("btn_RunningGame.Image")));
             this.btn_RunningGame.Location = new System.Drawing.Point(367, 199);
             this.btn_RunningGame.Name = "btn_RunningGame";
             this.btn_RunningGame.Size = new System.Drawing.Size(114, 114);
@@ -84,73 +85,74 @@
             this.btn_RunningGame.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
             this.btn_RunningGame.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 
-            // button1
+            // btn_Helicopter
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(557, 211);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 102);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
-            this.button1.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
+            this.btn_Helicopter.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Helicopter.BackgroundImage = global::DASHBOARD.Properties.Resources.helicopter23771103x103;
+            this.btn_Helicopter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Helicopter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Helicopter.FlatAppearance.BorderSize = 0;
+            this.btn_Helicopter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Helicopter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Helicopter.Location = new System.Drawing.Point(557, 211);
+            this.btn_Helicopter.Name = "btn_Helicopter";
+            this.btn_Helicopter.Size = new System.Drawing.Size(108, 102);
+            this.btn_Helicopter.TabIndex = 1;
+            this.btn_Helicopter.UseVisualStyleBackColor = false;
+            this.btn_Helicopter.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
+            this.btn_Helicopter.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 
-            // button2
+            // btn_Arcade
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(176, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 103);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
-            this.button2.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
+            this.btn_Arcade.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Arcade.BackgroundImage = global::DASHBOARD.Properties.Resources.gameicon155348103x103;
+            this.btn_Arcade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Arcade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Arcade.FlatAppearance.BorderSize = 0;
+            this.btn_Arcade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Arcade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Arcade.Location = new System.Drawing.Point(185, 357);
+            this.btn_Arcade.Name = "btn_Arcade";
+            this.btn_Arcade.Size = new System.Drawing.Size(109, 103);
+            this.btn_Arcade.TabIndex = 1;
+            this.btn_Arcade.UseVisualStyleBackColor = false;
+            this.btn_Arcade.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Arcade.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
+            this.btn_Arcade.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 
-            // button3
+            // btn_Snake
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(374, 363);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 106);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
-            this.button3.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
+            this.btn_Snake.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Snake.BackgroundImage = global::DASHBOARD.Properties.Resources._92x92;
+            this.btn_Snake.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Snake.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Snake.FlatAppearance.BorderSize = 0;
+            this.btn_Snake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Snake.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Snake.Location = new System.Drawing.Point(374, 366);
+            this.btn_Snake.Name = "btn_Snake";
+            this.btn_Snake.Size = new System.Drawing.Size(93, 94);
+            this.btn_Snake.TabIndex = 1;
+            this.btn_Snake.UseVisualStyleBackColor = false;
+            this.btn_Snake.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
+            this.btn_Snake.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 
-            // button4
+            // btn_OtherGame
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(557, 366);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 91);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
-            this.button4.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
+            this.btn_OtherGame.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OtherGame.BackgroundImage = global::DASHBOARD.Properties.Resources._103x103;
+            this.btn_OtherGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_OtherGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_OtherGame.FlatAppearance.BorderSize = 0;
+            this.btn_OtherGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OtherGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OtherGame.Location = new System.Drawing.Point(557, 366);
+            this.btn_OtherGame.Name = "btn_OtherGame";
+            this.btn_OtherGame.Size = new System.Drawing.Size(97, 100);
+            this.btn_OtherGame.TabIndex = 1;
+            this.btn_OtherGame.UseVisualStyleBackColor = false;
+            this.btn_OtherGame.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
+            this.btn_OtherGame.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 
             // FormHome
             // 
@@ -159,10 +161,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(908, 671);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Helicopter);
+            this.Controls.Add(this.btn_OtherGame);
+            this.Controls.Add(this.btn_Snake);
+            this.Controls.Add(this.btn_Arcade);
             this.Controls.Add(this.btnCarracing);
             this.Controls.Add(this.btn_RunningGame);
             this.Controls.Add(this.label1);
@@ -181,9 +183,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCarracing;
         private System.Windows.Forms.Button btn_RunningGame;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_Helicopter;
+        private System.Windows.Forms.Button btn_Arcade;
+        private System.Windows.Forms.Button btn_Snake;
+        private System.Windows.Forms.Button btn_OtherGame;
     }
 }

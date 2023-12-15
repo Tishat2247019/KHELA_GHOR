@@ -17,11 +17,20 @@ namespace DASHBOARD
         public partial class FormHome : Form
     {
     public static string username;
+
+        private Size originalSize;
+        private bool isHovered = false;
+
         public FormHome()
         {
             InitializeComponent();
             username = Dashboard.usernmaepass;
             btnCarracing.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_RunningGame.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_Snake.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_Arcade.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_OtherGame.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_Helicopter.FlatAppearance.MouseOverBackColor = Color.White;
         }
 
         private void FormHome_Load(object sender, EventArgs e)
@@ -80,17 +89,45 @@ namespace DASHBOARD
         private void btnCarracing_MouseHover(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            button.Location = new Point(button.Location.X -7, button.Location.Y);
-            button.Size = new Size(120, 115);
-            button.BringToFront();
+            //button.Location = new Point(button.Location.X -7, button.Location.Y);
+            //button.Size = new Size(120, 115);
+            //button.BringToFront();
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.btnCarracing, "CAR RACING");
+            tt.SetToolTip(this.btn_Arcade, "ARCADE GAME");
+            tt.SetToolTip(this.btn_Snake, "CLASSIC SNAKE GAME");
+            tt.SetToolTip(this.btn_RunningGame, "GRAVITY RUNNING GAME");
+            tt.SetToolTip(this.btn_Helicopter, "HELICOPTER SHOOTER");
+            tt.SetToolTip(this.btn_OtherGame, "OTHER GAME");
+            if (!isHovered)
+            {
+                originalSize = button.Size;
+               button.Location = new Point(button.Location.X -15, button.Location.Y);
+
+                button.Size = new Size(originalSize.Width + 36, originalSize.Height + 34);
+                isHovered = true;
+            }
         }
 
         private void btn_RunningGame_MouseLeave(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            button.Location = new Point(button.Location.X + 7, button.Location.Y);
-            button.Size = new Size(94, 91);
-            button.BringToFront();
+            // button.Location = new Point(button.Location.X +7, button.Location.Y);
+            // button.Size = new Size(94, 91);
+            //button.BringToFront();
+
+            if (isHovered)
+            {
+                 button.Location = new Point(button.Location.X + 15, button.Location.Y);
+
+                button.Size = originalSize;
+                isHovered = false;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

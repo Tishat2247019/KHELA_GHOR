@@ -96,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +120,33 @@
       <Project>{0900d191-7787-4da8-9a7b-4383a21236cc}</Project>
       <Name>RUNNING_GAME</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103x103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runningicon124491103x103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helicopter23771103x103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameicon155348103x103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snake-2103x103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92x92.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation - 1702661425530.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

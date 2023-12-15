@@ -12,6 +12,10 @@ namespace Car_Racing
 {
     public partial class Form1 : Form
     {
+        private Rectangle OriginalFormSize;
+        private Dictionary<Control, Rectangle> originalControlSizes = new Dictionary<Control, Rectangle>();
+        private Dictionary<Control, float> originalFontSizes = new Dictionary<Control, float>();
+
         int roadSpeed;
         int trafficSpeed;
         int playerSpeed = 12;
@@ -206,6 +210,81 @@ namespace Car_Racing
         {
             ResetGame();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            OriginalFormSize = new Rectangle(this.Location.X, this.Location.Y, this.Size.Width, this.Size.Height);
+
+            foreach (Control control in this.Controls)
+            {
+                originalControlSizes.Add(control, control.Bounds);
+                if (control is Label || control is CheckBox || control is Button)
+                {
+                    originalFontSizes.Add(control, control.Font.Size);
+                }
+            }
+        }
+
+
+        private void form1_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+                return;
+
+            float xRatio = (float)this.Width / OriginalFormSize.Width;
+            float yRatio = (float)this.Height / OriginalFormSize.Height;
+
+            foreach (Control control in this.Controls)
+            {
+                if (originalControlSizes.ContainsKey(control))
+                {
+                    Rectangle originalSize = originalControlSizes[control];
+
+                    int newX = (int)(originalSize.X * xRatio);
+                    int newY = (int)(originalSize.Y * yRatio);
+                    int newWidth = (int)(originalSize.Width * xRatio);
+                    int newHeight = (int)(originalSize.Height * yRatio);
+
+                    if (control is TextBox || control is PictureBox)
+                    {
+                        TextBox textBox = (TextBox)control;
+                        float textBoxFontSize = textBox.Font.Size * Math.Min(xRatio, yRatio);
+                        Font textBoxFont = new Font(textBox.Font.FontFamily, textBoxFontSize, textBox.Font.Style);
+                        textBox.Font = textBoxFont;
+                    }
+
+                    control.Location = new Point(newX, newY);
+                    control.Size = new Size(newWidth, newHeight);
+
+                    if (originalFontSizes.ContainsKey(control))
+                    {
+                        float originalFontSize = originalFontSizes[control];
+                        float newFontSize = originalFontSize * Math.Min(xRatio, yRatio);
+
+                        Font newFont = new Font(control.Font.FontFamily, newFontSize, control.Font.Style);
+
+                        if (control is Label || control is CheckBox)
+                        {
+                            control.Font = newFont;
+                            // Adjust CheckBox and Labels position
+                            control.Location = new Point(newX, newY);
+                        }
+                        else if (control is Button)
+                        {
+                            ((Button)control).Font = newFont;
+                        }
+                    }
+
+                    // Additional logic for repositioning specific PictureBoxes
+                    if (control == roadTrack1 || control == roadTrack2 || control == AI1 || control == AI2)
+                    {
+                        control.Left = (int)(control.Left * xRatio);
+                        control.Top = (int)(control.Top * yRatio);
+                    }
+                }
+            }
+        }
+
 
         public void playSound()
         {
