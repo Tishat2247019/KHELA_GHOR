@@ -28,7 +28,7 @@ namespace DASHBOARD
                 //open connection
                 con.Open();
 
-                string query = "SELECT user_name, score_value FROM Leader_Board";
+                string query = "SELECT TOP 10 user_name as 'User Name', CAST(score_value AS INT) as Scores \r\nFROM Leader_Board\r\nORDER BY CAST(score_value AS INT) DESC;";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 var reader = cmd.ExecuteReader();

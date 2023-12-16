@@ -34,16 +34,16 @@
             this.panel_top = new System.Windows.Forms.Panel();
             this.lbl_Menu = new System.Windows.Forms.Label();
             this.panel_home = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel_scoreboard = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel_settings = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel_help = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.sideBar_timer = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_UserNameHi = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.picBox_Menu = new System.Windows.Forms.PictureBox();
             this.btn_Home = new System.Windows.Forms.Button();
             this.btn_ScoreBoard = new System.Windows.Forms.Button();
@@ -107,6 +107,16 @@
             this.panel_home.Size = new System.Drawing.Size(202, 77);
             this.panel_home.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(9, 77);
+            this.panel3.TabIndex = 6;
+            this.panel3.Visible = false;
+            // 
             // panel_scoreboard
             // 
             this.panel_scoreboard.Controls.Add(this.panel4);
@@ -116,6 +126,16 @@
             this.panel_scoreboard.Name = "panel_scoreboard";
             this.panel_scoreboard.Size = new System.Drawing.Size(202, 77);
             this.panel_scoreboard.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(9, 77);
+            this.panel4.TabIndex = 6;
+            this.panel4.Visible = false;
             // 
             // panel_settings
             // 
@@ -127,6 +147,16 @@
             this.panel_settings.Size = new System.Drawing.Size(202, 77);
             this.panel_settings.TabIndex = 2;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(9, 77);
+            this.panel5.TabIndex = 6;
+            this.panel5.Visible = false;
+            // 
             // panel_help
             // 
             this.panel_help.Controls.Add(this.panel6);
@@ -136,6 +166,16 @@
             this.panel_help.Name = "panel_help";
             this.panel_help.Size = new System.Drawing.Size(202, 77);
             this.panel_help.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(9, 77);
+            this.panel6.TabIndex = 6;
+            this.panel6.Visible = false;
             // 
             // sideBar_timer
             // 
@@ -162,46 +202,6 @@
             this.lbl_UserNameHi.TabIndex = 0;
             this.lbl_UserNameHi.Text = "label1";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(9, 77);
-            this.panel3.TabIndex = 6;
-            this.panel3.Visible = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(9, 77);
-            this.panel4.TabIndex = 6;
-            this.panel4.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(9, 77);
-            this.panel5.TabIndex = 6;
-            this.panel5.Visible = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(9, 77);
-            this.panel6.TabIndex = 6;
-            this.panel6.Visible = false;
-            // 
             // picBox_Menu
             // 
             this.picBox_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -222,7 +222,7 @@
             this.btn_Home.FlatAppearance.BorderSize = 0;
             this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Home.Image = ((System.Drawing.Image)(resources.GetObject("btn_Home.Image")));
+            this.btn_Home.Image = global::DASHBOARD.Properties.Resources.home_135x35;
             this.btn_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Home.Location = new System.Drawing.Point(12, 15);
             this.btn_Home.Name = "btn_Home";
@@ -245,7 +245,7 @@
             this.btn_ScoreBoard.FlatAppearance.BorderSize = 0;
             this.btn_ScoreBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ScoreBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ScoreBoard.Image = ((System.Drawing.Image)(resources.GetObject("btn_ScoreBoard.Image")));
+            this.btn_ScoreBoard.Image = global::DASHBOARD.Properties.Resources.scoreboard35x35;
             this.btn_ScoreBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ScoreBoard.Location = new System.Drawing.Point(12, 15);
             this.btn_ScoreBoard.Name = "btn_ScoreBoard";
@@ -267,7 +267,7 @@
             this.btn_Settings.FlatAppearance.BorderSize = 0;
             this.btn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Settings.Image = ((System.Drawing.Image)(resources.GetObject("btn_Settings.Image")));
+            this.btn_Settings.Image = global::DASHBOARD.Properties.Resources.settings35x35;
             this.btn_Settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Settings.Location = new System.Drawing.Point(12, 15);
             this.btn_Settings.Name = "btn_Settings";
@@ -290,7 +290,7 @@
             this.btn_Help.FlatAppearance.BorderSize = 0;
             this.btn_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Help.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Help.Image = ((System.Drawing.Image)(resources.GetObject("btn_Help.Image")));
+            this.btn_Help.Image = global::DASHBOARD.Properties.Resources.support35x35;
             this.btn_Help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Help.Location = new System.Drawing.Point(12, 15);
             this.btn_Help.Name = "btn_Help";

@@ -123,6 +123,16 @@ namespace DASHBOARD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_135x35 {
+            get {
+                object obj = ResourceManager.GetObject("home-135x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap runningicon124491103x103 {
             get {
                 object obj = ResourceManager.GetObject("runningicon124491103x103", resourceCulture);
@@ -133,9 +143,39 @@ namespace DASHBOARD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap scoreboard35x35 {
+            get {
+                object obj = ResourceManager.GetObject("scoreboard35x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings35x35 {
+            get {
+                object obj = ResourceManager.GetObject("settings35x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap snake_2103x103 {
             get {
                 object obj = ResourceManager.GetObject("snake-2103x103", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap support35x35 {
+            get {
+                object obj = ResourceManager.GetObject("support35x35", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

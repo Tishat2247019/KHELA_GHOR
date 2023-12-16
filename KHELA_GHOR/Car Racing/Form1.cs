@@ -64,11 +64,11 @@ namespace Car_Racing
             txtScore.Text = "Score: " + score;
             score++;
  
-            if (goleft == true && player.Left > 10)
+            if (goleft == true && player.Left > 2)
             {
                 player.Left -= playerSpeed;
             }
-            if (goright == true && player.Left < 300)
+            if (goright == true && player.Left < 904)
             {
                 player.Left += playerSpeed;
             }
@@ -76,23 +76,23 @@ namespace Car_Racing
             roadTrack1.Top += roadSpeed;
             roadTrack2.Top += roadSpeed;
 
-            if (roadTrack2.Top > 519)
+            if (roadTrack2.Top > 436)
             {
-                roadTrack2.Top = -519;
+                roadTrack2.Top = -436;
             }
-            if (roadTrack1.Top > 519)
+            if (roadTrack1.Top > 436)
             {
-                roadTrack1.Top = -519;
+                roadTrack1.Top = -436;
             }
 
             AI1.Top += trafficSpeed;
             AI2.Top += trafficSpeed;
 
-            if (AI1.Top > 530)
+            if (AI1.Top > 425)
             {
                 changeAIcars(AI1);
             }
-            if (AI2.Top > 530)
+            if (AI2.Top > 425)
             {
                 changeAIcars(AI2);
             }
@@ -157,15 +157,15 @@ namespace Car_Racing
                     break;
             }
 
-            tempCar.Top = carPosition.Next(100, 400) * -1;
+            tempCar.Top = carPosition.Next(50, 700) * -1;
 
             if((string)tempCar.Tag == "carLeft")
             {
-                tempCar.Left = carPosition.Next(5, 200);
+                tempCar.Left = carPosition.Next(11, 375);
             }
             if((string)tempCar.Tag == "carRight")
             {
-                tempCar.Left = carPosition.Next(245, 422);
+                tempCar.Left = carPosition.Next(511, 876);
             }
         }
 
@@ -197,11 +197,11 @@ namespace Car_Racing
             roadSpeed = 12;
             trafficSpeed = 15;
 
-            AI1.Top = carPosition.Next(200, 500) * -1;
-            AI1.Left = carPosition.Next(5, 200);
+            AI1.Top = carPosition.Next(300, 500) * -1;
+            AI1.Left = carPosition.Next(11, 375);
 
-            AI2.Top = carPosition.Next(200, 500) * -1;
-            AI2.Left = carPosition.Next(245, 422);
+            AI2.Top = carPosition.Next(300, 500) * -1;
+            AI2.Left = carPosition.Next(511, 876);
 
             gameTimer.Start();
         }
@@ -285,11 +285,20 @@ namespace Car_Racing
             }
         }
 
+        private void player_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void roadTrack2_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public void playSound()
         {
             System.Media.SoundPlayer playClash = new System.Media.SoundPlayer(Properties.Resources.hit);
-            playClash.Play();
+            //playClash.Play();
         }
 
     }

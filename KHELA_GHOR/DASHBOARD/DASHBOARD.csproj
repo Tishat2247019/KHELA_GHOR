@@ -88,6 +88,9 @@
     <EmbeddedResource Include="FormScoreBoard.resx">
       <DependentUpon>FormScoreBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -147,6 +150,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\app %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-135x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreboard35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\support35x35.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

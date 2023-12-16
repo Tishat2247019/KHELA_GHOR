@@ -215,6 +215,16 @@ namespace DASHBOARD
             panel4.Visible = false;
             panel5.Visible = true;
             panel6.Visible = false;
+            Settings = new FormSettings();
+            Settings.FormClosed += formSettings_FormClosed;
+            Settings.MdiParent = this;
+            Settings.Dock = DockStyle.Fill;
+            Settings.Show();
+        }
+
+        private void formSettings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            home = null;
         }
 
         private void btn_Help_Click(object sender, EventArgs e)

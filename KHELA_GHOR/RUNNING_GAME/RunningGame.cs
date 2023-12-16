@@ -144,10 +144,10 @@ namespace RUNNING_GAME
                         s.Load();
                         s.Play();
                         // lblScore.Text += " Game Over !! Press Enter to Restert";
+                        SaveHighScore(username, score);
                         if (score > highscore)
                         {
                             highscore = score;
-                            SaveHighScore(username, highscore);
                             id = RunnigGamePopUp.showHighScore($"Your score is {score}");
                         }
                         else
@@ -246,13 +246,22 @@ namespace RUNNING_GAME
             //open connection
             con.Open();
             string game_name = "RunningGame";
-            string user_name =  playerName ;
+            string user_name = playerName;
             string score1 = score.ToString();
             string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name+ "', '" + score1 + "')";
-            //exucute Query
             SqlCommand cmd = new SqlCommand(query, con);
+            
+            string deleteQueary = "DELETE FROM Leader_Board WHERE score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board ORDER BY CAST(score_value AS INT) DESC)";
+            SqlCommand cmd1= new SqlCommand(deleteQueary, con);
+           
+            
+            //exucute Query
             cmd.ExecuteNonQuery();
 
+
+            cmd1.ExecuteNonQuery();
+            
+            
             //close the connection
             con.Close();
           
