@@ -160,7 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(908, 671);
+            this.ClientSize = new System.Drawing.Size(908, 639);
             this.Controls.Add(this.btn_Helicopter);
             this.Controls.Add(this.btn_OtherGame);
             this.Controls.Add(this.btn_Snake);

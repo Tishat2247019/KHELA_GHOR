@@ -82,6 +82,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHelp.resx">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +131,9 @@
     <None Include="Resources\103x103.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\MontereyMediumFLF.ttf" />
+    <None Include="Resources\Nunito-Bold.ttf" />
+    <None Include="Resources\Nunito-SemiBold.ttf" />
     <None Include="Resources\runningicon124491103x103.png" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +168,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\support35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

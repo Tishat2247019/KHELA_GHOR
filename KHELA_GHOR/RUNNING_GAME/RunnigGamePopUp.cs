@@ -28,8 +28,10 @@ namespace RUNNING_GAME
         {
             newMessageBox = new RunnigGamePopUp();
             newMessageBox.lbl_congrats.Visible = true;
-            newMessageBox.picbox_lottie.BackgroundImage = Resources.Animation___1702657303627;
+            newMessageBox.picBox_lottie.Visible = true;
+            newMessageBox.picBox_lottie.BackgroundImage = Resources.Animation___1702657303627;
             newMessageBox.lbl_Score.Text = txt;
+            newMessageBox.signUPerror_Oops.Text = "Hurray...";
             newMessageBox.picbox_gameOver.Image = Resources.output_onlinegiftools;
             newMessageBox.lbl_Score.Text = txt;
             newMessageBox.lbl_Score.Visible = true;

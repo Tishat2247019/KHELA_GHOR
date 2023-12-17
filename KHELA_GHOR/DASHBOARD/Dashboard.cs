@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RUNNING_GAME;
 using Car_Racing;
+using System.Drawing.Text;
+using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 
 //using MDITest;
 
@@ -32,8 +35,8 @@ namespace DASHBOARD
         public Dashboard()
         {
             InitializeComponent();
-            
 
+            //InitCustomLabelFont();
             btn_Help.FlatAppearance.MouseOverBackColor = Color.FromArgb(241, 90, 41);
             btn_Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(241, 90, 41);
             btn_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(241, 90, 41);
@@ -44,6 +47,7 @@ namespace DASHBOARD
         {
             //lbl_UserNameHi.Text = "dsa";
             InitializeComponent();
+           // InitCustomLabelFont();
             lbl_UserNameHi.Text = "Hi , "+ username;
             usernmaepass = username;
         }
@@ -130,9 +134,37 @@ namespace DASHBOARD
         {
             home = null;
         }
+        private void InitCustomLabelFont()
+        {
+            //Create your private font collection object.
+            PrivateFontCollection pfc = new PrivateFontCollection();
+
+            //Select your font from the resources.
+            //My font here is "Digireu.ttf"
+            int fontLength = Properties.Resources.MontereyMediumFLF.Length;
+
+            // create a buffer to read in to
+            byte[] fontdata = Properties.Resources.MontereyMediumFLF;
+
+            // create an unsafe memory block for the font data
+            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+
+            // copy the bytes to the unsafe memory block
+            Marshal.Copy(fontdata, 0, data, fontLength);
+
+            // pass the font to the font collection
+            pfc.AddMemoryFont(data, fontLength);
+
+            //After that we can create font and assign font to label
+            btn_Help.Font = new Font(pfc.Families[0], btn_Help.Font.Size);
+
+            Marshal.FreeCoTaskMem(data);
+            //lbl_contact.Text = "";
+        }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            
             panel3.Visible = true;
             home = new FormHome();
             home.FormClosed += FormHome_FormClosed;
@@ -233,6 +265,19 @@ namespace DASHBOARD
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = true;
+
+            if (help == null)
+            {
+                help = new FormHelp();
+                help.FormClosed += FormHome_FormClosed;
+                help.MdiParent = this;
+                help.Dock = DockStyle.Fill;
+                help.Show();
+            }
+            else
+            {
+                help.Activate();
+            }
         }
 
        

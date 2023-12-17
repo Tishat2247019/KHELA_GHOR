@@ -170,7 +170,7 @@ namespace LOGIN_REGISTRATION
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -180,8 +180,16 @@ namespace LOGIN_REGISTRATION
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            if(txt_PassLogin.Text.Length < 6)
+            {
+                errorProvider2.SetError(this.txt_PassLogin, "Please Must be at least 6 character long!!");
+            }
+            else
+            {
+                errorProvider2.Clear();
+            }
         }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -298,9 +306,9 @@ namespace LOGIN_REGISTRATION
                     //MessageBox.Show("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     SignUpExistError.showLogin("Invalid Login Details");
                     txt_UserLogin.Clear();
-                    txt_PassLogin.Clear();
+                    //txt_PassLogin.Clear();
 
-                    txt_UserLogin.Focus();
+                    txt_PassLogin.Focus();
                 }
 
             }

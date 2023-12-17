@@ -34,36 +34,32 @@
             this.SignUp_label2 = new System.Windows.Forms.Label();
             this.button_Signin = new System.Windows.Forms.Button();
             this.button_signup = new System.Windows.Forms.Button();
+            this.picBox_EmailBefore = new System.Windows.Forms.PictureBox();
+            this.picBox_EmailAfter = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.TxtBoxEmail_SignUp = new System.Windows.Forms.TextBox();
+            this.picBox_Eye2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtBoxConPassword_Signup = new System.Windows.Forms.TextBox();
+            this.picBox_Eye1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBoxPassword_Signup = new System.Windows.Forms.TextBox();
             this.txtBoxUser_SignUp = new System.Windows.Forms.TextBox();
-            this.SignUp_lable1 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnBack_Signup = new System.Windows.Forms.Button();
-            this.picBox_EmailBefore = new System.Windows.Forms.PictureBox();
-            this.picBox_EmailAfter = new System.Windows.Forms.PictureBox();
-            this.picBox_Eye2 = new System.Windows.Forms.PictureBox();
-            this.picBox_Eye1 = new System.Windows.Forms.PictureBox();
             this.picBox_userBefore = new System.Windows.Forms.PictureBox();
             this.picBox_UserAfter = new System.Windows.Forms.PictureBox();
             this.picBox_ConPassBefore = new System.Windows.Forms.PictureBox();
             this.picBox_ConPassAfter = new System.Windows.Forms.PictureBox();
             this.picBox_PassBefore = new System.Windows.Forms.PictureBox();
             this.picBox_PassAfter = new System.Windows.Forms.PictureBox();
+            this.SignUp_lable1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnBack_Signup = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_EmailBefore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_EmailAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Eye2)).BeginInit();
@@ -74,6 +70,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox_ConPassAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_PassBefore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_PassAfter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +151,28 @@
             this.button_signup.UseVisualStyleBackColor = false;
             this.button_signup.Click += new System.EventHandler(this.button_signup_Click);
             // 
+            // picBox_EmailBefore
+            // 
+            this.picBox_EmailBefore.Image = global::KHELA_GHOR.Properties.Resources.Asset_10_1_5x;
+            this.picBox_EmailBefore.Location = new System.Drawing.Point(13, 56);
+            this.picBox_EmailBefore.Name = "picBox_EmailBefore";
+            this.picBox_EmailBefore.Size = new System.Drawing.Size(24, 33);
+            this.picBox_EmailBefore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox_EmailBefore.TabIndex = 18;
+            this.picBox_EmailBefore.TabStop = false;
+            this.picBox_EmailBefore.Click += new System.EventHandler(this.email_before_Click);
+            // 
+            // picBox_EmailAfter
+            // 
+            this.picBox_EmailAfter.Image = global::KHELA_GHOR.Properties.Resources.EMAIL_AFTER_1_2x;
+            this.picBox_EmailAfter.Location = new System.Drawing.Point(13, 60);
+            this.picBox_EmailAfter.Name = "picBox_EmailAfter";
+            this.picBox_EmailAfter.Size = new System.Drawing.Size(22, 29);
+            this.picBox_EmailAfter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox_EmailAfter.TabIndex = 17;
+            this.picBox_EmailAfter.TabStop = false;
+            this.picBox_EmailAfter.Click += new System.EventHandler(this.email_after_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
@@ -174,6 +196,19 @@
             this.TxtBoxEmail_SignUp.TextChanged += new System.EventHandler(this.TxtBox_Email_TextChanged);
             this.TxtBoxEmail_SignUp.Leave += new System.EventHandler(this.TxtBox_Email_Leave);
             // 
+            // picBox_Eye2
+            // 
+            this.picBox_Eye2.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
+            this.picBox_Eye2.Location = new System.Drawing.Point(289, 181);
+            this.picBox_Eye2.Name = "picBox_Eye2";
+            this.picBox_Eye2.Size = new System.Drawing.Size(23, 28);
+            this.picBox_Eye2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox_Eye2.TabIndex = 11;
+            this.picBox_Eye2.TabStop = false;
+            this.picBox_Eye2.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.picBox_Eye2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseDown);
+            this.picBox_Eye2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseUp);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
@@ -196,6 +231,19 @@
             this.txtBoxConPassword_Signup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox3_MouseClick);
             this.txtBoxConPassword_Signup.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.txtBoxConPassword_Signup.Leave += new System.EventHandler(this.txtBoxConPassword_Signup_Leave);
+            // 
+            // picBox_Eye1
+            // 
+            this.picBox_Eye1.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
+            this.picBox_Eye1.Location = new System.Drawing.Point(289, 125);
+            this.picBox_Eye1.Name = "picBox_Eye1";
+            this.picBox_Eye1.Size = new System.Drawing.Size(23, 28);
+            this.picBox_Eye1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox_Eye1.TabIndex = 7;
+            this.picBox_Eye1.TabStop = false;
+            this.picBox_Eye1.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.picBox_Eye1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
+            this.picBox_Eye1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
             // 
             // panel4
             // 
@@ -242,95 +290,6 @@
             this.txtBoxUser_SignUp.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             this.txtBoxUser_SignUp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtBoxUser_SignUp.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // SignUp_lable1
-            // 
-            this.SignUp_lable1.AutoSize = true;
-            this.SignUp_lable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
-            this.SignUp_lable1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUp_lable1.Location = new System.Drawing.Point(577, 14);
-            this.SignUp_lable1.Name = "SignUp_lable1";
-            this.SignUp_lable1.Size = new System.Drawing.Size(375, 25);
-            this.SignUp_lable1.TabIndex = 21;
-            this.SignUp_lable1.Text = "Let\'s Create a Khela Ghor Account";
-            this.SignUp_lable1.Click += new System.EventHandler(this.Label_SignUp_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
-            // errorProvider3
-            // 
-            this.errorProvider3.ContainerControl = this;
-            // 
-            // errorProvider4
-            // 
-            this.errorProvider4.ContainerControl = this;
-            // 
-            // btnBack_Signup
-            // 
-            this.btnBack_Signup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack_Signup.BackgroundImage")));
-            this.btnBack_Signup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBack_Signup.FlatAppearance.BorderSize = 0;
-            this.btnBack_Signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack_Signup.Location = new System.Drawing.Point(4, 5);
-            this.btnBack_Signup.Name = "btnBack_Signup";
-            this.btnBack_Signup.Size = new System.Drawing.Size(34, 34);
-            this.btnBack_Signup.TabIndex = 5;
-            this.btnBack_Signup.UseVisualStyleBackColor = true;
-            this.btnBack_Signup.Click += new System.EventHandler(this.btnBack_Signup_Click);
-            // 
-            // picBox_EmailBefore
-            // 
-            this.picBox_EmailBefore.Image = global::KHELA_GHOR.Properties.Resources.Asset_10_1_5x;
-            this.picBox_EmailBefore.Location = new System.Drawing.Point(13, 56);
-            this.picBox_EmailBefore.Name = "picBox_EmailBefore";
-            this.picBox_EmailBefore.Size = new System.Drawing.Size(24, 33);
-            this.picBox_EmailBefore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBox_EmailBefore.TabIndex = 18;
-            this.picBox_EmailBefore.TabStop = false;
-            this.picBox_EmailBefore.Click += new System.EventHandler(this.email_before_Click);
-            // 
-            // picBox_EmailAfter
-            // 
-            this.picBox_EmailAfter.Image = global::KHELA_GHOR.Properties.Resources.EMAIL_AFTER_1_2x;
-            this.picBox_EmailAfter.Location = new System.Drawing.Point(13, 60);
-            this.picBox_EmailAfter.Name = "picBox_EmailAfter";
-            this.picBox_EmailAfter.Size = new System.Drawing.Size(22, 29);
-            this.picBox_EmailAfter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBox_EmailAfter.TabIndex = 17;
-            this.picBox_EmailAfter.TabStop = false;
-            this.picBox_EmailAfter.Click += new System.EventHandler(this.email_after_Click);
-            // 
-            // picBox_Eye2
-            // 
-            this.picBox_Eye2.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
-            this.picBox_Eye2.Location = new System.Drawing.Point(289, 181);
-            this.picBox_Eye2.Name = "picBox_Eye2";
-            this.picBox_Eye2.Size = new System.Drawing.Size(23, 28);
-            this.picBox_Eye2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBox_Eye2.TabIndex = 11;
-            this.picBox_Eye2.TabStop = false;
-            this.picBox_Eye2.Click += new System.EventHandler(this.pictureBox5_Click);
-            this.picBox_Eye2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseDown);
-            this.picBox_Eye2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseUp);
-            // 
-            // picBox_Eye1
-            // 
-            this.picBox_Eye1.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
-            this.picBox_Eye1.Location = new System.Drawing.Point(289, 125);
-            this.picBox_Eye1.Name = "picBox_Eye1";
-            this.picBox_Eye1.Size = new System.Drawing.Size(23, 28);
-            this.picBox_Eye1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBox_Eye1.TabIndex = 7;
-            this.picBox_Eye1.TabStop = false;
-            this.picBox_Eye1.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.picBox_Eye1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
-            this.picBox_Eye1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
             // 
             // picBox_userBefore
             // 
@@ -400,6 +359,47 @@
             this.picBox_PassAfter.Visible = false;
             this.picBox_PassAfter.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
+            // SignUp_lable1
+            // 
+            this.SignUp_lable1.AutoSize = true;
+            this.SignUp_lable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.SignUp_lable1.Font = new System.Drawing.Font("Roboto Mono", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUp_lable1.Location = new System.Drawing.Point(577, 14);
+            this.SignUp_lable1.Name = "SignUp_lable1";
+            this.SignUp_lable1.Size = new System.Drawing.Size(375, 25);
+            this.SignUp_lable1.TabIndex = 21;
+            this.SignUp_lable1.Text = "Let\'s Create a Khela Ghor Account";
+            this.SignUp_lable1.Click += new System.EventHandler(this.Label_SignUp_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // btnBack_Signup
+            // 
+            this.btnBack_Signup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack_Signup.BackgroundImage")));
+            this.btnBack_Signup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBack_Signup.FlatAppearance.BorderSize = 0;
+            this.btnBack_Signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack_Signup.Location = new System.Drawing.Point(4, 5);
+            this.btnBack_Signup.Name = "btnBack_Signup";
+            this.btnBack_Signup.Size = new System.Drawing.Size(34, 34);
+            this.btnBack_Signup.TabIndex = 5;
+            this.btnBack_Signup.UseVisualStyleBackColor = true;
+            this.btnBack_Signup.Click += new System.EventHandler(this.btnBack_Signup_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -431,10 +431,6 @@
             this.Resize += new System.EventHandler(this.Registration_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_EmailBefore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_EmailAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Eye2)).EndInit();
@@ -445,6 +441,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox_ConPassAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_PassBefore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_PassAfter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
