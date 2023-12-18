@@ -35,19 +35,19 @@
             this.lbl_Menu = new System.Windows.Forms.Label();
             this.picBox_Menu = new System.Windows.Forms.PictureBox();
             this.panel_home = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_sidehome = new System.Windows.Forms.Panel();
             this.btn_Home = new System.Windows.Forms.Button();
             this.panel_scoreboard = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel_sidescore = new System.Windows.Forms.Panel();
             this.btn_ScoreBoard = new System.Windows.Forms.Button();
             this.panel_settings = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel_sidesettings = new System.Windows.Forms.Panel();
             this.btn_Settings = new System.Windows.Forms.Button();
             this.panel_help = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel_sidehelp = new System.Windows.Forms.Panel();
             this.btn_Help = new System.Windows.Forms.Button();
             this.sideBar_timer = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_topcontainer = new System.Windows.Forms.Panel();
             this.lbl_UserNameHi = new System.Windows.Forms.Label();
             this.panel_sideBarContainer.SuspendLayout();
             this.panel_top.SuspendLayout();
@@ -56,7 +56,7 @@
             this.panel_scoreboard.SuspendLayout();
             this.panel_settings.SuspendLayout();
             this.panel_help.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_topcontainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_sideBarContainer
@@ -111,7 +111,7 @@
             // 
             // panel_home
             // 
-            this.panel_home.Controls.Add(this.panel3);
+            this.panel_home.Controls.Add(this.panel_sidehome);
             this.panel_home.Controls.Add(this.btn_Home);
             this.panel_home.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_home.Location = new System.Drawing.Point(3, 82);
@@ -119,14 +119,14 @@
             this.panel_home.Size = new System.Drawing.Size(202, 77);
             this.panel_home.TabIndex = 1;
             // 
-            // panel3
+            // panel_sidehome
             // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(0, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 70);
-            this.panel3.TabIndex = 6;
-            this.panel3.Visible = false;
+            this.panel_sidehome.BackColor = System.Drawing.Color.Black;
+            this.panel_sidehome.Location = new System.Drawing.Point(0, 4);
+            this.panel_sidehome.Name = "panel_sidehome";
+            this.panel_sidehome.Size = new System.Drawing.Size(5, 70);
+            this.panel_sidehome.TabIndex = 6;
+            this.panel_sidehome.Visible = false;
             // 
             // btn_Home
             // 
@@ -153,7 +153,7 @@
             // 
             // panel_scoreboard
             // 
-            this.panel_scoreboard.Controls.Add(this.panel4);
+            this.panel_scoreboard.Controls.Add(this.panel_sidescore);
             this.panel_scoreboard.Controls.Add(this.btn_ScoreBoard);
             this.panel_scoreboard.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_scoreboard.Location = new System.Drawing.Point(3, 165);
@@ -161,14 +161,14 @@
             this.panel_scoreboard.Size = new System.Drawing.Size(202, 77);
             this.panel_scoreboard.TabIndex = 2;
             // 
-            // panel4
+            // panel_sidescore
             // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(0, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 70);
-            this.panel4.TabIndex = 6;
-            this.panel4.Visible = false;
+            this.panel_sidescore.BackColor = System.Drawing.Color.Black;
+            this.panel_sidescore.Location = new System.Drawing.Point(0, 4);
+            this.panel_sidescore.Name = "panel_sidescore";
+            this.panel_sidescore.Size = new System.Drawing.Size(5, 70);
+            this.panel_sidescore.TabIndex = 6;
+            this.panel_sidescore.Visible = false;
             // 
             // btn_ScoreBoard
             // 
@@ -194,7 +194,7 @@
             // 
             // panel_settings
             // 
-            this.panel_settings.Controls.Add(this.panel5);
+            this.panel_settings.Controls.Add(this.panel_sidesettings);
             this.panel_settings.Controls.Add(this.btn_Settings);
             this.panel_settings.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_settings.Location = new System.Drawing.Point(3, 248);
@@ -202,14 +202,14 @@
             this.panel_settings.Size = new System.Drawing.Size(202, 77);
             this.panel_settings.TabIndex = 2;
             // 
-            // panel5
+            // panel_sidesettings
             // 
-            this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(0, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 70);
-            this.panel5.TabIndex = 6;
-            this.panel5.Visible = false;
+            this.panel_sidesettings.BackColor = System.Drawing.Color.Black;
+            this.panel_sidesettings.Location = new System.Drawing.Point(0, 4);
+            this.panel_sidesettings.Name = "panel_sidesettings";
+            this.panel_sidesettings.Size = new System.Drawing.Size(5, 70);
+            this.panel_sidesettings.TabIndex = 6;
+            this.panel_sidesettings.Visible = false;
             // 
             // btn_Settings
             // 
@@ -236,7 +236,7 @@
             // 
             // panel_help
             // 
-            this.panel_help.Controls.Add(this.panel6);
+            this.panel_help.Controls.Add(this.panel_sidehelp);
             this.panel_help.Controls.Add(this.btn_Help);
             this.panel_help.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_help.Location = new System.Drawing.Point(3, 331);
@@ -244,14 +244,14 @@
             this.panel_help.Size = new System.Drawing.Size(202, 77);
             this.panel_help.TabIndex = 2;
             // 
-            // panel6
+            // panel_sidehelp
             // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(0, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 70);
-            this.panel6.TabIndex = 6;
-            this.panel6.Visible = false;
+            this.panel_sidehelp.BackColor = System.Drawing.Color.Black;
+            this.panel_sidehelp.Location = new System.Drawing.Point(0, 4);
+            this.panel_sidehelp.Name = "panel_sidehelp";
+            this.panel_sidehelp.Size = new System.Drawing.Size(5, 70);
+            this.panel_sidehelp.TabIndex = 6;
+            this.panel_sidehelp.Visible = false;
             // 
             // btn_Help
             // 
@@ -282,15 +282,15 @@
             this.sideBar_timer.Interval = 50;
             this.sideBar_timer.Tick += new System.EventHandler(this.sideBar_timer_Tick);
             // 
-            // panel1
+            // panel_topcontainer
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
-            this.panel1.Controls.Add(this.lbl_UserNameHi);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(203, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(892, 32);
-            this.panel1.TabIndex = 3;
+            this.panel_topcontainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.panel_topcontainer.Controls.Add(this.lbl_UserNameHi);
+            this.panel_topcontainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_topcontainer.Location = new System.Drawing.Point(203, 0);
+            this.panel_topcontainer.Name = "panel_topcontainer";
+            this.panel_topcontainer.Size = new System.Drawing.Size(892, 32);
+            this.panel_topcontainer.TabIndex = 3;
             // 
             // lbl_UserNameHi
             // 
@@ -305,9 +305,10 @@
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1095, 632);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_topcontainer);
             this.Controls.Add(this.panel_sideBarContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -315,6 +316,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.Resize += new System.EventHandler(this.Dashboard_Resize);
             this.panel_sideBarContainer.ResumeLayout(false);
             this.panel_top.ResumeLayout(false);
             this.panel_top.PerformLayout();
@@ -323,8 +325,8 @@
             this.panel_scoreboard.ResumeLayout(false);
             this.panel_settings.ResumeLayout(false);
             this.panel_help.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_topcontainer.ResumeLayout(false);
+            this.panel_topcontainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,12 +342,12 @@
         private System.Windows.Forms.Panel panel_help;
         private System.Windows.Forms.Button btn_Help;
         private System.Windows.Forms.Timer sideBar_timer;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_topcontainer;
         private System.Windows.Forms.Label lbl_UserNameHi;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel_sidehome;
+        private System.Windows.Forms.Panel panel_sidescore;
+        private System.Windows.Forms.Panel panel_sidesettings;
+        private System.Windows.Forms.Panel panel_sidehelp;
         private System.Windows.Forms.Panel panel_top;
         private System.Windows.Forms.Label lbl_Menu;
         private System.Windows.Forms.PictureBox picBox_Menu;

@@ -34,6 +34,7 @@
             this.EmtertainLabel_Welcom = new System.Windows.Forms.Label();
             this.btnSignUp_Welcom = new System.Windows.Forms.Button();
             this.btnSignIn_Welcom = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // HeyYouLabel_Welcom
@@ -143,6 +144,7 @@
         private System.Windows.Forms.Label EmtertainLabel_Welcom;
         private System.Windows.Forms.Button btnSignUp_Welcom;
         private System.Windows.Forms.Button btnSignIn_Welcom;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

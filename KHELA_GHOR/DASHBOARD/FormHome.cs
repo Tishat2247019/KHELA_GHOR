@@ -20,6 +20,7 @@ namespace DASHBOARD
     public static string username;
 
         private Size originalSize;
+        private Size originalSize2;
         private bool isHovered = false;
 
         public FormHome()
@@ -93,19 +94,50 @@ namespace DASHBOARD
             //button.Location = new Point(button.Location.X -7, button.Location.Y);
             //button.Size = new Size(120, 115);
             //button.BringToFront();
+            Label label; // Declare the label separately
+            if (sender == btnCarracing)
+            {
+                label = lbl_carracing;// Replace lbl_CarRacing with the actual label name
+            }
+            else if (sender == btn_Arcade)
+            {
+                label = lbl_arcadegame; // Replace lbl_Arcade with the actual label name
+            }
+            else if (sender == btn_Snake)
+            {
+                label = lbl_classicsnkegame; // Replace lbl_Snake with the actual label name
+            }
+            else if (sender == btn_RunningGame)
+            {
+                label = lbl_runninggame; // Replace lbl_RunningGame with the actual label name
+            }
+            else if (sender == btn_Helicopter)
+            {
+                label = lbl_helicoptergame; // Replace lbl_Helicopter with the actual label name
+            }
+
+            else
+            {
+                return; // Handle other cases if necessary
+            }
+
+
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.btnCarracing, "CAR RACING");
             tt.SetToolTip(this.btn_Arcade, "ARCADE GAME");
             tt.SetToolTip(this.btn_Snake, "CLASSIC SNAKE GAME");
             tt.SetToolTip(this.btn_RunningGame, "GRAVITY RUNNING GAME");
             tt.SetToolTip(this.btn_Helicopter, "HELICOPTER SHOOTER");
-            tt.SetToolTip(this.btn_OtherGame, "OTHER GAME");
+            tt.SetToolTip(this.btn_OtherGame, "COMING SOON");
             if (!isHovered)
             {
                 originalSize = button.Size;
-               button.Location = new Point(button.Location.X -15, button.Location.Y);
-
+                originalSize2 = label.Size;
+               button.Location = new Point(button.Location.X - 15, button.Location.Y);
                 button.Size = new Size(originalSize.Width + 36, originalSize.Height + 34);
+
+                label.Location = new Point(label.Location.X - 5, label.Location.Y + 10);
+                label.Size = new Size(originalSize2.Width + 36, originalSize2.Height + 34);
                 isHovered = true;
             }
         }
@@ -113,6 +145,33 @@ namespace DASHBOARD
         private void btn_RunningGame_MouseLeave(object sender, EventArgs e)
         {
             Button button = (Button)sender;
+            Label label; // Declare the label separately
+            if (sender == btnCarracing)
+            {
+                label = lbl_carracing;// Replace lbl_CarRacing with the actual label name
+            }
+            else if (sender == btn_Arcade)
+            {
+                label = lbl_arcadegame; // Replace lbl_Arcade with the actual label name
+            }
+            else if (sender == btn_Snake)
+            {
+                label = lbl_classicsnkegame; // Replace lbl_Snake with the actual label name
+            }
+            else if (sender == btn_RunningGame)
+            {
+                label = lbl_runninggame; // Replace lbl_RunningGame with the actual label name
+            }
+            else if (sender == btn_Helicopter)
+            {
+                label = lbl_helicoptergame; // Replace lbl_Helicopter with the actual label name
+            }
+            
+            else
+            {
+                return; // Handle other cases if necessary
+            }
+
             // button.Location = new Point(button.Location.X +7, button.Location.Y);
             // button.Size = new Size(94, 91);
             //button.BringToFront();
@@ -122,6 +181,9 @@ namespace DASHBOARD
                  button.Location = new Point(button.Location.X + 15, button.Location.Y);
 
                 button.Size = originalSize;
+
+                label.Location = new Point(label.Location.X + 5, label.Location.Y -10);
+                label.Size = originalSize2;
                 isHovered = false;
             }
         }
@@ -138,7 +200,7 @@ namespace DASHBOARD
                 this.MdiParent.Hide();
             }
             this.Hide();
-            Classic_Snake_Game.Form1 snake_game = new Classic_Snake_Game.Form1();
+            Classic_Snake_Game.Form1 snake_game = new Classic_Snake_Game.Form1(username);
             snake_game.FormClosed += Snakegame_FormClosed;
             snake_game.Show();
         }
@@ -154,5 +216,9 @@ namespace DASHBOARD
             this.Show();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

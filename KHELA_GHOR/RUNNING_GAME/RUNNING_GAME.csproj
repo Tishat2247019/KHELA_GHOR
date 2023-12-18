@@ -152,5 +152,8 @@
   <ItemGroup>
     <None Include="Resources\Animation - 1702657303627.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-full-screen %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

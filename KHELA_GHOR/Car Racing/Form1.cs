@@ -234,30 +234,7 @@ namespace Car_Racing
 
         }
 
-        public void ResetGame2()
-        {
-            btnStart.Enabled = false;
-            explosion.Visible = false;
-            award.Visible = false;
-            goleft = true;
-            goright = true;
-            score = 0;
-            award.Image = Properties.Resources.bronze;
-
-            //get high socre
-            lbl_highscore.Text = "High Score : " + GetHighScore();
-
-            roadSpeed = 12;
-            trafficSpeed = 15;
-
-            AI1.Top = carPosition.Next(300, 500) * -1;
-            AI1.Left = carPosition.Next(11, 375);
-
-            AI2.Top = carPosition.Next(300, 500) * -1;
-            AI2.Left = carPosition.Next(511, 876);
-
-            gameTimer.Start();
-        }
+       
         public void ResetGame()
         {
             btnStart.Enabled = false;
@@ -377,15 +354,15 @@ namespace Car_Racing
             string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name + "', '" + score1 + "')";
             SqlCommand cmd = new SqlCommand(query, con);
 
-            string deleteQueary = "DELETE FROM Leader_Board WHERE game_name = 'CarRacing' AND score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board  WHERE game_name = 'CarRacing' ORDER BY CAST(score_value AS INT) DESC)";
-            SqlCommand cmd1 = new SqlCommand(deleteQueary, con);
+            //string deleteQueary = "DELETE FROM Leader_Board WHERE game_name = 'CarRacing' AND score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board  WHERE game_name = 'CarRacing' ORDER BY CAST(score_value AS INT) DESC)";
+            //SqlCommand cmd1 = new SqlCommand(deleteQueary, con);
+            //cmd1.ExecuteNonQuery();
 
 
             //exucute Query
             cmd.ExecuteNonQuery();
 
 
-            cmd1.ExecuteNonQuery();
 
 
             //close the connection

@@ -83,50 +83,8 @@ namespace RUNNING_GAME
            
         }
 
-        public static string showLogin(string txt)
-        {
-            newMessageBox = new RunnigGamePopUp();
-            newMessageBox.lbl_Gameover.Visible = false;
-           /// newMessageBox.pictureBox1.Image = Resources.SIGNUP_ANIMATOIN_FAILED;
-            newMessageBox.lbl_Score.Font = new Font("Microsoft Tai Le", 18);
-            newMessageBox.lbl_Score.Location = new System.Drawing.Point(150,131);
-            newMessageBox.lbl_Score.Text = txt;
-            newMessageBox.lbl_Score.Visible = true;
-            //play faild sound
-            System.Media.SoundPlayer s = new System.Media.SoundPlayer();
-         ///   s.Stream = Resources.failed_sound;
-            s.Load();
-            s.Play();
-            //  System.Media.SystemSounds.Hand.Play();
-            newMessageBox.ShowDialog();
+        
 
-            
-            return button_ID;
-        }
-
-        public static string showSuccess(string txt)
-        {
-            newMessageBox = new RunnigGamePopUp();
-            newMessageBox.lbl_Gameover.Visible = false;
-          ///  newMessageBox.pictureBox1.Image = Resources.SIGNUP_ANIMATION_SUCCESS;
-            newMessageBox.picbox_gameOver.Location = new System.Drawing.Point(-5, 73);
-            newMessageBox.lbl_Score.Font = new Font("Microsoft Tai Le", 18);
-            newMessageBox.lbl_Score.Location = new System.Drawing.Point(150, 100);
-            newMessageBox.lbl_Score.Text = txt;
-
-            //play success sound
-            System.Media.SoundPlayer s = new System.Media.SoundPlayer();
-          ///  s.Stream = Resources.success_sound;
-            s.Load();
-            s.Play();
-
-
-            newMessageBox.lbl_Score.Visible = true; 
-            newMessageBox.lbl_Restart.Visible = true;
-            System.Media.SystemSounds.Hand.Play();
-            newMessageBox.ShowDialog();
-            return button_ID;
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
