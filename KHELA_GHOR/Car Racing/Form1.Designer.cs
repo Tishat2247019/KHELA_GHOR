@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.txtScore = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.lbl_highscore = new System.Windows.Forms.Label();
             this.award = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.explosion = new System.Windows.Forms.PictureBox();
@@ -37,11 +43,6 @@
             this.roadTrack1 = new System.Windows.Forms.PictureBox();
             this.AI2 = new System.Windows.Forms.PictureBox();
             this.roadTrack2 = new System.Windows.Forms.PictureBox();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.txtScore = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.lbl_highscore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.award)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -67,6 +68,62 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(968, 422);
             this.panel1.TabIndex = 0;
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnStart.Location = new System.Drawing.Point(497, 473);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 38);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.restartGame);
+            // 
+            // txtScore
+            // 
+            this.txtScore.BackColor = System.Drawing.Color.Transparent;
+            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.Location = new System.Drawing.Point(84, 473);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(133, 74);
+            this.txtScore.TabIndex = 1;
+            this.txtScore.Text = "Score: 0";
+            this.txtScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(366, 513);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(355, 99);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Press Left & Right to move the car.\r\n\r\nDo not  hit any other cars & survive as lo" +
+    "ng as you can!\r\n\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gameTimer
+            // 
+            this.gameTimer.Interval = 20;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
+            // 
+            // lbl_highscore
+            // 
+            this.lbl_highscore.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_highscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_highscore.Location = new System.Drawing.Point(11, 523);
+            this.lbl_highscore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_highscore.Name = "lbl_highscore";
+            this.lbl_highscore.Size = new System.Drawing.Size(264, 74);
+            this.lbl_highscore.TabIndex = 1;
+            this.lbl_highscore.Text = "Score: 0";
+            this.lbl_highscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // award
             // 
@@ -139,6 +196,7 @@
             // 
             // roadTrack2
             // 
+            this.roadTrack2.BackColor = System.Drawing.Color.Black;
             this.roadTrack2.Image = global::Car_Racing.Properties.Resources.roadTrack;
             this.roadTrack2.Location = new System.Drawing.Point(0, 0);
             this.roadTrack2.Margin = new System.Windows.Forms.Padding(2);
@@ -149,70 +207,20 @@
             this.roadTrack2.TabStop = false;
             this.roadTrack2.Click += new System.EventHandler(this.roadTrack2_Click);
             // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnStart.Location = new System.Drawing.Point(497, 473);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 38);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.restartGame);
-            // 
-            // txtScore
-            // 
-            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(84, 473);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(133, 74);
-            this.txtScore.TabIndex = 1;
-            this.txtScore.Text = "Score: 0";
-            this.txtScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(366, 513);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(355, 99);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Press Left & Right to move the car.\r\n\r\nDo not  hit any other cars & survive as lo" +
-    "ng as you can!\r\n\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gameTimer
-            // 
-            this.gameTimer.Interval = 20;
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
-            // 
-            // lbl_highscore
-            // 
-            this.lbl_highscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_highscore.Location = new System.Drawing.Point(11, 523);
-            this.lbl_highscore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_highscore.Name = "lbl_highscore";
-            this.lbl_highscore.Size = new System.Drawing.Size(264, 74);
-            this.lbl_highscore.TabIndex = 1;
-            this.lbl_highscore.Text = "Score: 0";
-            this.lbl_highscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1095, 632);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_highscore);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

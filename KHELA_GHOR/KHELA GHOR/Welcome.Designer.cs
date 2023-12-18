@@ -41,11 +41,11 @@
             this.HeyYouLabel_Welcom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.HeyYouLabel_Welcom.AutoSize = true;
             this.HeyYouLabel_Welcom.BackColor = System.Drawing.Color.Transparent;
-            this.HeyYouLabel_Welcom.Font = new System.Drawing.Font("Roboto Mono", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeyYouLabel_Welcom.Font = new System.Drawing.Font("Lucida Console", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeyYouLabel_Welcom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.HeyYouLabel_Welcom.Location = new System.Drawing.Point(703, 86);
             this.HeyYouLabel_Welcom.Name = "HeyYouLabel_Welcom";
-            this.HeyYouLabel_Welcom.Size = new System.Drawing.Size(198, 49);
+            this.HeyYouLabel_Welcom.Size = new System.Drawing.Size(193, 37);
             this.HeyYouLabel_Welcom.TabIndex = 1;
             this.HeyYouLabel_Welcom.Text = "Hey You!";
             this.HeyYouLabel_Welcom.Click += new System.EventHandler(this.label1_Click);
@@ -55,11 +55,11 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Roboto Mono", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Console", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(556, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(528, 49);
+            this.label2.Size = new System.Drawing.Size(523, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "Connect With Khela Ghor";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -69,11 +69,11 @@
             this.EmtertainLabel_Welcom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EmtertainLabel_Welcom.AutoSize = true;
             this.EmtertainLabel_Welcom.BackColor = System.Drawing.Color.Transparent;
-            this.EmtertainLabel_Welcom.Font = new System.Drawing.Font("Roboto Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmtertainLabel_Welcom.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmtertainLabel_Welcom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.EmtertainLabel_Welcom.Location = new System.Drawing.Point(617, 184);
+            this.EmtertainLabel_Welcom.Location = new System.Drawing.Point(663, 181);
             this.EmtertainLabel_Welcom.Name = "EmtertainLabel_Welcom";
-            this.EmtertainLabel_Welcom.Size = new System.Drawing.Size(410, 21);
+            this.EmtertainLabel_Welcom.Size = new System.Drawing.Size(337, 18);
             this.EmtertainLabel_Welcom.TabIndex = 3;
             this.EmtertainLabel_Welcom.Text = "Entertain Yourself By Playing Mini Games";
             // 
@@ -84,7 +84,7 @@
             this.btnSignUp_Welcom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp_Welcom.FlatAppearance.BorderSize = 2;
             this.btnSignUp_Welcom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignUp_Welcom.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp_Welcom.Font = new System.Drawing.Font("Lucida Sans Typewriter", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp_Welcom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSignUp_Welcom.Location = new System.Drawing.Point(677, 309);
             this.btnSignUp_Welcom.Name = "btnSignUp_Welcom";
@@ -101,7 +101,7 @@
             this.btnSignIn_Welcom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignIn_Welcom.FlatAppearance.BorderSize = 2;
             this.btnSignIn_Welcom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignIn_Welcom.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn_Welcom.Font = new System.Drawing.Font("Lucida Sans Typewriter", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn_Welcom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSignIn_Welcom.Location = new System.Drawing.Point(677, 390);
             this.btnSignIn_Welcom.Name = "btnSignIn_Welcom";

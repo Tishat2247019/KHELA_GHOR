@@ -102,11 +102,11 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.SystemColors.Control;
             this.lblScore.Location = new System.Drawing.Point(12, 22);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(98, 25);
+            this.lblScore.Size = new System.Drawing.Size(102, 25);
             this.lblScore.TabIndex = 3;
             this.lblScore.Text = "Score : 0";
             // 
@@ -114,11 +114,11 @@
             // 
             this.lblHighScore.AutoSize = true;
             this.lblHighScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighScore.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighScore.ForeColor = System.Drawing.SystemColors.Control;
             this.lblHighScore.Location = new System.Drawing.Point(12, 586);
             this.lblHighScore.Name = "lblHighScore";
-            this.lblHighScore.Size = new System.Drawing.Size(148, 25);
+            this.lblHighScore.Size = new System.Drawing.Size(156, 25);
             this.lblHighScore.TabIndex = 3;
             this.lblHighScore.Text = "High Score : 0";
             // 

@@ -88,10 +88,11 @@ namespace LOGIN_REGISTRATION
         {
             newMessageBox = new SignUpExistError();
             newMessageBox.label1.Visible = false;
+            newMessageBox.signUPerror_Oops.Text = "Hurray..";
             newMessageBox.pictureBox1.Image = Resources.SIGNUP_ANIMATION_SUCCESS;
             newMessageBox.pictureBox1.Location = new System.Drawing.Point(-5, 73);
-            newMessageBox.LableEmailSuggest1.Font = new Font("Microsoft Tai Le", 18);
-            newMessageBox.LableEmailSuggest1.Location = new System.Drawing.Point(150, 100);
+            newMessageBox.LableEmailSuggest1.Font = new Font("Lucida Sans Unicode", 18);
+            newMessageBox.LableEmailSuggest1.Location = new System.Drawing.Point(120, 100);
             newMessageBox.LableEmailSuggest1.Text = txt;
 
             //play success sound

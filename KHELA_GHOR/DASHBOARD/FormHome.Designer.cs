@@ -135,6 +135,7 @@
             this.btn_Snake.Size = new System.Drawing.Size(93, 94);
             this.btn_Snake.TabIndex = 1;
             this.btn_Snake.UseVisualStyleBackColor = false;
+            this.btn_Snake.Click += new System.EventHandler(this.btn_Snake_Click);
             this.btn_Snake.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
             this.btn_Snake.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 

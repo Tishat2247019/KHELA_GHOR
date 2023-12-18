@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Car_Racing;
 using RUNNING_GAME;
+using Classic_Snake_Game;
 
 namespace DASHBOARD
 {
@@ -47,7 +48,7 @@ namespace DASHBOARD
                 this.MdiParent.Hide();
             }
             this.Hide();
-            Form1 car_racing = new Form1(username);
+            Car_Racing.Form1 car_racing = new Car_Racing.Form1(username);
             car_racing.FormClosed += CarRacing_FormClosed;
             car_racing.Show();
         }
@@ -129,5 +130,29 @@ namespace DASHBOARD
         {
 
         }
+
+        private void btn_Snake_Click(object sender, EventArgs e)
+        {
+            if (this.MdiParent != null)
+            {
+                this.MdiParent.Hide();
+            }
+            this.Hide();
+            Classic_Snake_Game.Form1 snake_game = new Classic_Snake_Game.Form1();
+            snake_game.FormClosed += Snakegame_FormClosed;
+            snake_game.Show();
+        }
+
+        private void Snakegame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Show both the MdiParent (Dashboard form) and the Home form when the car racing game form is closed
+            if (this.MdiParent != null)
+            {
+                this.MdiParent.Show();
+            }
+
+            this.Show();
+        }
+
     }
 }

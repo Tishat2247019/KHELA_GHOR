@@ -135,6 +135,10 @@
       <Project>{0900d191-7787-4da8-9a7b-4383a21236cc}</Project>
       <Name>RUNNING_GAME</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\User\Desktop\Snake game\Classic Snake Game\Classic Snake Game\Classic Snake Game.csproj">
+      <Project>{ab22a5e3-2fa1-4043-a6a3-ba1ae0c894cc}</Project>
+      <Name>Classic Snake Game</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\103x103.png" />

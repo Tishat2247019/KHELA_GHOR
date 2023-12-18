@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Coral;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.panel1.Controls.Add(this.signUPerror_Oops);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -56,16 +56,16 @@
             // signUPerror_Oops
             // 
             this.signUPerror_Oops.AutoSize = true;
-            this.signUPerror_Oops.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUPerror_Oops.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUPerror_Oops.Location = new System.Drawing.Point(3, 9);
             this.signUPerror_Oops.Name = "signUPerror_Oops";
-            this.signUPerror_Oops.Size = new System.Drawing.Size(59, 18);
+            this.signUPerror_Oops.Size = new System.Drawing.Size(63, 18);
             this.signUPerror_Oops.TabIndex = 3;
             this.signUPerror_Oops.Text = "Oops..";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Coral;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(142, 205);
@@ -78,7 +78,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Coral;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(277, 205);
@@ -92,20 +92,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(138, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 21);
+            this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
             // LableEmailSuggest1
             // 
             this.LableEmailSuggest1.AutoSize = true;
-            this.LableEmailSuggest1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableEmailSuggest1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LableEmailSuggest1.Location = new System.Drawing.Point(104, 128);
             this.LableEmailSuggest1.Name = "LableEmailSuggest1";
-            this.LableEmailSuggest1.Size = new System.Drawing.Size(348, 21);
+            this.LableEmailSuggest1.Size = new System.Drawing.Size(397, 20);
             this.LableEmailSuggest1.TabIndex = 3;
             this.LableEmailSuggest1.Text = "This Email Is  Already connected to an UserName\r\n";
             this.LableEmailSuggest1.Visible = false;
@@ -113,10 +113,10 @@
             // LableEmailSuggest2
             // 
             this.LableEmailSuggest2.AutoSize = true;
-            this.LableEmailSuggest2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableEmailSuggest2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LableEmailSuggest2.Location = new System.Drawing.Point(162, 149);
             this.LableEmailSuggest2.Name = "LableEmailSuggest2";
-            this.LableEmailSuggest2.Size = new System.Drawing.Size(181, 21);
+            this.LableEmailSuggest2.Size = new System.Drawing.Size(197, 20);
             this.LableEmailSuggest2.TabIndex = 3;
             this.LableEmailSuggest2.Text = "Do You Want To LOGIN?\r\n";
             this.LableEmailSuggest2.Visible = false;
@@ -124,17 +124,17 @@
             // LabelEmailShow
             // 
             this.LabelEmailShow.AutoSize = true;
-            this.LabelEmailShow.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelEmailShow.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelEmailShow.Location = new System.Drawing.Point(88, 76);
             this.LabelEmailShow.Name = "LabelEmailShow";
-            this.LabelEmailShow.Size = new System.Drawing.Size(348, 21);
+            this.LabelEmailShow.Size = new System.Drawing.Size(397, 20);
             this.LabelEmailShow.TabIndex = 3;
             this.LabelEmailShow.Text = "This Email Is  Already connected to an UserName\r\n";
             this.LabelEmailShow.Visible = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Coral;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = global::KHELA_GHOR.Properties.Resources.exit_full_screen__1_;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
