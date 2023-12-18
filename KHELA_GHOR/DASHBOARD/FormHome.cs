@@ -47,7 +47,7 @@ namespace DASHBOARD
                 this.MdiParent.Hide();
             }
             this.Hide();
-            Form1 car_racing = new Form1();
+            Form1 car_racing = new Form1(username);
             car_racing.FormClosed += CarRacing_FormClosed;
             car_racing.Show();
         }

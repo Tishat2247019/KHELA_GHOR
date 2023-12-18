@@ -73,6 +73,26 @@ namespace DASHBOARD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1st_place {
+            get {
+                object obj = ResourceManager.GetObject("1st-place", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3rd_place {
+            get {
+                object obj = ResourceManager.GetObject("3rd-place", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _92x92 {
             get {
                 object obj = ResourceManager.GetObject("92x92", resourceCulture);
@@ -106,6 +126,16 @@ namespace DASHBOARD.Properties {
         internal static System.Drawing.Bitmap employee {
             get {
                 object obj = ResourceManager.GetObject("employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_full_screen__1_ {
+            get {
+                object obj = ResourceManager.GetObject("exit-full-screen (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -151,6 +181,16 @@ namespace DASHBOARD.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap man__1_ {
+            get {
+                object obj = ResourceManager.GetObject("man (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] MontereyMediumFLF {
@@ -183,6 +223,16 @@ namespace DASHBOARD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap question {
+            get {
+                object obj = ResourceManager.GetObject("question", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap runningicon124491103x103 {
             get {
                 object obj = ResourceManager.GetObject("runningicon124491103x103", resourceCulture);
@@ -193,9 +243,29 @@ namespace DASHBOARD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap scoreboard__1_ {
+            get {
+                object obj = ResourceManager.GetObject("scoreboard (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap scoreboard35x35 {
             get {
                 object obj = ResourceManager.GetObject("scoreboard35x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap second_place {
+            get {
+                object obj = ResourceManager.GetObject("second-place", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

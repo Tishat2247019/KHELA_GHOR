@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHelp));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,9 +45,12 @@
             this.lbl_with = new System.Windows.Forms.Label();
             this.lbl_the = new System.Windows.Forms.Label();
             this.lbl_dev = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -87,10 +91,10 @@
             // 
             this.lbl_Name.AutoSize = true;
             this.lbl_Name.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Name.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Name.Location = new System.Drawing.Point(330, 203);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(187, 24);
+            this.lbl_Name.Size = new System.Drawing.Size(178, 30);
             this.lbl_Name.TabIndex = 2;
             this.lbl_Name.Text = "FARJANA YESMIN OPI";
             this.lbl_Name.UseCompatibleTextRendering = true;
@@ -99,10 +103,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(349, 226);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(351, 230);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(121, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "AIUB, BSC CSE";
             this.label1.UseCompatibleTextRendering = true;
@@ -111,10 +115,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(330, 248);
+            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(316, 256);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 24);
+            this.label2.Size = new System.Drawing.Size(212, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "farjanaopi11@gmail.com";
             this.label2.UseCompatibleTextRendering = true;
@@ -123,10 +127,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(156, 473);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 24);
+            this.label3.Size = new System.Drawing.Size(144, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "MD. ABU TOWSIF";
             this.label3.UseCompatibleTextRendering = true;
@@ -136,10 +140,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(160, 496);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 24);
+            this.label4.Size = new System.Drawing.Size(121, 30);
             this.label4.TabIndex = 2;
             this.label4.Text = "AIUB, BSC CSE";
             this.label4.UseCompatibleTextRendering = true;
@@ -148,10 +152,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(137, 519);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 24);
+            this.label5.Size = new System.Drawing.Size(200, 30);
             this.label5.TabIndex = 2;
             this.label5.Text = "towsif1528@gmail.com";
             this.label5.UseCompatibleTextRendering = true;
@@ -160,10 +164,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(499, 473);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(293, 24);
+            this.label6.Size = new System.Drawing.Size(293, 30);
             this.label6.TabIndex = 2;
             this.label6.Text = "MD. SHOHANUR RAHMAN SHOHAN";
             this.label6.UseCompatibleTextRendering = true;
@@ -172,10 +176,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(576, 500);
+            this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(578, 500);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 24);
+            this.label7.Size = new System.Drawing.Size(121, 30);
             this.label7.TabIndex = 2;
             this.label7.Text = "AIUB, BSC CSE";
             this.label7.UseCompatibleTextRendering = true;
@@ -184,10 +188,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(553, 523);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 24);
+            this.label8.Size = new System.Drawing.Size(207, 30);
             this.label8.TabIndex = 2;
             this.label8.Text = "msrsshohan@gmail.com";
             this.label8.UseCompatibleTextRendering = true;
@@ -196,10 +200,10 @@
             // 
             this.lbl_contact.AutoSize = true;
             this.lbl_contact.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_contact.Location = new System.Drawing.Point(12, 28);
+            this.lbl_contact.Font = new System.Drawing.Font("Lucida Sans Unicode", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_contact.Location = new System.Drawing.Point(12, 39);
             this.lbl_contact.Name = "lbl_contact";
-            this.lbl_contact.Size = new System.Drawing.Size(141, 47);
+            this.lbl_contact.Size = new System.Drawing.Size(152, 62);
             this.lbl_contact.TabIndex = 2;
             this.lbl_contact.Text = "Contact";
             this.lbl_contact.UseCompatibleTextRendering = true;
@@ -208,10 +212,10 @@
             // 
             this.lbl_with.AutoSize = true;
             this.lbl_with.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_with.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_with.Location = new System.Drawing.Point(34, 75);
+            this.lbl_with.Font = new System.Drawing.Font("Lucida Sans Unicode", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_with.Location = new System.Drawing.Point(34, 82);
             this.lbl_with.Name = "lbl_with";
-            this.lbl_with.Size = new System.Drawing.Size(87, 47);
+            this.lbl_with.Size = new System.Drawing.Size(92, 62);
             this.lbl_with.TabIndex = 2;
             this.lbl_with.Text = "With";
             this.lbl_with.UseCompatibleTextRendering = true;
@@ -220,10 +224,10 @@
             // 
             this.lbl_the.AutoSize = true;
             this.lbl_the.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_the.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_the.Location = new System.Drawing.Point(57, 122);
+            this.lbl_the.Font = new System.Drawing.Font("Lucida Sans Unicode", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_the.Location = new System.Drawing.Point(57, 126);
             this.lbl_the.Name = "lbl_the";
-            this.lbl_the.Size = new System.Drawing.Size(76, 47);
+            this.lbl_the.Size = new System.Drawing.Size(80, 62);
             this.lbl_the.TabIndex = 2;
             this.lbl_the.Text = "The";
             this.lbl_the.UseCompatibleTextRendering = true;
@@ -232,14 +236,35 @@
             // 
             this.lbl_dev.AutoSize = true;
             this.lbl_dev.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_dev.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dev.Font = new System.Drawing.Font("Lucida Sans Unicode", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.lbl_dev.Location = new System.Drawing.Point(71, 169);
             this.lbl_dev.Name = "lbl_dev";
-            this.lbl_dev.Size = new System.Drawing.Size(241, 44);
+            this.lbl_dev.Size = new System.Drawing.Size(238, 62);
             this.lbl_dev.TabIndex = 2;
             this.lbl_dev.Text = "DEVELOPERS";
             this.lbl_dev.UseCompatibleTextRendering = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(-29, -33);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(74, 81);
+            this.panel2.TabIndex = 7;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::DASHBOARD.Properties.Resources.question;
+            this.pictureBox4.Location = new System.Drawing.Point(143, 93);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(64, 62);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
             // 
             // FormHelp
             // 
@@ -248,6 +273,8 @@
             this.BackgroundImage = global::DASHBOARD.Properties.Resources.Untitled_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(892, 632);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -272,6 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +322,7 @@
         private System.Windows.Forms.Label lbl_with;
         private System.Windows.Forms.Label lbl_the;
         private System.Windows.Forms.Label lbl_dev;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel_sideBarContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel_top = new System.Windows.Forms.Panel();
+            this.lbl_Menu = new System.Windows.Forms.Label();
+            this.picBox_Menu = new System.Windows.Forms.PictureBox();
             this.panel_home = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Home = new System.Windows.Forms.Button();
@@ -46,17 +49,14 @@
             this.sideBar_timer = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_UserNameHi = new System.Windows.Forms.Label();
-            this.picBox_Menu = new System.Windows.Forms.PictureBox();
-            this.lbl_Menu = new System.Windows.Forms.Label();
-            this.panel_top = new System.Windows.Forms.Panel();
             this.panel_sideBarContainer.SuspendLayout();
+            this.panel_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).BeginInit();
             this.panel_home.SuspendLayout();
             this.panel_scoreboard.SuspendLayout();
             this.panel_settings.SuspendLayout();
             this.panel_help.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).BeginInit();
-            this.panel_top.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_sideBarContainer
@@ -76,6 +76,38 @@
             this.panel_sideBarContainer.Size = new System.Drawing.Size(203, 632);
             this.panel_sideBarContainer.TabIndex = 1;
             this.panel_sideBarContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_sideBarContainer_Paint);
+            // 
+            // panel_top
+            // 
+            this.panel_top.Controls.Add(this.lbl_Menu);
+            this.panel_top.Controls.Add(this.picBox_Menu);
+            this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_top.Location = new System.Drawing.Point(3, 3);
+            this.panel_top.Name = "panel_top";
+            this.panel_top.Size = new System.Drawing.Size(202, 73);
+            this.panel_top.TabIndex = 0;
+            // 
+            // lbl_Menu
+            // 
+            this.lbl_Menu.AutoSize = true;
+            this.lbl_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Menu.Location = new System.Drawing.Point(79, 19);
+            this.lbl_Menu.Name = "lbl_Menu";
+            this.lbl_Menu.Size = new System.Drawing.Size(66, 24);
+            this.lbl_Menu.TabIndex = 1;
+            this.lbl_Menu.Text = "MENU";
+            // 
+            // picBox_Menu
+            // 
+            this.picBox_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBox_Menu.Image = global::DASHBOARD.Properties.Resources.Animation___1702661425530;
+            this.picBox_Menu.Location = new System.Drawing.Point(-16, -13);
+            this.picBox_Menu.Name = "picBox_Menu";
+            this.picBox_Menu.Size = new System.Drawing.Size(87, 91);
+            this.picBox_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Menu.TabIndex = 0;
+            this.picBox_Menu.TabStop = false;
+            this.picBox_Menu.Click += new System.EventHandler(this.picBox_Menu_Click);
             // 
             // panel_home
             // 
@@ -263,44 +295,12 @@
             // lbl_UserNameHi
             // 
             this.lbl_UserNameHi.AutoSize = true;
-            this.lbl_UserNameHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UserNameHi.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserNameHi.Location = new System.Drawing.Point(372, 4);
             this.lbl_UserNameHi.Name = "lbl_UserNameHi";
-            this.lbl_UserNameHi.Size = new System.Drawing.Size(60, 24);
+            this.lbl_UserNameHi.Size = new System.Drawing.Size(68, 23);
             this.lbl_UserNameHi.TabIndex = 0;
             this.lbl_UserNameHi.Text = "label1";
-            // 
-            // picBox_Menu
-            // 
-            this.picBox_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox_Menu.Image = global::DASHBOARD.Properties.Resources.Animation___1702661425530;
-            this.picBox_Menu.Location = new System.Drawing.Point(-16, -13);
-            this.picBox_Menu.Name = "picBox_Menu";
-            this.picBox_Menu.Size = new System.Drawing.Size(87, 91);
-            this.picBox_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox_Menu.TabIndex = 0;
-            this.picBox_Menu.TabStop = false;
-            this.picBox_Menu.Click += new System.EventHandler(this.picBox_Menu_Click);
-            // 
-            // lbl_Menu
-            // 
-            this.lbl_Menu.AutoSize = true;
-            this.lbl_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Menu.Location = new System.Drawing.Point(79, 19);
-            this.lbl_Menu.Name = "lbl_Menu";
-            this.lbl_Menu.Size = new System.Drawing.Size(66, 24);
-            this.lbl_Menu.TabIndex = 1;
-            this.lbl_Menu.Text = "MENU";
-            // 
-            // panel_top
-            // 
-            this.panel_top.Controls.Add(this.lbl_Menu);
-            this.panel_top.Controls.Add(this.picBox_Menu);
-            this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_top.Location = new System.Drawing.Point(3, 3);
-            this.panel_top.Name = "panel_top";
-            this.panel_top.Size = new System.Drawing.Size(202, 73);
-            this.panel_top.TabIndex = 0;
             // 
             // Dashboard
             // 
@@ -316,15 +316,15 @@
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel_sideBarContainer.ResumeLayout(false);
+            this.panel_top.ResumeLayout(false);
+            this.panel_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).EndInit();
             this.panel_home.ResumeLayout(false);
             this.panel_scoreboard.ResumeLayout(false);
             this.panel_settings.ResumeLayout(false);
             this.panel_help.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).EndInit();
-            this.panel_top.ResumeLayout(false);
-            this.panel_top.PerformLayout();
             this.ResumeLayout(false);
 
         }

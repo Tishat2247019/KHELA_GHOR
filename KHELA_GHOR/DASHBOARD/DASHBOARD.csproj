@@ -77,6 +77,12 @@
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="MdiProperties.cs" />
+    <Compile Include="Password_up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_up.Designer.cs">
+      <DependentUpon>Password_up.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashboard.resx">
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_up.resx">
+      <DependentUpon>Password_up.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,6 +186,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3rd-place.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second-place.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1st-place.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreboard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-full-screen %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

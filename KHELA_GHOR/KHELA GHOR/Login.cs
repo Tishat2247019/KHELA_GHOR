@@ -305,8 +305,8 @@ namespace LOGIN_REGISTRATION
                 {
                     //MessageBox.Show("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     SignUpExistError.showLogin("Invalid Login Details");
-                    txt_UserLogin.Clear();
-                    //txt_PassLogin.Clear();
+                   // txt_UserLogin.Clear();
+                    txt_PassLogin.Clear();
 
                     txt_PassLogin.Focus();
                 }

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RUNNING_GAME;
 
 namespace Car_Racing
 {
@@ -28,11 +30,23 @@ namespace Car_Racing
 
         bool goleft, goright;
 
+        string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+        public static string username;
+        int highcore;
+
+
 
         public Form1()
         {
             InitializeComponent();
             ResetGame();
+        }
+
+        public Form1(string username1)
+        {
+            InitializeComponent();
+            ResetGame();
+            username = username1;
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
@@ -57,13 +71,23 @@ namespace Car_Racing
             {
                 goright = false;
             }
+
+            if (e.KeyCode == Keys.Enter && btnStart.Enabled)
+            {
+                ResetGame();
+            }
+
         }
 
         private void gameTimerEvent(object sender, EventArgs e)
         {
             txtScore.Text = "Score: " + score;
             score++;
- 
+
+
+            highcore = GetHighScore();
+
+
             if (goleft == true && player.Left > 2)
             {
                 player.Left -= playerSpeed;
@@ -180,10 +204,60 @@ namespace Car_Racing
 
             award.Visible = true;
             award.BringToFront();
+            SaveHighScore(username,score);
 
-            btnStart.Enabled = true;
+           btnStart.Enabled = true;
+            if (score > highcore)
+            {
+                string id = RunnigGamePopUp.showHighScore($"Your Score is : {score}");
+                if (id == "1")
+                {
+                   // btnStart.Enabled = true;
+                    //restartGame();
+
+                    ResetGame();
+                   // btnStart.Enabled = true;
+
+                }
+            }
+            else
+            {
+                string id = RunnigGamePopUp.showScore($"Your Score is : {score}");
+                if (id == "1")
+                {
+                   // btnStart.Enabled = true;
+
+                    ResetGame();
+                   // btnStart.Enabled = true;
+                }
+            }
+
         }
 
+        public void ResetGame2()
+        {
+            btnStart.Enabled = false;
+            explosion.Visible = false;
+            award.Visible = false;
+            goleft = true;
+            goright = true;
+            score = 0;
+            award.Image = Properties.Resources.bronze;
+
+            //get high socre
+            lbl_highscore.Text = "High Score : " + GetHighScore();
+
+            roadSpeed = 12;
+            trafficSpeed = 15;
+
+            AI1.Top = carPosition.Next(300, 500) * -1;
+            AI1.Left = carPosition.Next(11, 375);
+
+            AI2.Top = carPosition.Next(300, 500) * -1;
+            AI2.Left = carPosition.Next(511, 876);
+
+            gameTimer.Start();
+        }
         public void ResetGame()
         {
             btnStart.Enabled = false;
@@ -193,6 +267,9 @@ namespace Car_Racing
             goright = false;
             score = 0;
             award.Image = Properties.Resources.bronze;
+
+            //get high socre
+            lbl_highscore.Text = "High Score : " + GetHighScore(); 
 
             roadSpeed = 12;
             trafficSpeed = 15;
@@ -284,6 +361,61 @@ namespace Car_Racing
                 }
             }
         }
+
+
+        private void SaveHighScore(string playerName, int score)
+        {
+
+            //esblish connection;
+            SqlConnection con = new SqlConnection(connectinString);
+
+            //open connection
+            con.Open();
+            string game_name = "CarRacing";
+            string user_name = playerName;
+            string score1 = score.ToString();
+            string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name + "', '" + score1 + "')";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            string deleteQueary = "DELETE FROM Leader_Board WHERE game_name = 'CarRacing' AND score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board  WHERE game_name = 'CarRacing' ORDER BY CAST(score_value AS INT) DESC)";
+            SqlCommand cmd1 = new SqlCommand(deleteQueary, con);
+
+
+            //exucute Query
+            cmd.ExecuteNonQuery();
+
+
+            cmd1.ExecuteNonQuery();
+
+
+            //close the connection
+            con.Close();
+
+
+        }
+
+        private int GetHighScore()
+        {
+            using (SqlConnection connection = new SqlConnection(connectinString))
+            {
+                connection.Open();
+
+                string query = "select max(Convert(int, score_value)) from Leader_Board where game_name = 'CarRacing';";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return 0; // Default value if no high score is found
+                    }
+                }
+            }
+        }
+
 
         private void player_Click(object sender, EventArgs e)
         {

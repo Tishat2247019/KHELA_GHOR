@@ -34,21 +34,22 @@
             this.player = new System.Windows.Forms.PictureBox();
             this.explosion = new System.Windows.Forms.PictureBox();
             this.AI1 = new System.Windows.Forms.PictureBox();
-            this.roadTrack2 = new System.Windows.Forms.PictureBox();
-            this.AI2 = new System.Windows.Forms.PictureBox();
             this.roadTrack1 = new System.Windows.Forms.PictureBox();
+            this.AI2 = new System.Windows.Forms.PictureBox();
+            this.roadTrack2 = new System.Windows.Forms.PictureBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.txtScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.lbl_highscore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.award)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.explosion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AI1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roadTrack2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AI2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roadTrack1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AI2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roadTrack2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -113,6 +114,29 @@
             this.AI1.TabStop = false;
             this.AI1.Tag = "carLeft";
             // 
+            // roadTrack1
+            // 
+            this.roadTrack1.Image = global::Car_Racing.Properties.Resources.roadTrack;
+            this.roadTrack1.Location = new System.Drawing.Point(0, -433);
+            this.roadTrack1.Margin = new System.Windows.Forms.Padding(2);
+            this.roadTrack1.Name = "roadTrack1";
+            this.roadTrack1.Size = new System.Drawing.Size(969, 422);
+            this.roadTrack1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roadTrack1.TabIndex = 0;
+            this.roadTrack1.TabStop = false;
+            // 
+            // AI2
+            // 
+            this.AI2.Image = global::Car_Racing.Properties.Resources.carGrey;
+            this.AI2.Location = new System.Drawing.Point(629, 13);
+            this.AI2.Margin = new System.Windows.Forms.Padding(2);
+            this.AI2.Name = "AI2";
+            this.AI2.Size = new System.Drawing.Size(61, 131);
+            this.AI2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AI2.TabIndex = 2;
+            this.AI2.TabStop = false;
+            this.AI2.Tag = "carRight";
+            // 
             // roadTrack2
             // 
             this.roadTrack2.Image = global::Car_Racing.Properties.Resources.roadTrack;
@@ -124,29 +148,6 @@
             this.roadTrack2.TabIndex = 1;
             this.roadTrack2.TabStop = false;
             this.roadTrack2.Click += new System.EventHandler(this.roadTrack2_Click);
-            // 
-            // AI2
-            // 
-            this.AI2.Image = global::Car_Racing.Properties.Resources.carGrey;
-            this.AI2.Location = new System.Drawing.Point(533, 2);
-            this.AI2.Margin = new System.Windows.Forms.Padding(2);
-            this.AI2.Name = "AI2";
-            this.AI2.Size = new System.Drawing.Size(61, 131);
-            this.AI2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.AI2.TabIndex = 2;
-            this.AI2.TabStop = false;
-            this.AI2.Tag = "carRight";
-            // 
-            // roadTrack1
-            // 
-            this.roadTrack1.Image = global::Car_Racing.Properties.Resources.roadTrack;
-            this.roadTrack1.Location = new System.Drawing.Point(0, -433);
-            this.roadTrack1.Margin = new System.Windows.Forms.Padding(2);
-            this.roadTrack1.Name = "roadTrack1";
-            this.roadTrack1.Size = new System.Drawing.Size(969, 422);
-            this.roadTrack1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roadTrack1.TabIndex = 0;
-            this.roadTrack1.TabStop = false;
             // 
             // btnStart
             // 
@@ -165,7 +166,7 @@
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(95, 500);
+            this.txtScore.Location = new System.Drawing.Point(84, 473);
             this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(133, 74);
@@ -190,6 +191,17 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
             // 
+            // lbl_highscore
+            // 
+            this.lbl_highscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_highscore.Location = new System.Drawing.Point(11, 523);
+            this.lbl_highscore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_highscore.Name = "lbl_highscore";
+            this.lbl_highscore.Size = new System.Drawing.Size(264, 74);
+            this.lbl_highscore.TabIndex = 1;
+            this.lbl_highscore.Text = "Score: 0";
+            this.lbl_highscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +209,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1095, 632);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_highscore);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.panel1);
@@ -214,9 +227,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.explosion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AI1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roadTrack2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AI2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roadTrack1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AI2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roadTrack2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,6 +248,7 @@
         private System.Windows.Forms.PictureBox award;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label lbl_highscore;
     }
 }
 

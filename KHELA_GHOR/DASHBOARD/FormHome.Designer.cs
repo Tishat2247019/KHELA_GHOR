@@ -36,6 +36,7 @@
             this.btn_Arcade = new System.Windows.Forms.Button();
             this.btn_Snake = new System.Windows.Forms.Button();
             this.btn_OtherGame = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -154,6 +155,16 @@
             this.btn_OtherGame.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
             this.btn_OtherGame.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(-35, -27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(74, 81);
+            this.panel2.TabIndex = 7;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +172,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(908, 639);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_Helicopter);
             this.Controls.Add(this.btn_OtherGame);
             this.Controls.Add(this.btn_Snake);
@@ -187,5 +199,6 @@
         private System.Windows.Forms.Button btn_Arcade;
         private System.Windows.Forms.Button btn_Snake;
         private System.Windows.Forms.Button btn_OtherGame;
+        private System.Windows.Forms.Panel panel2;
     }
 }

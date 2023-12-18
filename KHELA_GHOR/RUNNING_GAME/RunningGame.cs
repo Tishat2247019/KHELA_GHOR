@@ -251,7 +251,7 @@ namespace RUNNING_GAME
             string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name+ "', '" + score1 + "')";
             SqlCommand cmd = new SqlCommand(query, con);
             
-            string deleteQueary = "DELETE FROM Leader_Board WHERE score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board ORDER BY CAST(score_value AS INT) DESC)";
+            string deleteQueary = "DELETE FROM Leader_Board WHERE game_name = 'RunningGame' AND score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board WHERE game_name = 'RunningGame' ORDER BY CAST(score_value AS INT) DESC)";
             SqlCommand cmd1= new SqlCommand(deleteQueary, con);
            
             
@@ -274,7 +274,7 @@ namespace RUNNING_GAME
             {
                 connection.Open();
 
-                string query = "select max(Convert(int, score_value)) from Leader_Board;";
+                string query = "select max(Convert(int, score_value)) from Leader_Board WHERE game_name = 'RunningGame';";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
