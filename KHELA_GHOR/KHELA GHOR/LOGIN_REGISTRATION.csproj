@@ -231,5 +231,29 @@
   <ItemGroup>
     <None Include="Resources\failed_sound.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-120x20.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check20x20.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15x15.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_77947 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_77947 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_77947 %283%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_77947 %281%29 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_77947 %281%29 %282%29.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

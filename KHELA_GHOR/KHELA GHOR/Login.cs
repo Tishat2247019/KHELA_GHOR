@@ -252,7 +252,10 @@ namespace LOGIN_REGISTRATION
             {
                 if (string.IsNullOrEmpty(txt_UserLogin.Text))
                 {
+                    errorProvider1.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                     errorProvider1.SetError(this.txt_UserLogin, "Please Enter Your Username!!");
+                    this.errorProvider1.SetIconPadding(this.txt_UserLogin, -20);
+
                 }
                 else
                 {
@@ -268,6 +271,7 @@ namespace LOGIN_REGISTRATION
             {
                 if (string.IsNullOrEmpty(txt_PassLogin.Text))
                 {
+                    errorProvider2.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                     errorProvider2.SetError(this.txt_PassLogin, "Please Enter Your Password!!");
                 }
                 else
@@ -321,6 +325,32 @@ namespace LOGIN_REGISTRATION
             //this.DialogResult = DialogResult.OK;
             previousForm.Show();
             this.Hide();
+        }
+
+        private void txt_UserLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Down))
+            {
+                if (isClick_password)
+                {
+                    e.Handled = true;
+                    txt_PassLogin.Focus();
+                }
+                
+            }
+        }
+
+        private void txt_PassLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Up))
+            {
+                if (isClick_username)
+                {
+                e.Handled = true;
+                txt_UserLogin.Focus();
+
+                }
+            }
         }
     }
 }

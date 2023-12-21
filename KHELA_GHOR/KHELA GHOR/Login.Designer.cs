@@ -114,6 +114,7 @@
             this.txt_UserLogin.Text = "Username";
             this.txt_UserLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_UserLogin_MouseClick);
             this.txt_UserLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txt_UserLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_UserLogin_KeyDown);
             this.txt_UserLogin.Leave += new System.EventHandler(this.txt_UserLogin_Leave);
             // 
             // panel2
@@ -184,11 +185,12 @@
             this.txt_PassLogin.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PassLogin.Location = new System.Drawing.Point(46, 146);
             this.txt_PassLogin.Name = "txt_PassLogin";
-            this.txt_PassLogin.Size = new System.Drawing.Size(208, 30);
+            this.txt_PassLogin.Size = new System.Drawing.Size(225, 30);
             this.txt_PassLogin.TabIndex = 23;
             this.txt_PassLogin.Text = "Password";
             this.txt_PassLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_PassLogin_MouseClick);
             this.txt_PassLogin.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txt_PassLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_PassLogin_KeyDown);
             this.txt_PassLogin.Leave += new System.EventHandler(this.txt_PassLogin_Leave);
             // 
             // panel3
@@ -202,7 +204,7 @@
             // picBox_Eye
             // 
             this.picBox_Eye.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
-            this.picBox_Eye.Location = new System.Drawing.Point(290, 144);
+            this.picBox_Eye.Location = new System.Drawing.Point(290, 147);
             this.picBox_Eye.Name = "picBox_Eye";
             this.picBox_Eye.Size = new System.Drawing.Size(23, 28);
             this.picBox_Eye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,7 +241,7 @@
             // 
             this.Login_Label2.AutoSize = true;
             this.Login_Label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Label2.Location = new System.Drawing.Point(77, 324);
+            this.Login_Label2.Location = new System.Drawing.Point(77, 323);
             this.Login_Label2.Name = "Login_Label2";
             this.Login_Label2.Size = new System.Drawing.Size(194, 20);
             this.Login_Label2.TabIndex = 26;

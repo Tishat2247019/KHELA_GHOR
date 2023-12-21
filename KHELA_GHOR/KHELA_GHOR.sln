@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RUNNING_GAME", "RUNNING_GAM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Racing", "Car Racing\Car Racing.csproj", "{E5FACAF8-00BF-44B3-AF91-A50EF9E0A863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic Snake Game", "C:\Users\User\Desktop\Snake game\Classic Snake Game\Classic Snake Game\Classic Snake Game.csproj", "{AB22A5E3-2FA1-4043-A6A3-BA1AE0C894CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic Snake Game", "Classic Snake Game\Classic Snake Game.csproj", "{AB22A5E3-2FA1-4043-A6A3-BA1AE0C894CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

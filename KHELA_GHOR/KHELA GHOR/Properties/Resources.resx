@@ -220,4 +220,7 @@
   <data name="failed_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\failed_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="cancel_77947__1___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_77947 (1) (2).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

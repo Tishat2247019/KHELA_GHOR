@@ -105,6 +105,9 @@ namespace DASHBOARD
 
                 dataGridView1.DataSource = dt;
 
+                //dataGridView1.Columns["user_name"].Name = "User NName";
+                //dataGridView1.Columns["Scores"].Name = "Column2";
+
                 //close the connection
                 con.Close();
             }
@@ -213,6 +216,10 @@ namespace DASHBOARD
             }
 
         }
+        void comboBox1_DropDownClosed(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new Action(() => { comboBox1.Select(0, 0); }));
+        }
 
         private void FormScoreBoard_Load(object sender, EventArgs e)
         {
@@ -229,6 +236,11 @@ namespace DASHBOARD
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

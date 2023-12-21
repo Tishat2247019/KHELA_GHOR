@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.PropertyGridInternal;
 using System.Data.SqlClient;
+using KHELA_GHOR.Properties;
 
 namespace LOGIN_REGISTRATION
 {
@@ -350,15 +351,7 @@ namespace LOGIN_REGISTRATION
 
         }
 
-        private void TxtBox_Email_TextChanged(object sender, EventArgs e)
-        {
-            
-            if (isclicked_emailtxtbox)
-            {
-              errorProvider2.Clear();
-                
-            }
-        }
+        
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
@@ -370,6 +363,7 @@ namespace LOGIN_REGISTRATION
             if (isclicked2 && isclicked3) {
              if (txtBoxPassword_Signup.Text != txtBoxConPassword_Signup.Text)
                 {
+                    errorProvider4.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                     errorProvider4.SetError(this.txtBoxConPassword_Signup, "Password Mismatched");
                     isMatched = false;
                 }
@@ -394,6 +388,7 @@ namespace LOGIN_REGISTRATION
         {
             if(txtBoxPassword_Signup.Text.Length < 6)
             {
+                errorProvider3.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                 errorProvider3.SetError(this.txtBoxPassword_Signup, "Password Must Be At Least 6 Character");
             }
             else
@@ -486,12 +481,26 @@ namespace LOGIN_REGISTRATION
             {
                 if (string.IsNullOrEmpty(txtBoxUser_SignUp.Text))
                 {
+                    errorProvider1.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                     errorProvider1.SetError(this.txtBoxUser_SignUp, "Please Enter Your Username!!");
+                    this.errorProvider1.SetIconPadding(this.txtBoxUser_SignUp, -20);
+
                 }
                 else
                 {
                     errorProvider1.Clear();
                 }
+
+            }
+        }
+        private void TxtBox_Email_TextChanged(object sender, EventArgs e)
+        {
+
+            if (isclicked_emailtxtbox)
+            {
+                //errorProvider2.Icon = KHELA_GHOR.Properties.Resources.check20x20;
+                //errorProvider2.SetError(this.TxtBoxEmail_SignUp, "a");
+                errorProvider2.Clear();
 
             }
         }
@@ -502,10 +511,16 @@ namespace LOGIN_REGISTRATION
             {
                 if (string.IsNullOrEmpty(TxtBoxEmail_SignUp.Text))
                 {
+                    errorProvider2.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                     errorProvider2.SetError(this.TxtBoxEmail_SignUp, "Please Enter Your Email");
+                    this.errorProvider2.SetIconPadding(this.TxtBoxEmail_SignUp, -20);
 
                 }
             }
+        }
+        private void TxtBoxEmail_SignUp_Validating(object sender, CancelEventArgs e)
+        {
+
         }
 
 
@@ -515,7 +530,10 @@ namespace LOGIN_REGISTRATION
             {
                 if (string.IsNullOrEmpty(txtBoxPassword_Signup.Text))
                 {
+                    errorProvider3.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                     errorProvider3.SetError(this.txtBoxPassword_Signup, "Please Enter Your Password");
+                  // this.errorProvider3.SetIconPadding(this.TxtBoxEmail_SignUp, -60);
+
                 }
                 //else
                 //{
@@ -532,9 +550,12 @@ namespace LOGIN_REGISTRATION
             {
                 if (string.IsNullOrEmpty(txtBoxConPassword_Signup.Text))
                 {
+                    errorProvider4.Icon = KHELA_GHOR.Properties.Resources.cancel_77947__1___2_;
                     errorProvider4.SetError(this.txtBoxConPassword_Signup, "Please Confirm Your Password");
+                    //this.errorProvider4.SetIconPadding(this.txtBoxConPassword_Signup, -10);
+
                 }
-                
+
             }
         }
 
@@ -674,6 +695,8 @@ namespace LOGIN_REGISTRATION
             resizeControl(LabelLogin2OriginalRectangle23, SignUp_label2, originalLabel2FontSize);
 
         }
+
+        
     }
 
 

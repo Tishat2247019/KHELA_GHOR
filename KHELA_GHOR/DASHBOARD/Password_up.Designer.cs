@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,14 +44,12 @@
             this.txt_confirmpass = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_changepass = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Coral;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -57,6 +57,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(638, 49);
             this.panel1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.button2.BackgroundImage = global::DASHBOARD.Properties.Resources.exit_full_screen__1_;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(594, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(41, 43);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(188, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(226, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Let\'s Update your Password";
             // 
             // label1
             // 
@@ -176,7 +200,7 @@
             // 
             // btn_changepass
             // 
-            this.btn_changepass.BackColor = System.Drawing.Color.Coral;
+            this.btn_changepass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
             this.btn_changepass.FlatAppearance.BorderSize = 0;
             this.btn_changepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_changepass.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,30 +211,6 @@
             this.btn_changepass.Text = "Change Password";
             this.btn_changepass.UseVisualStyleBackColor = false;
             this.btn_changepass.Click += new System.EventHandler(this.btn_changepass_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Coral;
-            this.button2.BackgroundImage = global::DASHBOARD.Properties.Resources.exit_full_screen__1_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(585, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(41, 43);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(188, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(226, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Let\'s Update your Password";
             // 
             // Password_up
             // 

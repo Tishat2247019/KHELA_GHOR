@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,10 +30,26 @@ namespace Classic_Snake_Game
 
         bool goLeft, goRight, goDown, goUp;
 
+        //for database connection
+        string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+        public static string username;
+
         public Form1()
         {
             InitializeComponent();
             new Settings();
+            //getting the highsocre from the database when the form is being loaded
+            txtHighScore.Text = "High Score: " + Environment.NewLine + GetHighScore();
+            highScore = GetHighScore();
+        }
+        public Form1(string username1)
+        {
+            InitializeComponent();
+            username = username1;
+            new Settings();
+            //getting the highsocre from the database when the form is being loaded
+            txtHighScore.Text = "High Score: " + Environment.NewLine + GetHighScore();
+            highScore = GetHighScore();
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
@@ -90,9 +107,9 @@ namespace Classic_Snake_Game
 
         private void GameTimerEvent(object sender, EventArgs e)
         {
-            //CG
             
-            //CG
+           
+            
 
             // Setting the directions
             if (goLeft)
@@ -169,8 +186,12 @@ namespace Classic_Snake_Game
                     {
                         if (Snake[i].X == Snake[j].X && Snake[i].Y == Snake[j].Y)
                         {
+                            SaveHighScore(username, score);
                             GameOver();
-                        }
+                            
+                        
+
+                         }
                             
                     }
                 }
@@ -301,6 +322,74 @@ namespace Classic_Snake_Game
                 txtHighScore.Text = "High Score: " + Environment.NewLine + highScore;
                 txtHighScore.ForeColor = Color.Maroon;
                 txtHighScore.TextAlign = ContentAlignment.MiddleCenter;
+                string id = SnakeGamepop.showHighScore($"Your score is {score}");
+                if (id == "1")
+                {
+                    RestartGame();
+                }
+            }
+            else
+            {
+                string id = SnakeGamepop.showScore($"Your score is {score}");
+                {
+                    if (id == "1")
+                    {
+                        RestartGame();
+                    }
+                }
+            }
+        }
+
+        private void SaveHighScore(string playerName, int score)
+        {
+
+            //esblish connection;
+            SqlConnection con = new SqlConnection(connectinString);
+
+            //open connection
+            con.Open();
+            string game_name = "SnakeGame";
+            string user_name = playerName;
+            string score1 = score.ToString();
+            string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name + "', '" + score1 + "')";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            //string deleteQueary = "DELETE FROM Leader_Board WHERE game_name = 'SnakeGame' AND score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board  WHERE game_name = 'SnakeGame' ORDER BY CAST(score_value AS INT) DESC)";
+            //SqlCommand cmd1 = new SqlCommand(deleteQueary, con);
+            //cmd1.ExecuteNonQuery();
+
+
+            //exucute Query
+            cmd.ExecuteNonQuery();
+
+
+
+
+            //close the connection
+            con.Close();
+
+
+        }
+
+        private int GetHighScore()
+        {
+            using (SqlConnection connection = new SqlConnection(connectinString))
+            {
+                connection.Open();
+
+                string query = "select max(Convert(int, score_value)) from Leader_Board where game_name = 'SnakeGame';";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return 0; // Default value if no high score is found
+                    }
+                }
             }
         }
     }

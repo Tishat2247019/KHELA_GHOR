@@ -141,6 +141,16 @@ namespace KHELA_GHOR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon cancel_77947__1___2_ {
+            get {
+                object obj = ResourceManager.GetObject("cancel_77947__1___2_", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap desktop_wallpaper_black_and_white_gaming_aesthetic_black_gaming {

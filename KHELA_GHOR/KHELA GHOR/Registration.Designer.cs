@@ -200,7 +200,7 @@
             // picBox_Eye2
             // 
             this.picBox_Eye2.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
-            this.picBox_Eye2.Location = new System.Drawing.Point(289, 181);
+            this.picBox_Eye2.Location = new System.Drawing.Point(289, 183);
             this.picBox_Eye2.Name = "picBox_Eye2";
             this.picBox_Eye2.Size = new System.Drawing.Size(23, 28);
             this.picBox_Eye2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -236,7 +236,7 @@
             // picBox_Eye1
             // 
             this.picBox_Eye1.Image = global::KHELA_GHOR.Properties.Resources.Asset_1;
-            this.picBox_Eye1.Location = new System.Drawing.Point(289, 125);
+            this.picBox_Eye1.Location = new System.Drawing.Point(289, 129);
             this.picBox_Eye1.Name = "picBox_Eye1";
             this.picBox_Eye1.Size = new System.Drawing.Size(23, 28);
             this.picBox_Eye1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

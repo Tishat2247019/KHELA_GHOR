@@ -48,12 +48,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(338, 27);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(117, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 39);
+            this.label1.Size = new System.Drawing.Size(661, 84);
             this.label1.TabIndex = 0;
-            this.label1.Text = "This is home";
+            this.label1.Text = "Click On the Game Icon to Play Games\r\n\r\n";
             // 
             // btnCarracing
             // 
