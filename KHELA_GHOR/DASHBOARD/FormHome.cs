@@ -12,6 +12,7 @@ using Car_Racing;
 using RUNNING_GAME;
 using Classic_Snake_Game;
 using Platform_Ball_Bouncing_Game;
+using Helicopter_Shooter;
 
 namespace DASHBOARD
 {
@@ -225,6 +226,28 @@ namespace DASHBOARD
         }
 
         private void Snakegame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Show both the MdiParent (Dashboard form) and the Home form when the car racing game form is closed
+            if (this.MdiParent != null)
+            {
+                this.MdiParent.Show();
+            }
+
+            this.Show();
+        }
+
+        private void btn_Helicopter_Click(object sender, EventArgs e)
+        {
+            if (this.MdiParent != null)
+            {
+                this.MdiParent.Hide();
+            }
+            this.Hide();
+            Helicopter_Shooter.Form1 helicopter = new Helicopter_Shooter.Form1(username);
+            helicopter.FormClosed += Helicopter_FormClosed;
+            helicopter.Show();
+        }
+        private void Helicopter_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Show both the MdiParent (Dashboard form) and the Home form when the car racing game form is closed
             if (this.MdiParent != null)

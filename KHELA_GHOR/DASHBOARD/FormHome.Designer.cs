@@ -105,6 +105,7 @@
             this.btn_Helicopter.Size = new System.Drawing.Size(108, 102);
             this.btn_Helicopter.TabIndex = 1;
             this.btn_Helicopter.UseVisualStyleBackColor = false;
+            this.btn_Helicopter.Click += new System.EventHandler(this.btn_Helicopter_Click);
             this.btn_Helicopter.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
             this.btn_Helicopter.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 
