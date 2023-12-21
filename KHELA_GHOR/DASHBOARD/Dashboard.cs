@@ -72,6 +72,10 @@ namespace DASHBOARD
         private float originalLabelUsernameFontSize;
         private float originalLabelMenuFontSize;
 
+        //logout button on hover transiton
+        private Size originalSizelogout;
+        
+        private bool isHoveredlogout = false;
         public Dashboard()
         {
             InitializeComponent();
@@ -358,6 +362,7 @@ namespace DASHBOARD
             if (isHovered)
             {
                 button.Location = new Point(button.Location.X + 5, button.Location.Y + 5);
+                button.Size = new Size(originalSize.Width - 26, originalSize.Height - 24);
 
                 button.Size = originalSize;
                 isHovered = false;
@@ -408,6 +413,38 @@ namespace DASHBOARD
             }
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            PictureBox p  = (PictureBox)sender;
+            
+            if (!isHoveredlogout)
+            {
+                originalSizelogout = p.Size;
+                p.Location = new Point(p.Location.X - 5, p.Location.Y - 5);
+
+                p.Size = new Size(originalSizelogout.Width + 16, originalSizelogout.Height + 14);
+                isHoveredlogout = true;
+            }
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            PictureBox p = (PictureBox)sender;
+
+            if(isHoveredlogout)
+            {
+                originalSizelogout = p.Size;
+                p.Location = new Point(p.Location.X + 5, p.Location.Y + 5);
+                p.Size = new Size(originalSizelogout.Width - 16, originalSizelogout.Height - 14);
+
+
+                isHoveredlogout = false;
+            }
+        }
     }
 }

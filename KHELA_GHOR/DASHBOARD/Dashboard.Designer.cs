@@ -33,30 +33,35 @@
             this.panel_sideBarContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_top = new System.Windows.Forms.Panel();
             this.lbl_Menu = new System.Windows.Forms.Label();
-            this.picBox_Menu = new System.Windows.Forms.PictureBox();
             this.panel_home = new System.Windows.Forms.Panel();
             this.panel_sidehome = new System.Windows.Forms.Panel();
-            this.btn_Home = new System.Windows.Forms.Button();
             this.panel_scoreboard = new System.Windows.Forms.Panel();
             this.panel_sidescore = new System.Windows.Forms.Panel();
-            this.btn_ScoreBoard = new System.Windows.Forms.Button();
             this.panel_settings = new System.Windows.Forms.Panel();
             this.panel_sidesettings = new System.Windows.Forms.Panel();
-            this.btn_Settings = new System.Windows.Forms.Button();
             this.panel_help = new System.Windows.Forms.Panel();
             this.panel_sidehelp = new System.Windows.Forms.Panel();
-            this.btn_Help = new System.Windows.Forms.Button();
             this.sideBar_timer = new System.Windows.Forms.Timer(this.components);
             this.panel_topcontainer = new System.Windows.Forms.Panel();
             this.lbl_UserNameHi = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_logout = new System.Windows.Forms.Label();
+            this.picBox_Menu = new System.Windows.Forms.PictureBox();
+            this.btn_Home = new System.Windows.Forms.Button();
+            this.btn_ScoreBoard = new System.Windows.Forms.Button();
+            this.btn_Settings = new System.Windows.Forms.Button();
+            this.btn_Help = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_sideBarContainer.SuspendLayout();
             this.panel_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).BeginInit();
             this.panel_home.SuspendLayout();
             this.panel_scoreboard.SuspendLayout();
             this.panel_settings.SuspendLayout();
             this.panel_help.SuspendLayout();
             this.panel_topcontainer.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_sideBarContainer
@@ -67,6 +72,7 @@
             this.panel_sideBarContainer.Controls.Add(this.panel_scoreboard);
             this.panel_sideBarContainer.Controls.Add(this.panel_settings);
             this.panel_sideBarContainer.Controls.Add(this.panel_help);
+            this.panel_sideBarContainer.Controls.Add(this.panel1);
             this.panel_sideBarContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_sideBarContainer.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.panel_sideBarContainer.Location = new System.Drawing.Point(0, 0);
@@ -97,18 +103,6 @@
             this.lbl_Menu.TabIndex = 1;
             this.lbl_Menu.Text = "MENU";
             // 
-            // picBox_Menu
-            // 
-            this.picBox_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBox_Menu.Image = global::DASHBOARD.Properties.Resources.Animation___1702661425530;
-            this.picBox_Menu.Location = new System.Drawing.Point(-16, -13);
-            this.picBox_Menu.Name = "picBox_Menu";
-            this.picBox_Menu.Size = new System.Drawing.Size(87, 91);
-            this.picBox_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox_Menu.TabIndex = 0;
-            this.picBox_Menu.TabStop = false;
-            this.picBox_Menu.Click += new System.EventHandler(this.picBox_Menu_Click);
-            // 
             // panel_home
             // 
             this.panel_home.Controls.Add(this.panel_sidehome);
@@ -127,29 +121,6 @@
             this.panel_sidehome.Size = new System.Drawing.Size(5, 70);
             this.panel_sidehome.TabIndex = 6;
             this.panel_sidehome.Visible = false;
-            // 
-            // btn_Home
-            // 
-            this.btn_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
-            this.btn_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Home.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Home.FlatAppearance.BorderSize = 0;
-            this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Home.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Home.Image = global::DASHBOARD.Properties.Resources.home_135x35;
-            this.btn_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Home.Location = new System.Drawing.Point(12, 15);
-            this.btn_Home.Name = "btn_Home";
-            this.btn_Home.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_Home.Size = new System.Drawing.Size(179, 47);
-            this.btn_Home.TabIndex = 0;
-            this.btn_Home.TabStop = false;
-            this.btn_Home.Text = "               HOME";
-            this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Home.UseVisualStyleBackColor = false;
-            this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
-            this.btn_Home.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
-            this.btn_Home.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
             // 
             // panel_scoreboard
             // 
@@ -170,28 +141,6 @@
             this.panel_sidescore.TabIndex = 6;
             this.panel_sidescore.Visible = false;
             // 
-            // btn_ScoreBoard
-            // 
-            this.btn_ScoreBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
-            this.btn_ScoreBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ScoreBoard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ScoreBoard.FlatAppearance.BorderSize = 0;
-            this.btn_ScoreBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ScoreBoard.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ScoreBoard.Image = global::DASHBOARD.Properties.Resources.scoreboard35x35;
-            this.btn_ScoreBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ScoreBoard.Location = new System.Drawing.Point(12, 15);
-            this.btn_ScoreBoard.Name = "btn_ScoreBoard";
-            this.btn_ScoreBoard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_ScoreBoard.Size = new System.Drawing.Size(179, 47);
-            this.btn_ScoreBoard.TabIndex = 0;
-            this.btn_ScoreBoard.TabStop = false;
-            this.btn_ScoreBoard.Text = "           SCOREBOARD";
-            this.btn_ScoreBoard.UseVisualStyleBackColor = false;
-            this.btn_ScoreBoard.Click += new System.EventHandler(this.btn_ScoreBoard_Click);
-            this.btn_ScoreBoard.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
-            this.btn_ScoreBoard.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
-            // 
             // panel_settings
             // 
             this.panel_settings.Controls.Add(this.panel_sidesettings);
@@ -211,29 +160,6 @@
             this.panel_sidesettings.TabIndex = 6;
             this.panel_sidesettings.Visible = false;
             // 
-            // btn_Settings
-            // 
-            this.btn_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
-            this.btn_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Settings.FlatAppearance.BorderSize = 0;
-            this.btn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Settings.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Settings.Image = global::DASHBOARD.Properties.Resources.settings35x35;
-            this.btn_Settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Settings.Location = new System.Drawing.Point(12, 15);
-            this.btn_Settings.Name = "btn_Settings";
-            this.btn_Settings.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_Settings.Size = new System.Drawing.Size(179, 47);
-            this.btn_Settings.TabIndex = 0;
-            this.btn_Settings.TabStop = false;
-            this.btn_Settings.Text = "               SETTINGS";
-            this.btn_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Settings.UseVisualStyleBackColor = false;
-            this.btn_Settings.Click += new System.EventHandler(this.btn_Settings_Click);
-            this.btn_Settings.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
-            this.btn_Settings.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
-            // 
             // panel_help
             // 
             this.panel_help.Controls.Add(this.panel_sidehelp);
@@ -252,30 +178,6 @@
             this.panel_sidehelp.Size = new System.Drawing.Size(5, 70);
             this.panel_sidehelp.TabIndex = 6;
             this.panel_sidehelp.Visible = false;
-            // 
-            // btn_Help
-            // 
-            this.btn_Help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
-            this.btn_Help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Help.FlatAppearance.BorderSize = 0;
-            this.btn_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Help.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Help.Image = global::DASHBOARD.Properties.Resources.support35x35;
-            this.btn_Help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Help.Location = new System.Drawing.Point(12, 15);
-            this.btn_Help.Name = "btn_Help";
-            this.btn_Help.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_Help.Size = new System.Drawing.Size(179, 47);
-            this.btn_Help.TabIndex = 0;
-            this.btn_Help.TabStop = false;
-            this.btn_Help.Text = "                 HELP";
-            this.btn_Help.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Help.UseCompatibleTextRendering = true;
-            this.btn_Help.UseVisualStyleBackColor = false;
-            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
-            this.btn_Help.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
-            this.btn_Help.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
             // 
             // sideBar_timer
             // 
@@ -302,6 +204,143 @@
             this.lbl_UserNameHi.TabIndex = 0;
             this.lbl_UserNameHi.Text = "label1";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbl_logout);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(3, 414);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 206);
+            this.panel1.TabIndex = 3;
+            // 
+            // lbl_logout
+            // 
+            this.lbl_logout.AutoSize = true;
+            this.lbl_logout.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_logout.Location = new System.Drawing.Point(83, 75);
+            this.lbl_logout.Name = "lbl_logout";
+            this.lbl_logout.Size = new System.Drawing.Size(64, 18);
+            this.lbl_logout.TabIndex = 1;
+            this.lbl_logout.Text = "Logout";
+            // 
+            // picBox_Menu
+            // 
+            this.picBox_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBox_Menu.Image = global::DASHBOARD.Properties.Resources.Animation___1702661425530;
+            this.picBox_Menu.Location = new System.Drawing.Point(-16, -13);
+            this.picBox_Menu.Name = "picBox_Menu";
+            this.picBox_Menu.Size = new System.Drawing.Size(87, 91);
+            this.picBox_Menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Menu.TabIndex = 0;
+            this.picBox_Menu.TabStop = false;
+            this.picBox_Menu.Click += new System.EventHandler(this.picBox_Menu_Click);
+            // 
+            // btn_Home
+            // 
+            this.btn_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.btn_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Home.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Home.FlatAppearance.BorderSize = 0;
+            this.btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Home.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Home.Image = global::DASHBOARD.Properties.Resources.home_135x35;
+            this.btn_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Home.Location = new System.Drawing.Point(12, 15);
+            this.btn_Home.Name = "btn_Home";
+            this.btn_Home.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_Home.Size = new System.Drawing.Size(179, 47);
+            this.btn_Home.TabIndex = 0;
+            this.btn_Home.TabStop = false;
+            this.btn_Home.Text = "               HOME";
+            this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Home.UseVisualStyleBackColor = false;
+            this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
+            this.btn_Home.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
+            this.btn_Home.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
+            // 
+            // btn_ScoreBoard
+            // 
+            this.btn_ScoreBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.btn_ScoreBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ScoreBoard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ScoreBoard.FlatAppearance.BorderSize = 0;
+            this.btn_ScoreBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ScoreBoard.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ScoreBoard.Image = global::DASHBOARD.Properties.Resources.scoreboard35x35;
+            this.btn_ScoreBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ScoreBoard.Location = new System.Drawing.Point(12, 15);
+            this.btn_ScoreBoard.Name = "btn_ScoreBoard";
+            this.btn_ScoreBoard.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_ScoreBoard.Size = new System.Drawing.Size(179, 47);
+            this.btn_ScoreBoard.TabIndex = 0;
+            this.btn_ScoreBoard.TabStop = false;
+            this.btn_ScoreBoard.Text = "           SCOREBOARD";
+            this.btn_ScoreBoard.UseVisualStyleBackColor = false;
+            this.btn_ScoreBoard.Click += new System.EventHandler(this.btn_ScoreBoard_Click);
+            this.btn_ScoreBoard.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
+            this.btn_ScoreBoard.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
+            // 
+            // btn_Settings
+            // 
+            this.btn_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.btn_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Settings.FlatAppearance.BorderSize = 0;
+            this.btn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Settings.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Settings.Image = global::DASHBOARD.Properties.Resources.settings35x35;
+            this.btn_Settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Settings.Location = new System.Drawing.Point(12, 15);
+            this.btn_Settings.Name = "btn_Settings";
+            this.btn_Settings.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_Settings.Size = new System.Drawing.Size(179, 47);
+            this.btn_Settings.TabIndex = 0;
+            this.btn_Settings.TabStop = false;
+            this.btn_Settings.Text = "               SETTINGS";
+            this.btn_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Settings.UseVisualStyleBackColor = false;
+            this.btn_Settings.Click += new System.EventHandler(this.btn_Settings_Click);
+            this.btn_Settings.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
+            this.btn_Settings.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
+            // 
+            // btn_Help
+            // 
+            this.btn_Help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(41)))));
+            this.btn_Help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Help.FlatAppearance.BorderSize = 0;
+            this.btn_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Help.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Help.Image = global::DASHBOARD.Properties.Resources.support35x35;
+            this.btn_Help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Help.Location = new System.Drawing.Point(12, 15);
+            this.btn_Help.Name = "btn_Help";
+            this.btn_Help.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_Help.Size = new System.Drawing.Size(179, 47);
+            this.btn_Help.TabIndex = 0;
+            this.btn_Help.TabStop = false;
+            this.btn_Help.Text = "                 HELP";
+            this.btn_Help.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Help.UseCompatibleTextRendering = true;
+            this.btn_Help.UseVisualStyleBackColor = false;
+            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
+            this.btn_Help.MouseLeave += new System.EventHandler(this.btn_sidepanel_MouseLeave);
+            this.btn_Help.MouseHover += new System.EventHandler(this.btnsidepanel_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::DASHBOARD.Properties.Resources.logout;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -320,13 +359,16 @@
             this.panel_sideBarContainer.ResumeLayout(false);
             this.panel_top.ResumeLayout(false);
             this.panel_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).EndInit();
             this.panel_home.ResumeLayout(false);
             this.panel_scoreboard.ResumeLayout(false);
             this.panel_settings.ResumeLayout(false);
             this.panel_help.ResumeLayout(false);
             this.panel_topcontainer.ResumeLayout(false);
             this.panel_topcontainer.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,6 +393,9 @@
         private System.Windows.Forms.Panel panel_top;
         private System.Windows.Forms.Label lbl_Menu;
         private System.Windows.Forms.PictureBox picBox_Menu;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_logout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -80,6 +80,10 @@ namespace RUNNING_GAME
 
 
             // when the player land on the platforms
+            if (score > GetHighScore())
+            {
+                lblHighScore.Text = "High Score : " + score;
+            }
 
 
             if (orignalsize)

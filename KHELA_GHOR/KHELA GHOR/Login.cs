@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using System.Data.SqlClient;
 using DASHBOARD;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace LOGIN_REGISTRATION
 {
@@ -180,7 +181,7 @@ namespace LOGIN_REGISTRATION
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if(txt_PassLogin.Text.Length < 6)
+            if (txt_PassLogin.Text.Length < 6)
             {
                 errorProvider2.SetError(this.txt_PassLogin, "Please Must be at least 6 character long!!");
             }
@@ -189,7 +190,7 @@ namespace LOGIN_REGISTRATION
                 errorProvider2.Clear();
             }
         }
-        
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -302,14 +303,19 @@ namespace LOGIN_REGISTRATION
 
                 if (dt.Rows.Count > 0)
                 {
-                    new Dashboard(txt_UserLogin.Text).Show();
+                    //new Dashboard(txt_UserLogin.Text).Show();
+                   // this.Hide();
+
+                    Dashboard d = new Dashboard(txt_UserLogin.Text);
+                    d.FormClosed += DashBoard_FormClosed;
+                    d.Show();
                     this.Hide();
                 }
                 else
                 {
                     //MessageBox.Show("Invalid Login Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     SignUpExistError.showLogin("Invalid Login Details");
-                   // txt_UserLogin.Clear();
+                    // txt_UserLogin.Clear();
                     txt_PassLogin.Clear();
 
                     txt_PassLogin.Focus();
@@ -318,6 +324,13 @@ namespace LOGIN_REGISTRATION
             }
 
 
+        }
+        private void DashBoard_FormClosed(object sender, FormClosedEventArgs e)
+        { 
+            this.Show();
+            txt_PassLogin.Text = "Password";
+            txt_UserLogin.Text = "Username";
+            txt_PassLogin.UseSystemPasswordChar = false;
         }
 
         private void btnBack_Login_Click(object sender, EventArgs e)
@@ -331,7 +344,7 @@ namespace LOGIN_REGISTRATION
         {
             if (e.KeyCode.Equals(Keys.Down))
             {
-                if (isClick_password)
+                if (isClick_username)
                 {
                     e.Handled = true;
                     txt_PassLogin.Focus();
@@ -344,7 +357,7 @@ namespace LOGIN_REGISTRATION
         {
             if (e.KeyCode.Equals(Keys.Up))
             {
-                if (isClick_username)
+                if (isClick_password)
                 {
                 e.Handled = true;
                 txt_UserLogin.Focus();

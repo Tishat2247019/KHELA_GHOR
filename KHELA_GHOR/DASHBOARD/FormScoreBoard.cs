@@ -135,6 +135,30 @@ namespace DASHBOARD
                 //close the connection
                 con.Close();
             }
+            if (comboBox1.Text == "Helicopter Shooter")
+            {
+                string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+                SqlConnection con = new SqlConnection(connectinString);
+
+                //open connection
+                con.Open();
+
+                string query = "SELECT TOP 10 user_name as 'User Name', CAST(score_value AS INT) as Scores \r\nFROM Leader_Board WHERE game_name = 'HelicopterShooter'\r\nORDER BY CAST(score_value AS INT) DESC;";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                var reader = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                dataGridView1.DataSource = dt;
+
+                //dataGridView1.Columns["user_name"].Name = "User NName";
+                //dataGridView1.Columns["Scores"].Name = "Column2";
+
+                //close the connection
+                con.Close();
+            }
 
         }
         private void ApplyRowColors()

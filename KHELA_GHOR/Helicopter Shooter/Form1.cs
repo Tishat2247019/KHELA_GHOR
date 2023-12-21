@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -35,11 +36,24 @@ namespace Helicopter_Shooter
         int index2 = 0;//change bomb images in one picture box
         int index3 = 0;//change bird images in one picture box
 
+        //database connection;
+        string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+        public static string username;
 
 
         public Form1()
         {
             InitializeComponent();
+            lbl_HighScore.Text = "High Score : " + GetHighScore();
+        }
+
+        public Form1(string username1)
+        {
+
+            InitializeComponent();
+            username = username1;
+            lbl_HighScore.Text = "High Score : " + GetHighScore();
+
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
@@ -118,6 +132,7 @@ namespace Helicopter_Shooter
             BirdSpeed = 10;
             
             txtScore.Text = "Score" + score;
+            lbl_HighScore.Text = "High Score : " + GetHighScore();
 
             ChangeUFO();//UFO Reposition
             ChangeBomb();//Bomb Reposition
@@ -204,6 +219,12 @@ namespace Helicopter_Shooter
                     if(player.Bounds.IntersectsWith(x.Bounds))
                     {
                         GameOver();
+                        SaveHighScore(username, score);
+                        string id = HelicopterPopUp.showScore($"Your score is {score}");
+                        if (id == "1")
+                        {
+                            RestartGame();
+                        }
                     }
                 }
 
@@ -238,6 +259,7 @@ namespace Helicopter_Shooter
             if (player.Bounds.IntersectsWith(ufo.Bounds))
             {
                 GameOver();
+                SaveHighScore(username, score);
                 string id = HelicopterPopUp.showScore($"Your score is {score}");
                 if (id == "1")
                 {
@@ -247,6 +269,7 @@ namespace Helicopter_Shooter
             if(player.Bounds.IntersectsWith(bomb.Bounds))
             {
                 GameOver();
+                SaveHighScore(username, score);
                 string id = HelicopterPopUp.showScore($"Your score is {score}");
                 if (id == "1") {
                     RestartGame();
@@ -256,6 +279,7 @@ namespace Helicopter_Shooter
             if(player.Bounds.IntersectsWith(bird.Bounds))
             {
                 GameOver();
+                SaveHighScore(username, score);
                 string id = HelicopterPopUp.showScore($"Your score is {score}");
                 if (id == "1") {
                     RestartGame();
@@ -271,7 +295,60 @@ namespace Helicopter_Shooter
                 BirdSpeed = 15;
             }
         }
-        
+
+        private void SaveHighScore(string playerName, int score)
+        {
+
+            //esblish connection;
+            SqlConnection con = new SqlConnection(connectinString);
+
+            //open connection
+            con.Open();
+            string game_name = "HelicopterShooter";
+            string user_name = playerName;
+            string score1 = score.ToString();
+            string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name + "', '" + score1 + "')";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            //string deleteQueary = "DELETE FROM Leader_Board WHERE game_name = 'SnakeGame' AND score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board  WHERE game_name = 'SnakeGame' ORDER BY CAST(score_value AS INT) DESC)";
+            //SqlCommand cmd1 = new SqlCommand(deleteQueary, con);
+            //cmd1.ExecuteNonQuery();
+
+
+            //exucute Query
+            cmd.ExecuteNonQuery();
+
+
+
+
+            //close the connection
+            con.Close();
+
+
+        }
+
+        private int GetHighScore()
+        {
+            using (SqlConnection connection = new SqlConnection(connectinString))
+            {
+                connection.Open();
+
+                string query = "select max(Convert(int, score_value)) from Leader_Board where game_name = 'HelicopterShooter';";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return 0; // Default value if no high score is found
+                    }
+                }
+            }
+        }
+
 
         private void RemoveBullet(PictureBox bullet)
         {
