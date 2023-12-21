@@ -170,6 +170,16 @@ namespace RUNNING_GAME.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_1159z_2107w026n002628bp1628 {
+            get {
+                object obj = ResourceManager.GetObject("rsz_1159z_2107w026n002628bp1628", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream smash_sound {

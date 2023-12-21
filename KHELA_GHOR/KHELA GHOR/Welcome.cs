@@ -4,10 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Windows.Forms.PropertyGridInternal;
 
 namespace LOGIN_REGISTRATION
 {
@@ -23,6 +24,10 @@ namespace LOGIN_REGISTRATION
         private float originalButtonsFontSize;
         private float originalLableFontSize1;
         private float originalLableFontSize2;
+
+        private Form gifPopupForm;
+        private Size originalSize;
+        private bool isHovered = false;
         public Welcome()
         {
             InitializeComponent();
@@ -31,6 +36,42 @@ namespace LOGIN_REGISTRATION
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void ShowGifPopup()
+        {
+            // Create a new form for the GIF popup
+            gifPopupForm = new Form();
+            gifPopupForm.Text = "Gameplay Preview";
+            gifPopupForm.Width = 700;
+            gifPopupForm.Height = 400;
+            gifPopupForm.StartPosition = FormStartPosition.CenterScreen;
+            gifPopupForm.FormBorderStyle = FormBorderStyle.None;
+
+            // Create a PictureBox to display the GIF
+            PictureBox gifPictureBox = new PictureBox();
+            gifPictureBox.Image = KHELA_GHOR.Properties.Resources._2023_12_19_00_22_34; // Replace with your actual resource or file path
+            gifPictureBox.Dock = DockStyle.Fill;
+            gifPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            // Add PictureBox to the popup form
+            gifPopupForm.Controls.Add(gifPictureBox);
+
+            // Show the popup form
+            gifPopupForm.Show();
+        }
+       
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ShowGifPopup();
+        }
+        private void previewButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Check if the mouse button is released and close the popup form
+            if (e.Button == MouseButtons.Left && gifPopupForm != null)
+            {
+                gifPopupForm.Close();
+                gifPopupForm.Dispose();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -107,6 +148,32 @@ namespace LOGIN_REGISTRATION
             resizeControl(labelOriginalRectangle3, HeyYouLabel_Welcom, originalLableFontSize1);
             resizeControl(labelOriginalRectangle4, EmtertainLabel_Welcom, originalLableFontSize2);
             resizeControl(labelOriginalRectangle5, label2, originalLableFontSize1);
+        }
+
+        private void picBox_Preview_MouseHover(object sender, EventArgs e)
+        {
+            PictureBox picbox = (PictureBox)sender;
+            if (!isHovered)
+            {
+                originalSize = picbox.Size;
+                
+                picbox.Location = new Point(picbox.Location.X - 15, picbox.Location.Y - 15);
+                picbox.Size = new Size(originalSize.Width + 36, originalSize.Height + 34);
+                isHovered = true;
+            }
+        }
+
+        private void picBox_Preview_MouseLeave(object sender, EventArgs e)
+        {
+            PictureBox picbox = (PictureBox)sender;
+            if (isHovered)
+            {
+                originalSize = picbox.Size;
+
+                picbox.Location = new Point(picbox.Location.X + 15, picbox.Location.Y + 15);
+                picbox.Size = new Size(originalSize.Width - 36, originalSize.Height - 34);
+                isHovered = false;
+            }
         }
     }
 }

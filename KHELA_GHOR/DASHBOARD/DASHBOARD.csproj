@@ -131,6 +131,10 @@
       <Project>{e5facaf8-00bf-44b3-af91-a50ef9e0a863}</Project>
       <Name>Car Racing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Classic Snake Game\Classic Snake Game.csproj">
+      <Project>{ab22a5e3-2fa1-4043-a6a3-ba1ae0c894cc}</Project>
+      <Name>Classic Snake Game</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RUNNING_GAME\RUNNING_GAME.csproj">
       <Project>{0900d191-7787-4da8-9a7b-4383a21236cc}</Project>
       <Name>RUNNING_GAME</Name>

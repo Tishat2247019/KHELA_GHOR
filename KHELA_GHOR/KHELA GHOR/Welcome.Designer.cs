@@ -35,6 +35,9 @@
             this.btnSignUp_Welcom = new System.Windows.Forms.Button();
             this.btnSignIn_Welcom = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.picBox_Preview = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Preview)).BeginInit();
             this.SuspendLayout();
             // 
             // HeyYouLabel_Welcom
@@ -87,7 +90,7 @@
             this.btnSignUp_Welcom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp_Welcom.Font = new System.Drawing.Font("Lucida Sans Typewriter", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp_Welcom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSignUp_Welcom.Location = new System.Drawing.Point(677, 309);
+            this.btnSignUp_Welcom.Location = new System.Drawing.Point(677, 371);
             this.btnSignUp_Welcom.Name = "btnSignUp_Welcom";
             this.btnSignUp_Welcom.Size = new System.Drawing.Size(290, 59);
             this.btnSignUp_Welcom.TabIndex = 4;
@@ -104,13 +107,42 @@
             this.btnSignIn_Welcom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignIn_Welcom.Font = new System.Drawing.Font("Lucida Sans Typewriter", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn_Welcom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSignIn_Welcom.Location = new System.Drawing.Point(677, 390);
+            this.btnSignIn_Welcom.Location = new System.Drawing.Point(677, 452);
             this.btnSignIn_Welcom.Name = "btnSignIn_Welcom";
             this.btnSignIn_Welcom.Size = new System.Drawing.Size(290, 59);
             this.btnSignIn_Welcom.TabIndex = 5;
             this.btnSignIn_Welcom.Text = "SIGN IN";
             this.btnSignIn_Welcom.UseVisualStyleBackColor = false;
             this.btnSignIn_Welcom.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // picBox_Preview
+            // 
+            this.picBox_Preview.BackColor = System.Drawing.Color.Transparent;
+            this.picBox_Preview.Image = ((System.Drawing.Image)(resources.GetObject("picBox_Preview.Image")));
+            this.picBox_Preview.Location = new System.Drawing.Point(1000, 24);
+            this.picBox_Preview.Name = "picBox_Preview";
+            this.picBox_Preview.Size = new System.Drawing.Size(31, 28);
+            this.picBox_Preview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Preview.TabIndex = 6;
+            this.picBox_Preview.TabStop = false;
+            this.picBox_Preview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.picBox_Preview.MouseLeave += new System.EventHandler(this.picBox_Preview_MouseLeave);
+            this.picBox_Preview.MouseHover += new System.EventHandler(this.picBox_Preview_MouseHover);
+            this.picBox_Preview.MouseUp += new System.Windows.Forms.MouseEventHandler(this.previewButton_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(818, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Watch a Preview!";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Welcome
             // 
@@ -121,8 +153,10 @@
             this.BackgroundImage = global::KHELA_GHOR.Properties.Resources.KHELA_GHOR_WELCOM;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1111, 658);
+            this.Controls.Add(this.picBox_Preview);
             this.Controls.Add(this.btnSignIn_Welcom);
             this.Controls.Add(this.EmtertainLabel_Welcom);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.HeyYouLabel_Welcom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSignUp_Welcom);
@@ -133,6 +167,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Welcome_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Preview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +180,8 @@
         private System.Windows.Forms.Button btnSignUp_Welcom;
         private System.Windows.Forms.Button btnSignIn_Welcom;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox picBox_Preview;
+        private System.Windows.Forms.Label label1;
     }
 }
 

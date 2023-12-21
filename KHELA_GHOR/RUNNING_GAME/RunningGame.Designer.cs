@@ -132,14 +132,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RUNNING_GAME.Properties.Resources.background_still;
+            this.BackgroundImage = global::RUNNING_GAME.Properties.Resources.rsz_1159z_2107w026n002628bp1628;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1095, 632);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblHighScore);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.Player);
             this.DoubleBuffered = true;

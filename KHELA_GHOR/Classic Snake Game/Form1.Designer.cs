@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.startButton = new System.Windows.Forms.Button();
             this.txtScore = new System.Windows.Forms.Label();
             this.txtHighScore = new System.Windows.Forms.Label();
-            this.gameTimer = new System.Windows.Forms.Timer();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.canvas = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.canvas)).BeginInit();
             this.SuspendLayout();

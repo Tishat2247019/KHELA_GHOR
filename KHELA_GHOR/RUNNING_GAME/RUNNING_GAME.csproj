@@ -155,5 +155,8 @@
   <ItemGroup>
     <None Include="Resources\exit-full-screen %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1159z_2107w026n002628bp1628.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

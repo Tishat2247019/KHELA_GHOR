@@ -295,9 +295,9 @@ namespace RUNNING_GAME
         private void RestartGame()
         {
            
-                lblScore.Parent = pictureBox1;
-                lblHighScore.Parent = pictureBox2;
-                lblHighScore.Top = 10;
+               // lblScore.Parent = pictureBox1;
+                //lblHighScore.Parent = pictureBox2;
+                //lblHighScore.Top = 10;
             
             lblHighScore.Text = "High Score : " + GetHighScore();
 
@@ -321,9 +321,9 @@ namespace RUNNING_GAME
         private void RestartGame2()
         {
 
-            lblScore.Parent = pictureBox1;
-            lblHighScore.Parent = pictureBox2;
-            lblHighScore.Top = 10;
+            //lblScore.Parent = pictureBox1;
+            //lblHighScore.Parent = pictureBox2;
+            //lblHighScore.Top = 10;
             Player.Location = new Point(453, 265);
             Player.Image = Properties.Resources.images_runniong_game__1_;
             score = 0;
@@ -364,9 +364,9 @@ namespace RUNNING_GAME
         //}
         private void continueGame()
         {
-            lblScore.Parent = pictureBox1;
-            lblHighScore.Parent = pictureBox2;
-            lblHighScore.Top = 10;
+            //lblScore.Parent = pictureBox1;
+            //lblHighScore.Parent = pictureBox2;
+           // lblHighScore.Top = 10;
 
             // Adjust player location based on the resized window
             //Player.Location = orignalsize ? new Point(253, 265) : new Point(453, 265);
@@ -395,7 +395,12 @@ namespace RUNNING_GAME
 
 
         private void RunningGame_Load(object sender, EventArgs e)
+
         {
+            lblScore.Parent = pictureBox1;
+            lblHighScore.Parent = pictureBox2;
+            lblHighScore.Top = 10;
+
             OriginalFormSize = new Rectangle(this.Location.X, this.Location.Y, this.Size.Width, this.Size.Height);
 
             OriginalPicBox1Size = new Rectangle(pictureBox1.Location.X, pictureBox1.Location.Y, pictureBox1.Width, pictureBox1.Height);
