@@ -135,6 +135,10 @@
       <Project>{ab22a5e3-2fa1-4043-a6a3-ba1ae0c894cc}</Project>
       <Name>Classic Snake Game</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Platform Ball Bouncing Game\Platform Ball Bouncing Game.csproj">
+      <Project>{19cfe795-96e2-4ef0-85b5-314202837bd2}</Project>
+      <Name>Platform Ball Bouncing Game</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RUNNING_GAME\RUNNING_GAME.csproj">
       <Project>{0900d191-7787-4da8-9a7b-4383a21236cc}</Project>
       <Name>RUNNING_GAME</Name>

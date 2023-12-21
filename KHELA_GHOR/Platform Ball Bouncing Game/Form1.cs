@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RUNNING_GAME;
 
 namespace Platform_Ball_Bouncing_Game
 {
@@ -37,6 +39,10 @@ namespace Platform_Ball_Bouncing_Game
         List<PictureBox> coinShadows = new List<PictureBox>();
         //Shadow
 
+        //database connection
+        string connectinString = "Data Source=Towsif\\SQLEXPRESS02;Initial Catalog=MyDB;Integrated Security=True";
+        public static string username;
+
         public Form1()
         {
             InitializeComponent();
@@ -52,10 +58,32 @@ namespace Platform_Ball_Bouncing_Game
             // Player
             MakePlayerCircular();
             // Player
+            txtHighScore.Text = "High Score : " + GetHighScore();
 
             //
             
             //
+
+        }
+
+        public Form1(string username1)
+        {
+            InitializeComponent();
+            // Cirular Coin
+            MakePictureBoxesCircular();
+            // Cirular Coin
+
+            // Shadow
+            CreateCoinShadows();
+            // Shadow
+
+            // Player
+            MakePlayerCircular();
+            // Player
+
+            username = username1;
+            txtHighScore.Text = "High Score : " + GetHighScore();
+
 
         }
 
@@ -132,11 +160,11 @@ namespace Platform_Ball_Bouncing_Game
             //
             if (!isGameOver)
             {
-                if (score > highScore)
+                if (score > GetHighScore())
                 {
-                    highScore = score;
+                    //highScore = GetHighScore();
                     // Update the high score display if you have a label for it
-                    txtHighScore.Text = "High Score: " + highScore;
+                    txtHighScore.Text = "High Score: " + score;
                 }
             }
             //
@@ -207,6 +235,8 @@ namespace Platform_Ball_Bouncing_Game
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
                             gameTimer.Stop();
+                            SaveHighScore(username, score);
+
                             isGameOver = true;
                             //txtScore.Text = "Score: " + score + Environment.NewLine + "GAME OVER!!";
                             string id = ArcadeGamePopUp.showScore($"your score is : {score}");
@@ -257,6 +287,7 @@ namespace Platform_Ball_Bouncing_Game
             if (player.Top + player.Height > this.ClientSize.Height + 50)
             {
                 gameTimer.Stop();
+                SaveHighScore(username, score);
                 isGameOver = true;
                 // txtScore.Text = "Score: " + score + Environment.NewLine + "GAME OVER!!";
 
@@ -270,12 +301,66 @@ namespace Platform_Ball_Bouncing_Game
             if (player.Bounds.IntersectsWith(door.Bounds) && score == 37) 
             {
                 gameTimer.Stop();
+                SaveHighScore(username, score);
                 isGameOver = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Congratulation";
             }
             else
             {
                 //txtScore.Text = "Score: " + score + Environment.NewLine + "Collect All Coins";
+            }
+        }
+
+        private void SaveHighScore(string playerName, int score)
+        {
+
+            //esblish connection;
+            SqlConnection con = new SqlConnection(connectinString);
+
+            //open connection
+            con.Open();
+            string game_name = "ArcadeGame";
+            string user_name = playerName;
+            string score1 = score.ToString();
+            string query = "INSERT INTO Leader_Board (game_name, user_name, score_value) VALUES ('" + game_name + "', '" + user_name + "', '" + score1 + "')";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            //string deleteQueary = "DELETE FROM Leader_Board WHERE game_name = 'SnakeGame' AND score_value NOT IN (SELECT TOP 10 score_value FROM Leader_Board  WHERE game_name = 'SnakeGame' ORDER BY CAST(score_value AS INT) DESC)";
+            //SqlCommand cmd1 = new SqlCommand(deleteQueary, con);
+            //cmd1.ExecuteNonQuery();
+
+
+            //exucute Query
+            cmd.ExecuteNonQuery();
+
+
+
+
+            //close the connection
+            con.Close();
+
+
+        }
+
+        private int GetHighScore()
+        {
+            using (SqlConnection connection = new SqlConnection(connectinString))
+            {
+                connection.Open();
+
+                string query = "select max(Convert(int, score_value)) from Leader_Board where game_name = 'ArcadeGame';";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return 0; // Default value if no high score is found
+                    }
+                }
             }
         }
 
@@ -334,6 +419,7 @@ namespace Platform_Ball_Bouncing_Game
             score = 0;
 
             txtScore.Text = "Score: " + score;
+            txtHighScore.Text = "High Score : " + GetHighScore();
 
             //
             if (isGameOver)

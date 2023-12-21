@@ -110,5 +110,11 @@
   <ItemGroup>
     <None Include="Resources\d6cfbh1-47931523-77f9-4ff2-b7c4-ea8083cdd544.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RUNNING_GAME\RUNNING_GAME.csproj">
+      <Project>{0900d191-7787-4da8-9a7b-4383a21236cc}</Project>
+      <Name>RUNNING_GAME</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

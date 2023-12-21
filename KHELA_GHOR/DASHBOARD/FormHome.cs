@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Car_Racing;
 using RUNNING_GAME;
 using Classic_Snake_Game;
+using Platform_Ball_Bouncing_Game;
 
 namespace DASHBOARD
 {
@@ -188,9 +189,27 @@ namespace DASHBOARD
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_Arcade_Click(object sender, EventArgs e)
         {
+            if (this.MdiParent != null)
+            {
+                this.MdiParent.Hide();
+            }
+            this.Hide();
+            Platform_Ball_Bouncing_Game.Form1 ArcadeGame = new Platform_Ball_Bouncing_Game.Form1(username);
+            ArcadeGame.FormClosed += ArcadeGame_FormClosed;
+            ArcadeGame.Show();
+        }
 
+        private void ArcadeGame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Show both the MdiParent (Dashboard form) and the Home form when the car racing game form is closed
+            if (this.MdiParent != null)
+            {
+                this.MdiParent.Show();
+            }
+
+            this.Show();
         }
 
         private void btn_Snake_Click(object sender, EventArgs e)
@@ -220,5 +239,6 @@ namespace DASHBOARD
         {
 
         }
+
     }
 }

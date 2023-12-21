@@ -122,7 +122,7 @@
             this.btn_Arcade.Size = new System.Drawing.Size(109, 103);
             this.btn_Arcade.TabIndex = 1;
             this.btn_Arcade.UseVisualStyleBackColor = false;
-            this.btn_Arcade.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Arcade.Click += new System.EventHandler(this.btn_Arcade_Click);
             this.btn_Arcade.MouseLeave += new System.EventHandler(this.btn_RunningGame_MouseLeave);
             this.btn_Arcade.MouseHover += new System.EventHandler(this.btnCarracing_MouseHover);
             // 

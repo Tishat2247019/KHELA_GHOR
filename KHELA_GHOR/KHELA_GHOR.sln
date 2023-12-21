@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classic Snake Game", "Class
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform Ball Bouncing Game", "Platform Ball Bouncing Game\Platform Ball Bouncing Game.csproj", "{19CFE795-96E2-4EF0-85B5-314202837BD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helicopter Shooter", "Helicopter Shooter\Helicopter Shooter.csproj", "{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,14 @@ Global
 		{19CFE795-96E2-4EF0-85B5-314202837BD2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19CFE795-96E2-4EF0-85B5-314202837BD2}.Release|x86.ActiveCfg = Release|Any CPU
 		{19CFE795-96E2-4EF0-85B5-314202837BD2}.Release|x86.Build.0 = Release|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Debug|x86.Build.0 = Debug|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Release|x86.ActiveCfg = Release|Any CPU
+		{96A339DC-A4A4-41C7-AF96-4F8D4B88ED95}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
