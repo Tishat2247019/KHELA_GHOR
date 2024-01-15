@@ -38,6 +38,7 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.lblHighScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.lbl_ownscore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
@@ -128,6 +129,18 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.GameTimerEvent);
             // 
+            // lbl_ownscore
+            // 
+            this.lbl_ownscore.AutoSize = true;
+            this.lbl_ownscore.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ownscore.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ownscore.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_ownscore.Location = new System.Drawing.Point(764, 22);
+            this.lbl_ownscore.Name = "lbl_ownscore";
+            this.lbl_ownscore.Size = new System.Drawing.Size(102, 25);
+            this.lbl_ownscore.TabIndex = 3;
+            this.lbl_ownscore.Text = "Score : 0";
+            // 
             // RunningGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +150,7 @@
             this.ClientSize = new System.Drawing.Size(1095, 632);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblHighScore);
+            this.Controls.Add(this.lbl_ownscore);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -169,6 +183,7 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblHighScore;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label lbl_ownscore;
     }
 }
 

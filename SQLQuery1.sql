@@ -1,0 +1,11 @@
+CREATE TABLE SIGNUP_INFO
+(
+UserName VARCHAR(100) NOT NULL PRIMARY KEY, 
+Email VARCHAR(255), 
+Password VARCHAR(100)
+)
+
+SELECT *FROM SIGNUP_INFO;
+
+INSERT INTO SIGNUP_INFO(UserName, Email, Password) VALUES('Admin', 'Admin11@gmail.com', 'admin1234');
+SELECT * FROM SIGNUP_INFO WHERE UserName = 'tishat1528' AND Password = '1234'

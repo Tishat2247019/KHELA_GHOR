@@ -66,6 +66,7 @@ namespace RUNNING_GAME
         {
             InitializeComponent();
             username = username1;
+            lbl_ownscore.Text = "Your High score : " + GetOwnHighScore();
             RestartGame();
             orignalsize = true;
 
@@ -293,6 +294,28 @@ namespace RUNNING_GAME
                 }
             }
         }
+        private int GetOwnHighScore()
+        {
+            
+            using (SqlConnection connection = new SqlConnection(connectinString))
+            {
+                connection.Open();
+
+                string query = "select max(Convert(int, score_value)) from Leader_Board WHERE game_name = 'RunningGame' AND user_name = '" + username + "' ;";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                    else
+                    {
+                        return 0; // Default value if no high score is found
+                    }
+                }
+            }
+        }
 
 
 
@@ -304,6 +327,8 @@ namespace RUNNING_GAME
                 //lblHighScore.Top = 10;
             
             lblHighScore.Text = "High Score : " + GetHighScore();
+            lbl_ownscore.Text = "Your High score : " + GetOwnHighScore();
+
 
 
             Player.Location = new Point(253, 265);
@@ -331,9 +356,9 @@ namespace RUNNING_GAME
             Player.Location = new Point(453, 265);
             Player.Image = Properties.Resources.images_runniong_game__1_;
             score = 0;
-            gravityvalue = 13;
+            gravityvalue = 16;
             gravity = gravityvalue;
-            obstaclespeed = 10;
+            obstaclespeed = 12;
 
             foreach (Control x in this.Controls)
             {
@@ -404,6 +429,10 @@ namespace RUNNING_GAME
             lblScore.Parent = pictureBox1;
             lblHighScore.Parent = pictureBox2;
             lblHighScore.Top = 10;
+            lbl_ownscore.Parent = pictureBox1;
+            //lblHighScore.Parent = pictureBox2;
+            lbl_ownscore.Top = 20;
+
 
             OriginalFormSize = new Rectangle(this.Location.X, this.Location.Y, this.Size.Width, this.Size.Height);
 
@@ -513,7 +542,7 @@ namespace RUNNING_GAME
                 pictureBox1.Size = OriginalPicBox1Size.Size;
                 pictureBox2.Location = OriginalPicBox2Size.Location;
                 pictureBox2.Size = OriginalPicBox2Size.Size;
-
+              
                 // Player.Location = OriginalPlayerSize.Location;
                 Player.Location = playerBeforerresize.Location;
 

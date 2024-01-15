@@ -36,7 +36,7 @@
             this.btnSignIn_Welcom = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.picBox_Preview = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_preview = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Preview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,19 +130,19 @@
             this.picBox_Preview.MouseHover += new System.EventHandler(this.picBox_Preview_MouseHover);
             this.picBox_Preview.MouseUp += new System.Windows.Forms.MouseEventHandler(this.previewButton_MouseUp);
             // 
-            // label1
+            // lbl_preview
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(818, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Watch a Preview!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lbl_preview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_preview.AutoSize = true;
+            this.lbl_preview.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_preview.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_preview.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_preview.Location = new System.Drawing.Point(818, 24);
+            this.lbl_preview.Name = "lbl_preview";
+            this.lbl_preview.Size = new System.Drawing.Size(167, 23);
+            this.lbl_preview.TabIndex = 1;
+            this.lbl_preview.Text = "Watch a Preview!";
+            this.lbl_preview.Click += new System.EventHandler(this.label1_Click);
             // 
             // Welcome
             // 
@@ -156,7 +156,7 @@
             this.Controls.Add(this.picBox_Preview);
             this.Controls.Add(this.btnSignIn_Welcom);
             this.Controls.Add(this.EmtertainLabel_Welcom);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_preview);
             this.Controls.Add(this.HeyYouLabel_Welcom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSignUp_Welcom);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Button btnSignIn_Welcom;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox picBox_Preview;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_preview;
     }
 }
 

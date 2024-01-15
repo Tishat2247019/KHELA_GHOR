@@ -129,7 +129,7 @@
             // AI2
             // 
             this.AI2.Image = global::Car_Racing.Properties.Resources.carGrey;
-            this.AI2.Location = new System.Drawing.Point(629, 13);
+            this.AI2.Location = new System.Drawing.Point(663, 2);
             this.AI2.Margin = new System.Windows.Forms.Padding(2);
             this.AI2.Name = "AI2";
             this.AI2.Size = new System.Drawing.Size(61, 131);

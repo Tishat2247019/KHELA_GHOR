@@ -181,7 +181,7 @@ namespace Car_Racing
                     break;
             }
 
-            tempCar.Top = carPosition.Next(50, 700) * -1;
+            tempCar.Top = carPosition.Next(50, 300) * -1;
 
             if((string)tempCar.Tag == "carLeft")
             {
@@ -190,6 +190,8 @@ namespace Car_Racing
             if((string)tempCar.Tag == "carRight")
             {
                 tempCar.Left = carPosition.Next(511, 876);
+               // tempCar.Top = carPosition.Next(50, 300) * -1;
+
             }
         }
 
@@ -209,12 +211,11 @@ namespace Car_Racing
            btnStart.Enabled = true;
             if (score > highcore)
             {
-                string id = RunnigGamePopUp.showHighScore($"Your Score is : {score}");
+                string id = RunnigGamePopUp.showHighScore($"Your Score is : {score - 1}");
                 if (id == "1")
                 {
                    // btnStart.Enabled = true;
                     //restartGame();
-
                     ResetGame();
                    // btnStart.Enabled = true;
 
@@ -222,7 +223,7 @@ namespace Car_Racing
             }
             else
             {
-                string id = RunnigGamePopUp.showScore($"Your Score is : {score}");
+                string id = RunnigGamePopUp.showScore($"Your Score is : {score - 1}");
                 if (id == "1")
                 {
                    // btnStart.Enabled = true;

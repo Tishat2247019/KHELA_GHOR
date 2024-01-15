@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +63,8 @@ namespace LOGIN_REGISTRATION
         private float originalButtonsFontSize;
         private float originalLabel1FontSize;
         private float originalLabel2FontSize;
+
+        private bool lengthok = false;
 
         public Registration()
         {
@@ -218,6 +220,12 @@ namespace LOGIN_REGISTRATION
             {
                 MessageBox.Show("Please Confirm Your Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (!lengthok)
+            {
+                MessageBox.Show("Password Must be at lest 6 character!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+            
 
             else
             {
@@ -393,6 +401,7 @@ namespace LOGIN_REGISTRATION
             }
             else
             {
+                lengthok = true;
                 errorProvider3.Clear();
             }
         }

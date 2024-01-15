@@ -21,6 +21,11 @@ namespace LOGIN_REGISTRATION
         private Rectangle labelOriginalRectangle5;
         private Rectangle OriginalFormSize;
 
+        private Rectangle OriginalprevewRectangle;
+        private Rectangle OrignalPicBoxPreviewRectangle;
+        private float originalLableFontSize3;
+
+
         private float originalButtonsFontSize;
         private float originalLableFontSize1;
         private float originalLableFontSize2;
@@ -89,6 +94,10 @@ namespace LOGIN_REGISTRATION
             originalLableFontSize1 = HeyYouLabel_Welcom.Font.Size;
             originalLableFontSize2 = EmtertainLabel_Welcom.Font.Size;
 
+            OriginalprevewRectangle = new Rectangle(lbl_preview.Location.X, lbl_preview.Location.Y, lbl_preview.Width, lbl_preview.Height);
+            OrignalPicBoxPreviewRectangle = new Rectangle(picBox_Preview.Location.X, picBox_Preview.Location.Y, picBox_Preview.Width, picBox_Preview.Height);
+            originalLableFontSize3 = lbl_preview.Font.Size;
+
             //label3.Parent = pictureBox2;
             // label3.BackColor = Color.Transparent;
 
@@ -148,6 +157,8 @@ namespace LOGIN_REGISTRATION
             resizeControl(labelOriginalRectangle3, HeyYouLabel_Welcom, originalLableFontSize1);
             resizeControl(labelOriginalRectangle4, EmtertainLabel_Welcom, originalLableFontSize2);
             resizeControl(labelOriginalRectangle5, label2, originalLableFontSize1);
+            resizeControl(OriginalprevewRectangle, lbl_preview, originalLableFontSize3);
+            resizeControl(OrignalPicBoxPreviewRectangle, picBox_Preview, originalLableFontSize3);
         }
 
         private void picBox_Preview_MouseHover(object sender, EventArgs e)
