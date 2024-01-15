@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/4e653583-e999-44f6-bdce-a270cb3ff98e" alt="Image">
+</p>
+
+<p align="center"><sub>Khela Ghor Logo</sub></p>
 This reposotary contains the source code of my c# project "Khela Ghor". Which is basically a desktop application with collectoin of mini games developed with c# windows forms(.Net frameoworks)
 
 
@@ -86,26 +91,26 @@ C# PROJECT
       <td align="center">
         <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/91f39487-7f1b-4d1f-b74b-936bba24a4b4" alt="feed example" width="500">
         <br>
-        <sub>Text for Image 1</sub>
+        <sub>Loading Screen</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
         <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/b18d6f29-1c5d-4ad6-8901-1050aa449764" alt="feed example" width="500">
         <br>
-        <sub>Text for Image 2</sub>
+        <sub>Welcome Page</sub>
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/e3631ab5-f83e-4c0b-b8e9-d68c681d0aad" alt="feed example" width="500">
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Preview Button</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
         <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/ed36d1a0-2342-4b3d-9a80-8eddc6123747" alt="feed example" width="500">
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Registratoin Page</sub>
       </td>
     </tr>
 
@@ -113,13 +118,13 @@ C# PROJECT
       <td align="center">
         <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/b9bbd5a7-e234-46ca-bee6-b48c8e214b55" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>VAlidtionn check</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/9b110467-e714-4df7-82c7-de9961d6c423" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Registraton Scuccessful</sub>
       </td>
 </tr>
 
@@ -127,13 +132,13 @@ C# PROJECT
       <td align="center">
         <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/cc7f6677-62b2-469c-84de-0b3fa8c95199" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>login Page validation check</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/7a8b2796-22c9-4cc1-af7d-9985c6719206" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Dashboard</sub>
       </td>
 </tr>
 
@@ -142,13 +147,13 @@ C# PROJECT
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/534122cd-f1af-4fb7-bf1d-0c353171cf71" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Games Collection</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/b56778e5-b288-4a05-bedf-c9808b0fb886" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Scoreboard Page</sub>
       </td>
 </tr>
 
@@ -156,13 +161,13 @@ C# PROJECT
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/967e0a91-2a7e-4576-970f-5c8543732402" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Settings Page</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/09a8c9d1-57ba-4011-918c-116e0503d661" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Update Password</sub>
       </td>
 </tr>
 
@@ -171,13 +176,13 @@ C# PROJECT
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/8159f57b-dccc-4de8-bc67-d80747e23ea0" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Help Page</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/aed70ea9-3097-49cb-8d7d-3984f40b19c9" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Car Racing Game</sub>
       </td>
 </tr>
 
@@ -185,13 +190,13 @@ C# PROJECT
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/29df1323-1bb6-443e-8b0a-28c923c0116b" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Game Over Popup with score</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/bbbd5c3f-f7bf-4440-a564-49fbe0ee1b8b" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Running Game</sub>
       </td>
 </tr>
 
@@ -200,13 +205,13 @@ C# PROJECT
       <td align="center">
       <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/51ebafc0-07a9-45db-bacf-53f04a56b45d" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Game over popup</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/50b7c100-c974-48c8-9ac8-2ea5c61e2805" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Helicopter shooter</sub>
       </td>
 </tr>
 
@@ -215,13 +220,13 @@ C# PROJECT
       <td align="center">
       <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/50b7c100-c974-48c8-9ac8-2ea5c61e2805" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Game Over Popup</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/00b9f1ce-ddf9-4ddc-9905-9b9b03cc993e" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Arcade Game</sub>
       </td>
 </tr>
 
@@ -230,13 +235,13 @@ C# PROJECT
       <td align="center">
       <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/b8e262f7-305d-4435-b2c8-d69cbf0a0bd0" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Game Over Popup</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/e4600f84-57f4-4197-9840-bda617643657" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Snake Game Game Over Popup</sub>
       </td>
 </tr>
 
@@ -245,13 +250,13 @@ C# PROJECT
       <td align="center">
      <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/8260b38b-ab01-4a85-a5a3-e6ce8d4b44fa" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 3</sub>
+        <sub>Snake Game</sub>
       </td>
       <td style="padding-left: 20px; padding-right: 20px;"></td>
       <td align="center">
        <img src="https://github.com/Tishat2247019/KHELA_GHOR/assets/107317191/e4600f84-57f4-4197-9840-bda617643657" alt="feed example" width = "500" >
         <br>
-        <sub>Text for Image 4</sub>
+        <sub>Snake Game Game Over Popup</sub>
       </td>
 </tr>
 
