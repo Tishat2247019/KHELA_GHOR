@@ -13,6 +13,41 @@ This reposotary contains the source code of my c# project "Khela Ghor". Which is
 - [MD. SHOHANUR RAHMAN SHOHAN](https://www.github.com/encodeshohan)
 - [FARJAN YESMIN OPI](https://www.github.com/farjanaopi11)
 
+## Group Members
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>University</th>
+    <th>Department</th>
+    <th>ID</th>
+    <th>GitHub Profile</th>
+  </tr>
+  <tr>
+    <td>MD. ABU TOWSIF</td>
+    <td>AIUB</td>
+    <td>Bsc CSE</td>
+    <td>22-47019-1</td>
+    <td><a href="https://www.github.com/Tishat2247019">Tishat2247019</a></td>
+  </tr>
+   <tr>
+    <td>FARJANA YESMIN OPI</td>
+    <td>AIUB</td>
+    <td>Bsc CSE</td>
+    <td>22-47018-1</td>
+    <td><a href="https://www.github.com/farjanaopi11">farjanaopi11</a></td>
+  </tr>
+  <tr>
+    <td>MD. SHOHANUR RAHMAN SHOHAN</td>
+    <td>AIUB</td>
+    <td>Bsc CSE</td>
+    <td>22-46013-1</td>
+    <td><a href="https://www.github.com/encodeshohan">encodeshohan</a></td>
+  </tr>
+ 
+</table>
+
+
 
 ## Introduction
 Khela Ghor is a Windows application developed in C# using Windows Forms and .NET Framework. It serves as a gaming platform where users can play various small games in offline mode. The application provides features such as user registration, game preview, login/logout functionality, game playing, leaderboard checking, password management, and developer contact
