@@ -7,12 +7,6 @@ This reposotary contains the source code of my c# project "Khela Ghor". Which is
 
 
 
-
-## Group Members
-- [MD. ABU TOWSIF](https://www.github.com/Tishat2247019)
-- [MD. SHOHANUR RAHMAN SHOHAN](https://www.github.com/encodeshohan)
-- [FARJAN YESMIN OPI](https://www.github.com/farjanaopi11)
-
 ## Group Members
 
 <table>
